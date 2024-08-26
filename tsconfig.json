@@ -37,13 +37,14 @@
       "@/providers/*": ["providers/*"],
       "@/constants/*": ["constants/*"],
       "@/db/*": ["database/*"],
-      "@/models/*": ["models/*"],
+      "@/schema/*": ["schema/*"],
       "@_types/*": ["_types/*"],
       "@/*": ["./src/*"]
     }
   },
   "include": [
     "next-env.d.ts",
+    "**/*.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
