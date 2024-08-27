@@ -4,36 +4,36 @@ const { Schema } = mongoose
 
 const projectSchema = new Schema({
   image: {
-    String,
+    type: String,
     required: true
   },
-  startDate: {
-    String,
-    required: true
+  date: {
+    type: String,
+    default: Date.now
   },
-  endDate: {
-    String,
-    required: true
-  },
-  name: {
-    String,
+  title: {
+    type: String,
     required: true
   },
   description: {
-    String,
+    type: String,
     required: true
   },
   features: {
-    Array,
+    type: Array,
     required: true
   },
   techStack: {
-    Array,
+    type: Array,
     required: true
   },
-  stars: Number,
-  userCount: String,
-  installCount: String
+  // stars: Number,
+  // userCount: String,
+  // installCount: String,
+  top: {
+    type: Boolean,
+    default: true
+  }
 })
 
 const Project = mongoose.model('Project', projectSchema)

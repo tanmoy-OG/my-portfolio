@@ -37,7 +37,7 @@
       "@/providers/*": ["providers/*"],
       "@/constants/*": ["constants/*"],
       "@/db/*": ["database/*"],
-      "@/schema/*": ["schema/*"],
+      "@/models/*": ["models/*"],
       "@_types/*": ["_types/*"],
       "@/*": ["./src/*"]
     }
