@@ -1,37 +1,37 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
 
-const {Schema} = mongoose;
+const { Schema } = mongoose
 
 const experienceSchema = new Schema({
   startDate: {
     String,
-    required: true,
+    required: true
   },
   endDate: {
     String,
-    required: true,
+    required: true
   },
   company: {
     String,
-    required: true,
+    required: true
   },
   companyLink: String,
   freelanceSite: String,
   position: {
     String,
-    required: true,
+    required: true
   },
   myContribution: {
     Array,
-    required: true,
+    required: true
   },
   productsLink: Array,
   techStack: {
     Array,
-    required: true,
-  },
-});
+    required: true
+  }
+})
 
-const Experience = mongoose.model('Experience', experienceSchema);
+const Experience = mongoose.model('Experience', experienceSchema)
 
-export default Experience;
+export default Experience
