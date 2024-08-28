@@ -11,8 +11,8 @@ export async function GET() {
   console.log('GET request')
   try {
     const skills = await Skill.find({})
-      const response = NextResponse.json({ success: true, data: skills })
-      return response
+    const response = NextResponse.json({ success: true, data: skills })
+    return response
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message })
   }
