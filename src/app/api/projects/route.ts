@@ -29,14 +29,15 @@ export async function POST(request: NextRequest) {
   try {
     const { image, date, title, description, features, techStack, top }: any =
       await request.json()
-
-    if (!image || !date || !title || !description || !features || !techStack) {
       console.log('image', image)
       console.log('date', date)
       console.log('title', title)
       console.log('description', description)
       console.log('features', features)
       console.log('techStack', techStack)
+      console.log('top', top)
+
+    if (!image || !date || !title || !description || !features || !techStack) {
       return NextResponse.json({
         success: false,
         error: 'All fields are required'

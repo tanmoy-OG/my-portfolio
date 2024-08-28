@@ -4,30 +4,32 @@ const { Schema } = mongoose
 
 const experienceSchema = new Schema({
   startDate: {
-    String,
+    type: String,
     required: true
   },
-  endDate: {
-    String,
-    required: true
-  },
+  endDate: String,
   company: {
-    String,
+    type: String,
     required: true
   },
   companyLink: String,
   freelanceSite: String,
   position: {
-    String,
+    type: String,
     required: true
   },
-  myContribution: {
-    Array,
-    required: true
-  },
+  myContribution: Array,
   productsLink: Array,
   techStack: {
-    Array,
+    type: Array,
+    required: true
+  },
+  present: {
+    type: Boolean,
+    required: true
+  },
+  top: {
+    type: Boolean,
     required: true
   }
 })

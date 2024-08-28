@@ -9,7 +9,7 @@ const projectSchema = new Schema({
   },
   date: {
     type: String,
-    default: Date.now
+    required: true
   },
   title: {
     type: String,
@@ -32,7 +32,7 @@ const projectSchema = new Schema({
   // installCount: String,
   top: {
     type: Boolean,
-    default: true
+    required: true
   }
 })
 
