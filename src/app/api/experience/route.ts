@@ -27,30 +27,19 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   console.log('POST request')
   try {
-    const {
-      startDate,
-      endDate,
-      company,
-      companyLink,
-      freelanceSite,
-      position,
-      myContribution,
-      productsLink,
-      techStack,
-      present,
-      top
-    }: any = await request.json()
-    console.log('startDate', startDate)
-    console.log('endDate', endDate)
-    console.log('company', company)
-    console.log('companyLink', companyLink)
-    console.log('freelanceSite', freelanceSite)
-    console.log('position', position)
-    console.log('myContribution', myContribution)
-    console.log('productsLink', productsLink)
-    console.log('techStack', techStack)
-    console.log('present', present)
-    console.log('top', top)
+    const { startDate, endDate, company, companyLink, freelanceSite, position, myContribution, productsLink, techStack, present, top }: any =
+      await request.json()
+      console.log('startDate', startDate)
+      console.log('endDate', endDate)
+      console.log('company', company)
+      console.log('companyLink', companyLink)
+      console.log('freelanceSite', freelanceSite)
+      console.log('position', position)
+      console.log('myContribution', myContribution)
+      console.log('productsLink', productsLink)
+      console.log('techStack', techStack)
+      console.log('present', present)
+      console.log('top', top)
 
     if (!startDate || !company || !position || !myContribution || !techStack) {
       return NextResponse.json({
@@ -59,7 +48,7 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    if (present === 'true' && endDate === '') {
+    if(present === 'true' && endDate === '') {
       const getOne = await Experience.findOne({ present: true })
       if (getOne) {
         getOne.present = false
@@ -69,17 +58,7 @@ export async function POST(request: NextRequest) {
     }
 
     const experience = await Experience.create({
-      startDate,
-      endDate,
-      company,
-      companyLink,
-      freelanceSite,
-      position,
-      myContribution,
-      productsLink,
-      techStack,
-      present,
-      top
+      startDate, endDate, company, companyLink, freelanceSite, position, myContribution, productsLink, techStack, present, top
     })
     const response = NextResponse.json({ success: true, data: experience })
     return response
