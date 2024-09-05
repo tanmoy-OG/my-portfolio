@@ -39,7 +39,7 @@
       "@/db/*": ["database/*"],
       "@/models/*": ["models/*"],
       "@_types/*": ["_types/*"],
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
   "include": [
