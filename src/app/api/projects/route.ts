@@ -6,11 +6,11 @@ import Project from '@/models/projects'
 connect()
 
 export async function GET(request: NextRequest) {
-  // console.log('GET request')
+  console.log('GET request')
   try {
     const url = new URL(request.url)
     const type = url.searchParams.get('type')
-    // console.log('type', type)
+    console.log('type', type)
     if (type === 'all') {
       const projects = await Project.find({})
       const response = NextResponse.json({ success: true, data: projects })
@@ -25,17 +25,17 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  // console.log('POST request')
+  console.log('POST request')
   try {
     const { image, date, title, description, features, techStack, top }: any =
       await request.json()
-    // console.log('image', image)
-    // console.log('date', date)
-    // console.log('title', title)
-    // console.log('description', description)
-    // console.log('features', features)
-    // console.log('techStack', techStack)
-    // console.log('top', top)
+    console.log('image', image)
+    console.log('date', date)
+    console.log('title', title)
+    console.log('description', description)
+    console.log('features', features)
+    console.log('techStack', techStack)
+    console.log('top', top)
 
     if (!image || !date || !title || !description || !features || !techStack) {
       return NextResponse.json({
@@ -45,44 +45,6 @@ export async function POST(request: NextRequest) {
     }
 
     const project = await Project.create({
-      image,
-      date,
-      title,
-      description,
-      features,
-      techStack,
-      top
-    })
-    const response = NextResponse.json({ success: true, data: project })
-    return response
-  } catch (error: any) {
-    return NextResponse.json({ success: false, error: error.message })
-  }
-}
-
-export async function PUT(request: NextRequest) {
-  // console.log('PUT request')
-  try {
-    const {
-      id,
-      image,
-      date,
-      title,
-      description,
-      features,
-      techStack,
-      top
-    }: any = await request.json()
-    // console.log('id', id)
-    // console.log('image', image)
-    // console.log('date', date)
-    // console.log('title', title)
-    // console.log('description', description)
-    // console.log('features', features)
-    // console.log('techStack', techStack)
-    // console.log('top', top)
-
-    const project = await Project.findByIdAndUpdate(id, {
       image,
       date,
       title,
