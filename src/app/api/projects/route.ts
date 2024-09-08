@@ -82,15 +82,43 @@ export async function PUT(request: NextRequest) {
     // console.log('techStack', techStack)
     // console.log('top', top)
 
-    const project = await Project.findByIdAndUpdate(id, {
-      image,
-      date,
-      title,
-      description,
-      features,
-      techStack,
-      top
-    })
+    if (!id) {
+      const response = NextResponse.json({
+        success: false,
+        error: 'ID is required'
+      })
+      return response
+    }
+
+    const project = await Project.findByIdAndUpdate(
+      id,
+      {
+        image,
+        date,
+        title,
+        description,
+        features,
+        techStack,
+        top
+      },
+      { new: true }
+    )
+    const response = NextResponse.json({ success: true, data: project })
+    return response
+  } catch (error: any) {
+    return NextResponse.json({ success: false, error: error.message })
+  }
+}
+
+export async function DELETE(request: NextRequest) {
+  // console.log('DELETE request')
+  try {
+    //* use this api route in client side axios hook `/api/your-endpoint?id=${id}`
+    const { searchParams } = new URL(request.url)
+    const id = searchParams.get('id')
+    // console.log('id', id)
+
+    const project = await Project.findByIdAndDelete(id)
     const response = NextResponse.json({ success: true, data: project })
     return response
   } catch (error: any) {
