@@ -21,7 +21,7 @@ const Login = () => (
       <CardContent className="space-y-2">
         <div className="space-y-1">
           <Input
-            className="border-secondary bg-secondary caret-foreground focus:border-accent-foreground"
+            className="border-secondary bg-secondary text-foreground caret-foreground focus:border-accent-foreground"
             id="password"
             placeholder="You remember the password right??"
             type="password"
@@ -29,7 +29,7 @@ const Login = () => (
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="bg-accent text-accent-foreground hover:bg-accent-hover">
+        <Button className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent">
           Login
         </Button>
       </CardFooter>
