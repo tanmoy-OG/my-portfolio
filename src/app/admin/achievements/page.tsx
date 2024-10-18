@@ -79,7 +79,7 @@ const Achievements = () => {
                   Delete
                 </Button>
               ) : (
-                <Popup name="" topic="achievement" type="Add" />
+                <Popup name="" link="" date="" topic="achievement" type="Add" />
               )}
             </TableHead>
           </TableRow>
@@ -99,7 +99,7 @@ const Achievements = () => {
                 {e.date}
               </TableCell>
               <TableCell className="text-right">
-                <Popup name={e.name} topic="achievement" type="Edit" />
+                <Popup name={e.name} link={e.link} date={e.date} topic="achievement" type="Edit" />
               </TableCell>
             </TableRow>
           ))}

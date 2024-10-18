@@ -17,12 +17,24 @@ interface PopupProps {
   type: string
   topic: string
   name: string
+  link: string
+  date: string
 }
 
-const Popup = ({ type, topic, name }: PopupProps) => {
-  const [newName, setNewName] = useState<string>(name)
+interface Inputs {
+  name: string
+  link: string
+  date: string
+}
+
+const Popup = ({ type, topic, name, link, date }: PopupProps) => {
+  const [inputs, setInputs] = useState<Inputs>({
+    name,
+    link,
+    date
+  })
   const onSubmit = () => {
-    console.log(newName)
+    console.log(inputs)
     if (type === 'add') {
       console.log('Add', topic)
     } else {
@@ -64,8 +76,30 @@ const Popup = ({ type, topic, name }: PopupProps) => {
             <Input
               className="col-span-3"
               id="name"
-              value={newName}
-              onChange={(e) => setNewName(e.target.value)}
+              value={inputs.name}
+              onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label className="text-right" htmlFor="name">
+              Link
+            </Label>
+            <Input
+              className="col-span-3"
+              id="link"
+              value={inputs.link}
+              onChange={(e) => setInputs({ ...inputs, link: e.target.value })}
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label className="text-right" htmlFor="name">
+              Date
+            </Label>
+            <Input
+              className="col-span-3"
+              id="date"
+              value={inputs.date}
+              onChange={(e) => setInputs({ ...inputs, date: e.target.value })}
             />
           </div>
         </div>
