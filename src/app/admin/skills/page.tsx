@@ -14,6 +14,8 @@ import {
   TableRow
 } from '@/components/ui/table'
 
+import Popup from './popup'
+
 const data = [
   {
     id: '1',
@@ -68,12 +70,13 @@ const Skills = () => {
                   Delete
                 </Button>
               ) : (
-                <Button
-                  className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
-                  onClick={() => console.log(selected)}
-                >
-                  Add
-                </Button>
+                // <Button
+                //   className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
+                //   onClick={() => console.log(selected)}
+                // >
+                //   Add
+                // </Button>
+                <Popup name="" topic="Skill" type="Add" />
               )}
             </TableHead>
           </TableRow>
@@ -90,12 +93,13 @@ const Skills = () => {
                 <span>{e.name}</span>
               </TableCell>
               <TableCell className="text-right">
-                <Button
+                {/* <Button
                   className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
                   onClick={() => console.log(selected)}
                 >
                   Edit
-                </Button>
+                </Button> */}
+                <Popup name={e.name} topic="Skill" type="Edit" />
               </TableCell>
             </TableRow>
           ))}

@@ -10,8 +10,8 @@ import {
 import { Input } from '@/components/ui/input'
 
 const Login = () => (
-  <div className="h-screen content-center">
-    <Card className="mx-auto w-[400px] border-none bg-[#111F43]/90 backdrop-blur-md">
+  <div className="h-screen content-center bg-secondary">
+    <Card className="mx-auto w-[400px] border-zinc-800 bg-background">
       <CardHeader>
         <CardTitle className="text-accent-foreground">Admin Login</CardTitle>
         <CardDescription className="text-foreground">
@@ -21,7 +21,7 @@ const Login = () => (
       <CardContent className="space-y-2">
         <div className="space-y-1">
           <Input
-            className="border-secondary bg-secondary text-foreground caret-foreground focus:border-accent-foreground"
+            className="text-foreground caret-foreground"
             id="password"
             placeholder="You remember the password right??"
             type="password"
