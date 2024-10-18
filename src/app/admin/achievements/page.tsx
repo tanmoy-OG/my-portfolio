@@ -67,9 +67,7 @@ const Achievements = () => {
               />
               <span>Select all</span>
             </TableHead>
-            <TableHead>
-              Date
-            </TableHead>
+            <TableHead>Date</TableHead>
             <TableHead className="text-right">
               {selected.length > 0 ? (
                 <Button
@@ -79,7 +77,7 @@ const Achievements = () => {
                   Delete
                 </Button>
               ) : (
-                <Popup name="" link="" date="" topic="achievement" type="Add" />
+                <Popup date="" link="" name="" topic="achievement" type="Add" />
               )}
             </TableHead>
           </TableRow>
@@ -95,11 +93,15 @@ const Achievements = () => {
                 />
                 <span>{e.name}</span>
               </TableCell>
-              <TableCell className='text-nowrap'>
-                {e.date}
-              </TableCell>
+              <TableCell className="text-nowrap">{e.date}</TableCell>
               <TableCell className="text-right">
-                <Popup name={e.name} link={e.link} date={e.date} topic="achievement" type="Edit" />
+                <Popup
+                  date={e.date}
+                  link={e.link}
+                  name={e.name}
+                  topic="achievement"
+                  type="Edit"
+                />
               </TableCell>
             </TableRow>
           ))}

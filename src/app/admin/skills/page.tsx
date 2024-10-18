@@ -70,12 +70,6 @@ const Skills = () => {
                   Delete
                 </Button>
               ) : (
-                // <Button
-                //   className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
-                //   onClick={() => console.log(selected)}
-                // >
-                //   Add
-                // </Button>
                 <Popup name="" topic="skill" type="Add" />
               )}
             </TableHead>
@@ -93,12 +87,6 @@ const Skills = () => {
                 <span>{e.name}</span>
               </TableCell>
               <TableCell className="text-right">
-                {/* <Button
-                  className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
-                  onClick={() => console.log(selected)}
-                >
-                  Edit
-                </Button> */}
                 <Popup name={e.name} topic="skill" type="Edit" />
               </TableCell>
             </TableRow>
