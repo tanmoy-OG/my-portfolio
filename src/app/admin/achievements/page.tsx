@@ -19,19 +19,25 @@ import Popup from './popup'
 const data = [
   {
     id: '1',
-    name: 'Javascript'
+    name: 'Rebase<01>',
+    link: 'https://rebase01.tech',
+    date: '2021-10-01'
   },
   {
     id: '2',
-    name: 'Python'
+    name: 'Hack4Bengal2.0',
+    link: 'https://hack4bengal.tech',
+    date: '2021-10-02'
   },
   {
     id: '3',
-    name: 'Ruby'
+    name: 'Bits2Bytes',
+    link: 'https://bits2bytes.tech',
+    date: '2021-10-03'
   }
 ]
 
-const Skills = () => {
+const Achievements = () => {
   const [selected, setSelected] = useState<string[]>([])
   const handleSelect = (id: string) => {
     if (selected.includes(id)) {
@@ -50,16 +56,19 @@ const Skills = () => {
   return (
     <div className="mx-auto w-4/5 px-10 py-20">
       <Table>
-        <TableCaption>Your skill list.</TableCaption>
+        <TableCaption>Your achievements list.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="flex items-center gap-4">
+            <TableHead className="space-x-4">
               <Checkbox
                 checked={selected.length === data.length}
                 className="border-foreground stroke-foreground"
                 onCheckedChange={handleSelectAll}
               />
-              Select all
+              <span>Select all</span>
+            </TableHead>
+            <TableHead>
+              Date
             </TableHead>
             <TableHead className="text-right">
               {selected.length > 0 ? (
@@ -70,13 +79,7 @@ const Skills = () => {
                   Delete
                 </Button>
               ) : (
-                // <Button
-                //   className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
-                //   onClick={() => console.log(selected)}
-                // >
-                //   Add
-                // </Button>
-                <Popup name="" topic="skill" type="Add" />
+                <Popup name="" topic="achievement" type="Add" />
               )}
             </TableHead>
           </TableRow>
@@ -92,14 +95,11 @@ const Skills = () => {
                 />
                 <span>{e.name}</span>
               </TableCell>
+              <TableCell className='text-nowrap'>
+                {e.date}
+              </TableCell>
               <TableCell className="text-right">
-                {/* <Button
-                  className="bg-accent text-accent-foreground transition-all hover:bg-accent-hover active:bg-accent"
-                  onClick={() => console.log(selected)}
-                >
-                  Edit
-                </Button> */}
-                <Popup name={e.name} topic="skill" type="Edit" />
+                <Popup name={e.name} topic="achievement" type="Edit" />
               </TableCell>
             </TableRow>
           ))}
@@ -109,4 +109,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Achievements

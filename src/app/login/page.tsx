@@ -13,7 +13,7 @@ const Login = () => (
   <div className="h-screen content-center bg-secondary">
     <Card className="mx-auto w-[400px] border-zinc-800 bg-background">
       <CardHeader>
-        <CardTitle className="text-accent-foreground">Admin Login</CardTitle>
+        <CardTitle className="text-accent-foreground">Admin login</CardTitle>
         <CardDescription className="text-foreground">
           Welcome back OG Boy!!
         </CardDescription>
