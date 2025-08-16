@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.light *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Dark theme (default) - using the color scheme from the image */
+  --background: #0d1117; /* Rich Black */
+  --foreground: #dde4ef; /* Alice Blue */
+  --card: #0f172a; /* Oxford Blue */
+  --card-foreground: #dde4ef; /* Alice Blue */
+  --popover: #0f172a; /* Oxford Blue */
+  --popover-foreground: #dde4ef; /* Alice Blue */
+  --primary: #5eead4; /* Turquoise */
+  --primary-foreground: #0d1117; /* Rich Black */
+  --secondary: #122a39; /* Gunmetal */
+  --secondary-foreground: #e0e6f0; /* Alice Blue (lighter) */
+  --muted: #122a39; /* Gunmetal */
+  --muted-foreground: #dde4ef; /* Alice Blue */
+  --accent: #122a39; /* Gunmetal */
+  --accent-foreground: #dde4ef; /* Alice Blue */
+  --destructive: #ef4444;
+  --border: #111f43; /* Oxford Blue (darker) */
+  --input: #111f43; /* Oxford Blue (darker) */
+  --ring: #5eead4; /* Turquoise */
+  --chart-1: #5eead4; /* Turquoise */
+  --chart-2: #0f172a; /* Oxford Blue */
+  --chart-3: #122a39; /* Gunmetal */
+  --chart-4: #dde4ef; /* Alice Blue */
+  --chart-5: #e0e6f0; /* Alice Blue (lighter) */
+  --sidebar: #0f172a; /* Oxford Blue */
+  --sidebar-foreground: #dde4ef; /* Alice Blue */
+  --sidebar-primary: #5eead4; /* Turquoise */
+  --sidebar-primary-foreground: #0d1117; /* Rich Black */
+  --sidebar-accent: #122a39; /* Gunmetal */
+  --sidebar-accent-foreground: #dde4ef; /* Alice Blue */
+  --sidebar-border: #111f43; /* Oxford Blue (darker) */
+  --sidebar-ring: #5eead4; /* Turquoise */
+}
+
+.light {
+  /* Light theme (alternative) */
+  --background: #ffffff;
+  --foreground: #0d1117; /* Rich Black */
+  --card: #f8fafc;
+  --card-foreground: #0d1117; /* Rich Black */
+  --popover: #f8fafc;
+  --popover-foreground: #0d1117; /* Rich Black */
+  --primary: #5eead4; /* Turquoise */
+  --primary-foreground: #0d1117; /* Rich Black */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0d1117; /* Rich Black */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0d1117; /* Rich Black */
+  --destructive: #ef4444;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #5eead4; /* Turquoise */
+  --chart-1: #5eead4; /* Turquoise */
+  --chart-2: #0f172a; /* Oxford Blue */
+  --chart-3: #122a39; /* Gunmetal */
+  --chart-4: #dde4ef; /* Alice Blue */
+  --chart-5: #e0e6f0; /* Alice Blue (lighter) */
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0d1117; /* Rich Black */
+  --sidebar-primary: #5eead4; /* Turquoise */
+  --sidebar-primary-foreground: #0d1117; /* Rich Black */
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #0d1117; /* Rich Black */
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #5eead4; /* Turquoise */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
