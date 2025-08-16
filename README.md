@@ -31,11 +31,11 @@ A modern, responsive portfolio website built with cutting-edge web technologies.
 
 <div align="center">
 
-| **Frontend** | **Styling** | **Development** | **Deployment** |
-|:-------------:|:-------------:|:-------------:|:-------------:|
-| ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js) | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css) | ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript) | ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel) |
-| ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) | ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint) | ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify) |
-| ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?logo=shadcnui) | ![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white) | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black) | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github-pages) |
+|                               **Frontend**                                |                                       **Styling**                                       |                                     **Development**                                     |                                   **Deployment**                                    |
+| :-----------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: |
+|  ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)   | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css) |     ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)     |          ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel)          |
+|     ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)     |       ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)       |            ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint)            |        ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify)         |
+| ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?logo=shadcnui) |  ![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white)   | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black) | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github-pages) |
 
 </div>
 
@@ -43,18 +43,20 @@ A modern, responsive portfolio website built with cutting-edge web technologies.
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) 18+ 
+- [Node.js](https://nodejs.org/) 18+
 - [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/my-portfolio.git
    cd my-portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    yarn install
    # or
@@ -62,6 +64,7 @@ A modern, responsive portfolio website built with cutting-edge web technologies.
    ```
 
 3. **Start development server**
+
    ```bash
    yarn dev
    # or
@@ -73,16 +76,16 @@ A modern, responsive portfolio website built with cutting-edge web technologies.
 
 ## 📦 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `yarn dev` | 🚀 Start development server |
-| `yarn build` | 🏗️ Build for production |
-| `yarn start` | 🌐 Start production server |
-| `yarn lint` | 🔍 Run ESLint |
-| `yarn lint:fix` | 🛠️ Fix ESLint issues automatically |
-| `yarn format` | ✨ Format code with Prettier |
-| `yarn format:check` | ✅ Check code formatting |
-| `yarn type-check` | 🔒 Run TypeScript type checking |
+| Command                 | Description                                   |
+| ----------------------- | --------------------------------------------- |
+| `yarn dev`              | 🚀 Start development server                   |
+| `yarn build`            | 🏗️ Build for production                       |
+| `yarn start`            | 🌐 Start production server                    |
+| `yarn lint`             | 🔍 Run ESLint                                 |
+| `yarn lint:fix`         | 🛠️ Fix ESLint issues automatically            |
+| `yarn format`           | ✨ Format code with Prettier                  |
+| `yarn format:check`     | ✅ Check code formatting                      |
+| `yarn type-check`       | 🔒 Run TypeScript type checking               |
 | `yarn type-check:watch` | 👀 Run TypeScript type checking in watch mode |
 
 ## 🎨 Adding shadcn/ui Components
@@ -94,6 +97,7 @@ npx shadcn@latest add <component-name>
 ```
 
 **Examples:**
+
 ```bash
 # Add multiple components at once
 npx shadcn@latest add button card input
@@ -108,13 +112,13 @@ npx shadcn@latest add form
 
 This project uses several configuration files for optimal development experience:
 
-| File | Purpose |
-|------|---------|
-| `components.json` | shadcn/ui component configuration |
-| `eslint.config.mjs` | ESLint rules and TypeScript integration |
-| `tsconfig.json` | TypeScript compiler options |
-| `tailwind.config.ts` | Tailwind CSS customization |
-| `next.config.ts` | Next.js framework configuration |
+| File                 | Purpose                                 |
+| -------------------- | --------------------------------------- |
+| `components.json`    | shadcn/ui component configuration       |
+| `eslint.config.mjs`  | ESLint rules and TypeScript integration |
+| `tsconfig.json`      | TypeScript compiler options             |
+| `tailwind.config.ts` | Tailwind CSS customization              |
+| `next.config.ts`     | Next.js framework configuration         |
 
 ## 📁 Project Structure
 
@@ -152,6 +156,7 @@ my-portfolio/
 ## 🎯 Development Standards
 
 ### TypeScript Configuration
+
 - ✅ **Strict mode** enabled
 - ✅ **No implicit any** types
 - ✅ **Exact optional property types**
@@ -159,6 +164,7 @@ my-portfolio/
 - ✅ **Comprehensive type checking**
 
 ### Code Quality
+
 - 🔍 **ESLint** with TypeScript and React rules
 - ✨ **Prettier** for consistent code formatting
 - 🚫 **Import sorting** and organization
@@ -166,6 +172,7 @@ my-portfolio/
 - 📏 **Code quality** and consistency rules
 
 ### Tailwind CSS Features
+
 - 🎨 **v4** with latest features
 - 🌈 **CSS variables** for theming
 - 📱 **Responsive design** utilities
@@ -177,12 +184,14 @@ my-portfolio/
 This project is optimized for deployment on modern platforms:
 
 ### Recommended: Vercel
+
 ```bash
 # Deploy to Vercel (recommended for Next.js)
 npx vercel --prod
 ```
 
 ### Alternative Platforms
+
 - [Netlify](https://netlify.com/) - Great for static sites
 - [Railway](https://railway.app/) - Full-stack deployment
 - [Render](https://render.com/) - Modern cloud platform
@@ -192,10 +201,10 @@ npx vercel --prod
 
 <div align="center">
 
-| **Framework** | **Styling** | **Components** | **Language** |
-|:-------------:|:-------------:|:-------------:|:-------------:|
-| [Next.js Docs](https://nextjs.org/docs) | [Tailwind CSS](https://tailwindcss.com/docs) | [shadcn/ui](https://ui.shadcn.com/) | [TypeScript](https://www.typescriptlang.org/docs/) |
-| [React Docs](https://react.dev/) | [CSS Tricks](https://css-tricks.com/) | [Radix UI](https://www.radix-ui.com/) | [TS Playground](https://www.typescriptlang.org/play) |
+|              **Framework**              |                 **Styling**                  |            **Components**             |                     **Language**                     |
+| :-------------------------------------: | :------------------------------------------: | :-----------------------------------: | :--------------------------------------------------: |
+| [Next.js Docs](https://nextjs.org/docs) | [Tailwind CSS](https://tailwindcss.com/docs) |  [shadcn/ui](https://ui.shadcn.com/)  |  [TypeScript](https://www.typescriptlang.org/docs/)  |
+|    [React Docs](https://react.dev/)     |    [CSS Tricks](https://css-tricks.com/)     | [Radix UI](https://www.radix-ui.com/) | [TS Playground](https://www.typescriptlang.org/play) |
 
 </div>
 
