@@ -1,73 +1,54 @@
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-background p-8'>
-      <div className='container mx-auto max-w-4xl'>
-        <div className='mb-8 text-center'>
-          <h1 className='mb-4 text-4xl font-bold tracking-tight text-foreground'>
-            Welcome to My Portfolio
-          </h1>
-          <p className='text-lg text-muted-foreground'>
-            Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui
+    <main className='min-h-screen bg-card flex'>
+      <aside className='bg-background basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
+        <div className='!pt-8'>
+          <h1 className='text-lg text-primary'>Tanmoy_OG</h1>
+          <h1 className='text-lg/6'>Web Developer & Designer</h1>
+          <p className='text-xs'>
+            I build elegant and functional websites with fully responsive
+            design.
           </p>
         </div>
-
-        <div className='grid gap-6 md:grid-cols-2'>
-          <Card>
-            <CardHeader>
-              <CardTitle>shadcn/ui Components</CardTitle>
-              <CardDescription>
-                Beautiful and accessible components built with Radix UI and
-                Tailwind CSS
-              </CardDescription>
-            </CardHeader>
-            <CardContent className='space-y-4'>
-              <div className='space-y-2'>
-                <Label htmlFor='email'>Email</Label>
-                <Input id='email' placeholder='Enter your email' type='email' />
-              </div>
-              <Button className='w-full'>Subscribe</Button>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>TypeScript + ESLint</CardTitle>
-              <CardDescription>
-                Strict TypeScript configuration with comprehensive ESLint rules
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className='text-sm text-muted-foreground'>
-                This project is configured with:
-              </p>
-              <ul className='mt-2 list-inside list-disc text-sm text-muted-foreground'>
-                <li>Strict TypeScript settings</li>
-                <li>Comprehensive ESLint rules</li>
-                <li>Prettier formatting</li>
-                <li>Import sorting and organization</li>
-                <li>React best practices</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <div className='*:text-xs *:font-bold *:uppercase *:tracking-wide *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100'>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>About</Link>
+          </div>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>Experience</Link>
+          </div>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>Projects</Link>
+          </div>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>Skills</Link>
+          </div>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>Blog</Link>
+          </div>
+          <div className='group'>
+            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+            <Link href='path'>Get in Touch</Link>
+          </div>
         </div>
-
-        <div className='mt-8 text-center'>
-          <Button variant='outline' size='lg'>
-            Get Started
-          </Button>
+        <div className='!pb-8'>
+          <h1>Coding Profiles</h1>
+          <div className='flex flex-col gap-1 *:text-xs'>
+            <Link href='path'>LeetCode</Link>
+            <Link href='path'>Codeforces</Link>
+            <Link href='path'>CodeChef</Link>
+            <Link href='path'>GeeksForGeeks</Link>
+          </div>
         </div>
-      </div>
+      </aside>
+      <div className='basis-4/5'></div>
     </main>
   );
 }
