@@ -30,6 +30,8 @@
       }
     ],
     "paths": {
+      "@/landing/*": ["./src/components/landing/*"],
+      "@/layout/*": ["./src/components/layout/*"],
       "@/*": ["./src/*"]
     }
   },

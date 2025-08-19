@@ -4,7 +4,7 @@ import NavigationLink from './navigation-link';
 
 const Aside = () => {
   return (
-    <aside className='bg-background basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
+    <aside className='bg-background h-screen basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
       <div className='!pt-8'>
         <h1 className='text-lg text-primary'>Tanmoy_OG</h1>
         <h1 className='text-lg/6'>Web Developer & Designer</h1>
@@ -16,7 +16,7 @@ const Aside = () => {
         <NavigationLink path='#about' linkName='About' />
         <NavigationLink path='#experience' linkName='Experience' />
         <NavigationLink path='#projects' linkName='Projects' />
-        <NavigationLink path='#skills' linkName='Achievements & Skills' />
+        <NavigationLink path='#skills' linkName='Skills' />
         <NavigationLink path='#blog' linkName='Blog' />
         <NavigationLink path='#connect' linkName='Get in Touch' />
       </div>
