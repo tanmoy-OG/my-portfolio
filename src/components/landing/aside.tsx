@@ -6,9 +6,9 @@ const Aside = () => {
   return (
     <aside className='bg-background h-screen basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
       <div className='!pt-8'>
-        <h1 className='text-lg text-primary'>Tanmoy_OG</h1>
+        <h1 className='text-lg text-accent'>Tanmoy_OG</h1>
         <h1 className='text-lg/6'>Web Developer & Designer</h1>
-        <p className='text-xs'>
+        <p className='text-xs opacity-50'>
           I build elegant and functional websites with fully responsive design.
         </p>
       </div>
@@ -21,7 +21,7 @@ const Aside = () => {
         <NavigationLink path='#connect' linkName='Get in Touch' />
       </div>
       <div className='!pb-8'>
-        <h1>Coding Profiles</h1>
+        <h1 className='text-accent'>Coding Profiles</h1>
         <div className='flex flex-col gap-1 *:text-xs'>
           <Link href='path'>LeetCode</Link>
           <Link href='path'>Codeforces</Link>

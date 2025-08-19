@@ -1,11 +1,11 @@
-import Aside from "@/landing/aside";
-import Hero from "@/landing/hero";
-import Background from "@/landing/background";
-import Cols from "@/layout/cols";
+import Aside from '@/landing/aside';
+import Background from '@/landing/background';
+import Hero from '@/landing/hero';
+import Cols from '@/layout/cols';
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-card flex'>
+    <main className='min-h-screen bg-primary flex text-foreground'>
       <Aside /> {/* bg-background basis-1/5 flex flex-col justify-between */}
       <div className='basis-4/5 flex flex-col gap-8 relative'>
         <Hero />

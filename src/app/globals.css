@@ -46,73 +46,95 @@
 :root {
   --radius: 0.625rem;
 
-  /* Dark theme (default) - using the color scheme from the image */
+  /* Dark theme (default) */
   --background: #0d1117; /* Rich Black */
   --foreground: #dde4ef; /* Alice Blue */
-  --card: #0f172a; /* Oxford Blue */
+
+  --card: #111f43; /* Oxford Blue (lighter) */
   --card-foreground: #dde4ef; /* Alice Blue */
-  --popover: #0f172a; /* Oxford Blue */
+
+  --popover: #111f43; /* Oxford Blue (lighter) */
   --popover-foreground: #dde4ef; /* Alice Blue */
-  --primary: #5eead4; /* Turquoise */
-  --primary-foreground: #0d1117; /* Rich Black */
-  --secondary: #122a39; /* Gunmetal */
-  --secondary-foreground: #e0e6f0; /* Alice Blue (lighter) */
+
+  --primary: #0f172a; /* Oxford Blue */
+  --primary-foreground: #dde4ef; /* Alice Blue */
+
+  --secondary: #111f43; /* Oxford Blue (lighter) */
+  --secondary-foreground: #dde4ef; /* Alice Blue */
+
   --muted: #122a39; /* Gunmetal */
-  --muted-foreground: #dde4ef; /* Alice Blue */
-  --accent: #122a39; /* Gunmetal */
-  --accent-foreground: #dde4ef; /* Alice Blue */
+  --muted-foreground: #5eead4; /* Turquoise */
+
+  --accent: #5eead4; /* Turquoise */
+  --accent-foreground: #0d1117; /* Rich Black */
+
   --destructive: #ef4444;
-  --border: #111f43; /* Oxford Blue (darker) */
-  --input: #111f43; /* Oxford Blue (darker) */
+
+  --border: #111f43; /* Oxford Blue (lighter) */
+  --input: #111f43; /* Oxford Blue (lighter) */
   --ring: #5eead4; /* Turquoise */
+
   --chart-1: #5eead4; /* Turquoise */
   --chart-2: #0f172a; /* Oxford Blue */
   --chart-3: #122a39; /* Gunmetal */
   --chart-4: #dde4ef; /* Alice Blue */
   --chart-5: #e0e6f0; /* Alice Blue (lighter) */
+
   --sidebar: #0f172a; /* Oxford Blue */
   --sidebar-foreground: #dde4ef; /* Alice Blue */
   --sidebar-primary: #5eead4; /* Turquoise */
   --sidebar-primary-foreground: #0d1117; /* Rich Black */
   --sidebar-accent: #122a39; /* Gunmetal */
   --sidebar-accent-foreground: #dde4ef; /* Alice Blue */
-  --sidebar-border: #111f43; /* Oxford Blue (darker) */
+  --sidebar-border: #111f43; /* Oxford Blue (lighter) */
   --sidebar-ring: #5eead4; /* Turquoise */
 }
 
 .light {
+  --radius: 0.625rem;
+
   /* Light theme (alternative) */
-  --background: #ffffff;
-  --foreground: #0d1117; /* Rich Black */
-  --card: #f8fafc;
+  --background: #f8fafc; /* Alice Blue (very light background) */
+  --foreground: #0d1117; /* Rich Black (text color) */
+
+  --card: #ffffff; /* White (card background) */
   --card-foreground: #0d1117; /* Rich Black */
-  --popover: #f8fafc;
+
+  --popover: #ffffff; /* White */
   --popover-foreground: #0d1117; /* Rich Black */
+
   --primary: #5eead4; /* Turquoise */
   --primary-foreground: #0d1117; /* Rich Black */
-  --secondary: #f1f5f9;
+
+  --secondary: #e2e8f0; /* Light Grayish Blue */
   --secondary-foreground: #0d1117; /* Rich Black */
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #0d1117; /* Rich Black */
+
+  --muted: #f1f5f9; /* Very light gray/blue */
+  --muted-foreground: #0f172a; /* Oxford Blue (text on muted) */
+
+  --accent: #0f172a; /* Oxford Blue */
+  --accent-foreground: #ffffff; /* White text on accent */
+
   --destructive: #ef4444;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #5eead4; /* Turquoise */
-  --chart-1: #5eead4; /* Turquoise */
-  --chart-2: #0f172a; /* Oxford Blue */
+
+  --border: #e2e8f0; /* Light Grayish Blue */
+  --input: #e2e8f0; /* Light Grayish Blue */
+  --ring: #0f172a; /* Oxford Blue */
+
+  --chart-1: #0f172a; /* Oxford Blue */
+  --chart-2: #5eead4; /* Turquoise */
   --chart-3: #122a39; /* Gunmetal */
-  --chart-4: #dde4ef; /* Alice Blue */
-  --chart-5: #e0e6f0; /* Alice Blue (lighter) */
-  --sidebar: #f8fafc;
+  --chart-4: #0d1117; /* Rich Black */
+  --chart-5: #94a3b8; /* Muted Slate Gray */
+
+  --sidebar: #f1f5f9; /* Very light gray sidebar */
   --sidebar-foreground: #0d1117; /* Rich Black */
-  --sidebar-primary: #5eead4; /* Turquoise */
-  --sidebar-primary-foreground: #0d1117; /* Rich Black */
-  --sidebar-accent: #f1f5f9;
+  --sidebar-primary: #0f172a; /* Oxford Blue */
+  --sidebar-primary-foreground: #ffffff; /* White */
+  --sidebar-accent: #e2e8f0; /* Light Grayish Blue */
   --sidebar-accent-foreground: #0d1117; /* Rich Black */
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #5eead4; /* Turquoise */
+  --sidebar-border: #e2e8f0; /* Light Gray */
+  --sidebar-ring: #0f172a; /* Oxford Blue */
 }
 
 @layer base {
