@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavigationLink from '@/components/landing/navigation-link';
 
 export default function Home() {
   return (
@@ -13,30 +14,12 @@ export default function Home() {
           </p>
         </div>
         <div className='*:text-xs *:font-bold *:uppercase *:tracking-wide *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100'>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>About</Link>
-          </div>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>Experience</Link>
-          </div>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>Projects</Link>
-          </div>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>Skills</Link>
-          </div>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>Blog</Link>
-          </div>
-          <div className='group'>
-            <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
-            <Link href='path'>Get in Touch</Link>
-          </div>
+          <NavigationLink path='#about' linkName='About' />
+          <NavigationLink path='#experience' linkName='Experience' />
+          <NavigationLink path='#projects' linkName='Projects' />
+          <NavigationLink path='#skills' linkName='Achievements & Skills' />
+          <NavigationLink path='#blog' linkName='Blog' />
+          <NavigationLink path='#connect' linkName='Get in Touch' />
         </div>
         <div className='!pb-8'>
           <h1>Coding Profiles</h1>
