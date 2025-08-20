@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Dosis, Fasthand, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const dosisSans = Dosis({
+  variable: '--font-dosis-sans',
+  subsets: ['latin'],
+});
+
+const fastHandCursive = Fasthand({
+  variable: '--font-fasthand-cursive',
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${dosisSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

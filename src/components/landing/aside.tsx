@@ -4,7 +4,7 @@ import NavigationLink from './navigation-link';
 
 const Aside = () => {
   return (
-    <aside className='bg-background h-screen basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
+    <aside className='fixed left-0 w-1/5 bg-background h-screen basis-1/5 flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
       <div className='!pt-8'>
         <h1 className='text-lg text-accent'>Tanmoy_OG</h1>
         <h1 className='text-lg/6'>Web Developer & Designer</h1>

@@ -5,7 +5,7 @@ import Cols from '@/layout/cols';
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-primary flex text-foreground'>
+    <main className='min-h-screen bg-primary flex flex-row-reverse text-foreground font-sans'>
       <Aside /> {/* bg-background basis-1/5 flex flex-col justify-between */}
       <div className='basis-4/5 flex flex-col gap-8 relative'>
         <Hero />
