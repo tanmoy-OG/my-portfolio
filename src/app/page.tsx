@@ -1,7 +1,7 @@
 import Aside from '@/landing/aside';
 import Background from '@/landing/background';
 import Hero from '@/landing/hero';
-import Cols from '@/layout/cols';
+import About from '@/landing/about';
 
 export default function Home() {
   return (
@@ -9,17 +9,19 @@ export default function Home() {
       <Aside /> {/* bg-background basis-1/5 flex flex-col justify-between */}
       <div className='basis-4/5 flex flex-col gap-8 relative'>
         <Hero />
+        <About />
         <Background />
-        <Cols ml={0} />
-        <Cols ml={8} />
-        <Cols ml={16} />
-        <Cols ml={24} />
-        <Cols ml={32} />
-        <Cols ml={40} />
-        <Cols ml={48} />
-        <Cols ml={56} />
-        <Cols ml={64} />
-        <Cols ml={72} />
+        <div className={`absolute w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-8 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-16 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-24 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-32 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-40 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-48 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-56 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-64 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-72 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-80 w-4 h-full bg-destructive/10 `}></div>
       </div>
     </main>
   );

@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
-import { Dosis, Fasthand, Geist_Mono } from 'next/font/google';
+import { Dosis, Manrope, Fasthand, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
 const dosisSans = Dosis({
   variable: '--font-dosis-sans',
   subsets: ['latin'],
 });
+
+const manropeSans = Manrope({
+  variable: '--font-manrope-sans',
+})
 
 const fastHandCursive = Fasthand({
   variable: '--font-fasthand-cursive',
@@ -31,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark'>
       <body
-        className={`${dosisSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased`}
+        className={`${dosisSans.variable} ${manropeSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
