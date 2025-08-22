@@ -13,9 +13,9 @@ const Background = () => {
             <h1 className=''>{'<section>'}</h1>
             <h1 className='mt-16'>{'</section>'}</h1>
           </div>
-          <div className="mt-24">
+          <div className="mt-34">
             <h1 className=''>{'<h1>'}</h1>
-            <h1 className='ml-56 mt-8'>{'</h1>'}</h1>
+            <h1 className='ml-56 mt-6'>{'</h1>'}</h1>
             <h1 className=''>{'<p>'}</h1>
             <h1 className='mt-104'>{'</p>'}</h1>
           </div>

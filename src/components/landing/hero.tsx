@@ -4,7 +4,7 @@ import Stats from './stats';
 
 const Hero = () => {
   return (
-    <div className='px-24 pt-32 pb-24 text-2xl'>
+    <div className='px-24 mt-32 text-2xl'>
       <h1 className='text-5xl'>{'Hi,'}</h1>
       <h1 className='text-5xl'>
         {"I'm "}

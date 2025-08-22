@@ -1,0 +1,19 @@
+[
+    {
+        "date": {
+            "from": "November 2024",
+            "to": "Present"
+        },
+        "company": "Ernst & Young GDS",
+        "designation": "Associate Software Engineer",
+        "location": {
+            "city": "Hyderabad",
+            "country": "India"
+        },
+        "work": "Trained in SAP ABAP. Completed internal coursework in AWS and Azure. ISTQB certified. Handled the submission of reusable SAP modules into PALS library.",
+        "tech": [
+            "ABAP",
+            "SAP GUI"
+        ]
+    }
+]

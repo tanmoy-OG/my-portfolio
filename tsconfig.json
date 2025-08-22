@@ -31,6 +31,8 @@
     ],
     "paths": {
       "@/landing/*": ["./src/components/landing/*"],
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/data/*": ["./src/assets/data/*"],
       "@/*": ["./src/*"]
     }
   },

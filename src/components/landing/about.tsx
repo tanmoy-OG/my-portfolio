@@ -1,4 +1,4 @@
-import { Card, CardTitle, CardHeader, CardContent } from "../ui/card"
+import { Card, CardTitle, CardHeader, CardContent } from "@/ui/card"
 
 const para1 = `I was introduced to the world of programming back in middle school (2014), when JAVA was introduced to the curriculum. Back then the lab computers were still running on windows XP. Fast-forward to today, I am a web developer based in Kolkata.`
 const para2 = `I started digging the rabbit hole of web technologies and ui design during my 3rd year of university, after my first hackathon experience. These past years, I've had the privilege to participate in multiple hackathon and work with other aspiring and amazing devs.`
@@ -15,14 +15,6 @@ const About = () => {
                     <p className="">{para3}</p>
                 </div>
             </div>
-            {/* <div className="flex flex-col gap-8 bg-muted p-8 h-fit">
-                <h1 className="text-5xl">{'What can I do?'}</h1>
-                <div className="flex flex-col gap-4 font-sans-desc">
-                    <p>{'I mainly do full-stack Web Development and UI/UX Design'}</p>
-                    <p>{'Currently I am also learning React-Native for Android'}</p>
-                    <p>{'I\'ve also started learning ML'}</p>
-                </div>
-            </div> */}
             <Card className="w-full max-w-sm flex flex-col py-8 gap-8 bg-muted h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:-translate-y-2 transition-all">
                 <CardHeader>
                     <CardTitle className="text-5xl text-accent font-normal">{'What can I do?'}</CardTitle>
