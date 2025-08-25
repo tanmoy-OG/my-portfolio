@@ -8,6 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-dosis-sans);
   --font-sans-desc: var(--font-manrope-sans);
+  --font-sans-bg: var(--font-archivo-sans);
   --font-cursive: var(--font-fasthand-cursive);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);

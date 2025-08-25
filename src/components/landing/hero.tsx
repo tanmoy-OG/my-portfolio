@@ -1,6 +1,6 @@
 import { FaLinkedin, FaXTwitter, FaGithub, FaInstagram } from 'react-icons/fa6';
 
-import Stats from './stats';
+import Stats from './hero-stats';
 
 const Hero = () => {
   return (
