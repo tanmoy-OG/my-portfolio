@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { Dosis, Manrope, Archivo, Fasthand, Geist_Mono } from 'next/font/google';
+import {
+  Dosis,
+  Manrope,
+  Archivo,
+  Fasthand,
+  Geist_Mono,
+} from 'next/font/google';
 import './globals.css';
 
 const dosisSans = Dosis({
@@ -9,11 +15,11 @@ const dosisSans = Dosis({
 
 const manropeSans = Manrope({
   variable: '--font-manrope-sans',
-})
+});
 
 const archivoSans = Archivo({
-  variable: '--font-archivo-sans'
-})
+  variable: '--font-archivo-sans',
+});
 
 const fastHandCursive = Fasthand({
   variable: '--font-fasthand-cursive',
