@@ -2,6 +2,7 @@ import About from '@/landing/about';
 import Aside from '@/landing/aside';
 import Experience from '@/landing/experience';
 import Hero from '@/landing/hero';
+import SkillNAchieve from '@/landing/skill-n-achieve';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Hero />
           <About />
           <Experience />
+          <SkillNAchieve />
         </div>
         <div className={`absolute w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-8 w-4 h-full bg-destructive/10 `}></div>
