@@ -3,6 +3,7 @@ import Aside from '@/landing/aside';
 import Experience from '@/landing/experience';
 import Hero from '@/landing/hero';
 import SkillNAchieve from '@/landing/skill-n-achieve';
+import Connect from '@/landing/connect';
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
           <About />
           <Experience />
           <SkillNAchieve />
+          <Connect />
         </div>
-        <div className={`absolute w-4 h-full bg-destructive/10 `}></div>
+        {/* <div className={`absolute w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-8 w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-16 w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-24 w-4 h-full bg-destructive/10 `}></div>
@@ -25,7 +27,7 @@ export default function Home() {
         <div className={`absolute ml-56 w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-64 w-4 h-full bg-destructive/10 `}></div>
         <div className={`absolute ml-72 w-4 h-full bg-destructive/10 `}></div>
-        <div className={`absolute ml-80 w-4 h-full bg-destructive/10 `}></div>
+        <div className={`absolute ml-80 w-4 h-full bg-destructive/10 `}></div> */}
       </div>
     </main>
   );

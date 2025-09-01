@@ -7,6 +7,7 @@ import {
   Geist_Mono,
 } from 'next/font/google';
 import './globals.css';
+import { Toaster } from "@/components/ui/sonner"
 
 const dosisSans = Dosis({
   variable: '--font-dosis-sans',
@@ -48,6 +49,7 @@ export default function RootLayout({
         className={`${dosisSans.variable} ${manropeSans.variable} ${archivoSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
