@@ -30,9 +30,12 @@
       }
     ],
     "paths": {
+      "@/data/*": ["./src/assets/data/*"],
       "@/landing/*": ["./src/components/landing/*"],
       "@/ui/*": ["./src/components/ui/*"],
-      "@/data/*": ["./src/assets/data/*"],
+      "@/email/*": ["./src/components/email/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/types/*": ["./src/types/*"],
       "@/*": ["./src/*"]
     }
   },

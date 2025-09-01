@@ -1,18 +1,17 @@
 [
-    {
-        "desc": "Top 20 finalists out of 350 participants",
-        "event": "Rebase<01>",
-        "org": "GDS IIIT Kalyani"
-    },
-    {
-        "desc": "Finalists in 36 hr Hackathon",
-        "event": "Diversion 2k24",
-        "org": "IEM"
-    },
-    {
-        
-        "desc": "Secured 4th rank in HackForHumanity Hackathon event",
-        "event": "Srijan 2k23",
-        "org": "Jadavpur Uni"
-    }
+  {
+    "desc": "Top 20 finalists out of 350 participants",
+    "event": "Rebase<01>",
+    "org": "GDS IIIT Kalyani"
+  },
+  {
+    "desc": "Finalists in 36 hr Hackathon",
+    "event": "Diversion 2k24",
+    "org": "IEM"
+  },
+  {
+    "desc": "Secured 4th rank in HackForHumanity Hackathon event",
+    "event": "Srijan 2k23",
+    "org": "Jadavpur Uni"
+  }
 ]

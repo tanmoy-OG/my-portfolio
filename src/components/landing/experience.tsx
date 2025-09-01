@@ -6,7 +6,6 @@ import projList from '@/data/projects.json';
 import ExpJob from './exp-job';
 import ExpProject from './exp-project';
 
-
 const Experience = () => {
   return (
     <div className='flex flex-col justify-between gap-32 px-16 z-20 relative'>

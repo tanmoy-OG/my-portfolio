@@ -1,20 +1,6 @@
+import { Job } from '@/types/api';
 import { Badge } from '@/ui/badge';
 import { Card, CardContent } from '@/ui/card';
-
-export interface Job {
-  date: {
-    from: string;
-    to: string | null;
-  };
-  company: string;
-  designation: string;
-  location: {
-    city: string;
-    country: string;
-  };
-  work: string;
-  tech: string[];
-}
 
 const ExpJob = ({ date, company, designation, location, work, tech }: Job) => {
   return (
@@ -22,14 +8,14 @@ const ExpJob = ({ date, company, designation, location, work, tech }: Job) => {
       <CardContent className='flex w-full flex-row gap-8'>
         <div className='basis-1/4'>
           <h1 className='mt-1.5 font-sans-desc opacity-50'>
-            {`${date.from  } - ${  date.to}`}
+            {`${date.from} - ${date.to}`}
           </h1>
         </div>
         <div className='basis-3/4 flex flex-col gap-4'>
           <div className='flex flex-col gap-2'>
-            <p className='text-2xl'>{`${designation  } - ${  company}`}</p>
+            <p className='text-2xl'>{`${designation} - ${company}`}</p>
             <p className='text-sm opacity-50'>
-              {`${location.city  }, ${  location.country}`}
+              {`${location.city}, ${location.country}`}
             </p>
           </div>
           <p className='flex flex-col pr-2 gap-4 font-sans-desc opacity-50'>

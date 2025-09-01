@@ -6,8 +6,9 @@ import {
   Fasthand,
   Geist_Mono,
 } from 'next/font/google';
+
 import './globals.css';
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from '@/components/ui/sonner';
 
 const dosisSans = Dosis({
   variable: '--font-dosis-sans',

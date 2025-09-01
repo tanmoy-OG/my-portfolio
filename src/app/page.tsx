@@ -1,9 +1,9 @@
 import About from '@/landing/about';
 import Aside from '@/landing/aside';
+import Connect from '@/landing/connect';
 import Experience from '@/landing/experience';
 import Hero from '@/landing/hero';
 import SkillNAchieve from '@/landing/skill-n-achieve';
-import Connect from '@/landing/connect';
 
 export default function Home() {
   return (

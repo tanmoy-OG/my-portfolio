@@ -1,11 +1,8 @@
 import Link from 'next/link';
 
-interface Props {
-  path: string;
-  linkName: string;
-}
+import { NavProps } from '@/types/api';
 
-const NavigationLink = ({ path, linkName }: Props) => {
+const NavigationLink = ({ path, linkName }: NavProps) => {
   return (
     <div className='group w-fit hover:cursor-pointer'>
       <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>

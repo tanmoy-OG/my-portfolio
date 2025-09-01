@@ -1,49 +1,104 @@
 import * as React from 'react';
 
-interface ContactEmailTemplateProps {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-}
+import { ContactEmailTemplateProps } from '@/types/api';
 
-const EmailTemplate = ({
-    name,
-    email,
-    subject,
-    message,
-}: ContactEmailTemplateProps) => {
-    return (
-        <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto' }}>
-            <h2 style={{ color: '#333', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>
-                New Contact Form Submission
-            </h2>
+const EmailTemplate = ({ name, email, message }: ContactEmailTemplateProps) => {
+  // Theme colors (from provided palette)
+  const COLORS = {
+    background: '#0D1117', // Rich Black
+    foreground: '#DDE4EF', // Alice Blue
+    foreground50OnBackground: '#757A83', // 50% blend of foreground on background
+    card: '#111F43', // Oxford Blue (lighter)
+    muted: '#122A39', // Gunmetal
+    accent: '#5EEAD4', // Turquoise
+    borderOnMutedFromForeground10: '#263D4B', // 10% foreground on muted
+  };
 
-            <div style={{ margin: '20px 0' }}>
-                <h3 style={{ color: '#555' }}>Contact Details:</h3>
-                <p><strong>Name:</strong> {name}</p>
-                <p><strong>Email:</strong> {email}</p>
-                <p><strong>Subject:</strong> {subject}</p>
-            </div>
+  const container: React.CSSProperties = {
+    maxWidth: '600px',
+    margin: '0 auto',
+    backgroundColor: COLORS.background,
+    color: COLORS.foreground50OnBackground,
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    lineHeight: '1.5',
+    padding: '24px',
+  };
 
-            <div style={{ margin: '20px 0' }}>
-                <h3 style={{ color: '#555' }}>Message:</h3>
-                <div style={{
-                    backgroundColor: '#f9f9f9',
-                    padding: '15px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd'
-                }}>
-                    {message}
-                </div>
-            </div>
+  const h2Style: React.CSSProperties = {
+    color: COLORS.foreground,
+    borderBottom: `2px solid ${COLORS.accent}`,
+    paddingBottom: '10px',
+    margin: '0',
+    fontSize: '20px',
+    fontWeight: 700,
+  };
 
-            <div style={{ marginTop: '30px', fontSize: '14px', color: '#666' }}>
-                <p>This email was sent from your website's contact form.</p>
-                <p>Reply directly to this email to respond to {name}.</p>
-            </div>
-        </div>
-    );
-}
+  const section: React.CSSProperties = {
+    margin: '20px 0',
+  };
 
-export default EmailTemplate
+  const h3Style: React.CSSProperties = {
+    color: COLORS.accent,
+    margin: '0 0 8px 0',
+    fontSize: '16px',
+    fontWeight: 700,
+  };
+
+  const pStyle: React.CSSProperties = {
+    margin: '4px 0',
+    color: COLORS.foreground,
+    fontSize: '15px',
+  };
+
+  const strongStyle: React.CSSProperties = {
+    fontWeight: 700,
+    color: COLORS.foreground,
+  };
+
+  const messageBox: React.CSSProperties = {
+    backgroundColor: COLORS.muted,
+    border: `1px solid ${COLORS.borderOnMutedFromForeground10}`,
+    padding: '15px',
+    borderRadius: '10px',
+    color: COLORS.foreground,
+    fontSize: '15px',
+    whiteSpace: 'pre-wrap',
+    wordWrap: 'break-word',
+  };
+
+  const footer: React.CSSProperties = {
+    marginTop: '32px',
+    fontSize: '14px',
+    color: COLORS.foreground50OnBackground,
+  };
+
+  return (
+    <div style={container}>
+      <h2 style={h2Style}>Email from Direct Connect</h2>
+
+      <div style={section}>
+        <h3 style={h3Style}>Contact Details:</h3>
+        <p style={pStyle}>
+          <span style={strongStyle}>Name:</span> {name}
+        </p>
+        <p style={pStyle}>
+          <span style={strongStyle}>Email:</span> {email}
+        </p>
+      </div>
+
+      <div style={section}>
+        <h3 style={h3Style}>Message:</h3>
+        <div style={messageBox}>{message}</div>
+      </div>
+
+      <div style={footer}>
+        <p>This email was sent from your website&apos;s contact form.</p>
+        <p>
+          Reply directly to this {email} to respond to {name}.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default EmailTemplate;
