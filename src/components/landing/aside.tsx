@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import NavigationLink from './aside-nav-link';
+import NavigationLink from './aside-nav-links';
 
 const Aside = () => {
   return (

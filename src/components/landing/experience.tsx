@@ -34,7 +34,7 @@ const Experience = () => {
             tech={data.tech}
           />
         ))}
-        <Link href='path' className='w-fit group z-10'>
+        <Link href='/job' className='w-fit group z-10'>
           <h1 className='text-xl font-medium'>{'View Career History ->'}</h1>
           <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
         </Link>
@@ -60,7 +60,7 @@ const Experience = () => {
               installs={data.install}
             />
           ))}
-          <Link href='path' className='w-fit group z-10'>
+          <Link href='/project' className='w-fit group z-10'>
             <h1 className='text-xl font-medium'>
               {'View Full Project Archive ->'}
             </h1>

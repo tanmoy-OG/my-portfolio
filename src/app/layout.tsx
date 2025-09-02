@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark'>
       <body
-        className={`${dosisSans.variable} ${manropeSans.variable} ${archivoSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased`}
+        className={`${dosisSans.variable} ${manropeSans.variable} ${archivoSans.variable} ${fastHandCursive.variable} ${geistMono.variable} antialiased select-none`}
       >
         {children}
         <Toaster />
