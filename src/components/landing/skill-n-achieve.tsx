@@ -32,9 +32,15 @@ const SkillNAchieve = () => {
               </p>
             ))}
           </div>
-          <Link href='/skills' className='w-fit group z-10'>
+          <Link href='/archive/achievements' className='w-fit group z-10'>
             <h1 className='text-xl font-medium'>
-              {'View Full Project Archive ->'}
+              {'View All Achievements ->'}
+            </h1>
+            <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+          </Link>
+          <Link href='/archive/certificates' className='w-fit group z-10'>
+            <h1 className='text-xl font-medium'>
+              {'View All Certifications ->'}
             </h1>
             <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
           </Link>
