@@ -32,18 +32,20 @@ const SkillNAchieve = () => {
               </p>
             ))}
           </div>
-          <Link href='/archive/achievements' className='w-fit group z-10'>
-            <h1 className='text-xl font-medium'>
-              {'View All Achievements ->'}
-            </h1>
-            <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
-          </Link>
-          <Link href='/archive/certificates' className='w-fit group z-10'>
-            <h1 className='text-xl font-medium'>
-              {'View All Certifications ->'}
-            </h1>
-            <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link href='/archive/achievements' className='w-fit group z-10'>
+              <h1 className='text-xl font-medium'>
+                {'View All Achievements ->'}
+              </h1>
+              <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+            </Link>
+            <Link href='/archive/certificates' className='w-fit group z-10'>
+              <h1 className='text-xl font-medium'>
+                {'View All Certifications ->'}
+              </h1>
+              <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+            </Link>
+          </div>
         </div>
         <div className='w-1/2 text-accent -mt-8'>
           <TagCloud

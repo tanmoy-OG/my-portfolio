@@ -1,9 +1,19 @@
 [
   {
-    "gallery": ["/img1.webp", "/img1.webp", "/img1.webp"],
+    "gallery": [
+      "/img1.webp",
+      "/img1.webp",
+      "/img1.webp"
+    ],
     "date": {
-      "from": "June 2024",
-      "to": "July 2024"
+      "from": {
+        "month": "June",
+        "year": "2024"
+      },
+      "to": {
+        "month": "July",
+        "year": "2024"
+      }
     },
     "title": "Web3 Chat App",
     "team": "Soft Wizards",
@@ -12,10 +22,17 @@
       "orgName": "SRM Uni",
       "platform": "IIIT Kalyani"
     },
+    "company": "",
     "description": "An app where users can anonymously post and raise awareness about exploits within their organization.",
-    "tech": ["Solana", "Rust", "React Native", "Next Js"],
+    "tech": [
+      "Solana",
+      "Rust",
+      "React Native",
+      "Next Js"
+    ],
     "externalLink": "",
     "gitHub": "",
     "install": ""
   }
 ]
+

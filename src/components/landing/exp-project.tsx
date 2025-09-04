@@ -31,18 +31,17 @@ const ExpProject = ({
             />
           )}
           <h1 className='mt-1.5 font-sans-desc opacity-50'>
-            {`${date.from} - ${date.to}`}
+            {`${date.from.month} ${date.from.year} - ${date.to.month} ${date.to.year}`}
           </h1>
         </div>
         <div className='basis-3/4 flex flex-col gap-4'>
           <div className='flex flex-col gap-2'>
             <p className='text-2xl'>{title}</p>
             <div className='flex flex-col gap-0.5'>
-              {team + hackathon && (
-                <p className='text-sm opacity-50'>
-                  {`Team ${team}${team && hackathon && ' - '}${hackathon}`}
-                </p>
-              )}
+              <p className='text-sm opacity-50'>
+                {team && `Team ${team}`}
+                {hackathon && team && ` - ${hackathon}`}
+              </p>
               <p className='text-sm opacity-50'>
                 {org.orgName + (org.platform && ` - ${org.platform}`)}
               </p>

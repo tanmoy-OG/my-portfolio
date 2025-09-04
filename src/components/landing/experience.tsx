@@ -32,6 +32,7 @@ const Experience = () => {
             location={data.location}
             work={data.work}
             tech={data.tech}
+            portal={data.portal}
           />
         ))}
         <Link href='/archive/job' className='w-fit group z-10'>

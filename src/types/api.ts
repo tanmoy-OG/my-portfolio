@@ -12,8 +12,15 @@ export interface NavProps {
 
 export interface Job {
   date: {
-    from: string;
-    to: string | null;
+    from: {
+      month: string;
+      year: string;
+    }
+    to: {
+      month: string | null;
+      year: string | null;
+    }
+    current: boolean;
   };
   company: string;
   designation: string;
@@ -23,13 +30,20 @@ export interface Job {
   };
   work: string;
   tech: string[];
+  portal: string;
 }
 
 export interface Proj {
   gallery: string[];
   date: {
-    from: string;
-    to: string | null;
+    from: {
+      month: string;
+      year: string;
+    }
+    to: {
+      month: string | null;
+      year: string | null;
+    }
   };
   title: string;
   team: string;
