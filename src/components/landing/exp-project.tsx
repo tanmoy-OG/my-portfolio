@@ -10,12 +10,12 @@ const ExpProject = ({
   title,
   team,
   hackathon,
-  org,
-  desc,
+  organization,
+  description,
   tech,
   externalLink,
   gitHub,
-  installs,
+  install,
 }: Proj) => {
   return (
     <Card className='py-8 bg-secondary/50 backdrop-blur-xs shadow-secondary border-foreground/10 hover:border-foreground/20 hover:shadow-accent hover:shadow-lg/50 hover:-translate-y-2 hover:backdrop-blur-sm transition-all group'>
@@ -43,12 +43,12 @@ const ExpProject = ({
                 {hackathon && team && ` - ${hackathon}`}
               </p>
               <p className='text-sm opacity-50'>
-                {org.orgName + (org.platform && ` - ${org.platform}`)}
+                {organization.orgName + (organization.platform && ` - ${organization.platform}`)}
               </p>
             </div>
           </div>
           <p className='flex flex-col pr-2 gap-4 font-sans-desc opacity-50'>
-            {desc}
+            {description}
           </p>
           <div className='flex gap-2'>
             {tech.map((data, id) => (

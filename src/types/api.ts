@@ -1,3 +1,5 @@
+import { ColumnDef } from "@tanstack/react-table"
+
 export interface ContactEmailTemplateProps {
   name: string;
   email: string;
@@ -48,13 +50,27 @@ export interface Proj {
   title: string;
   team: string;
   hackathon: string;
-  org: {
+  organization: {
     orgName: string;
     platform: string;
   };
-  desc: string;
+  company: string;
+  description: string;
   tech: string[];
   externalLink: string;
   gitHub: string;
-  installs: string;
+  install: string;
+}
+
+// export type ProjCol = {
+//   year: string
+//   title: string
+//   company: string
+//   tech: string[]
+//   externalLink: string
+// }
+
+export interface DataTableProps<TData, TValue> {
+  columns: ColumnDef<TData, TValue>[]
+  data: TData[]
 }

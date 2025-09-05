@@ -18,7 +18,6 @@ const Hero = () => {
             </h1>
             <div className='text-5xl'>
               <h1>{'Web Developer & Designer'}</h1>
-              {/* <h1 className=''>{'& Designer'}</h1> */}
             </div>
           </div>
           <h1 className='ml-132 -mt-6 opacity-20 font-cursive text-lg'>

@@ -33,6 +33,41 @@
     "externalLink": "",
     "gitHub": "",
     "install": ""
+  },
+  {
+    "gallery": [
+      "/img1.webp",
+      "/img1.webp",
+      "/img1.webp"
+    ],
+    "date": {
+      "from": {
+        "month": "June",
+        "year": "2022"
+      },
+      "to": {
+        "month": "July",
+        "year": "2024"
+      }
+    },
+    "title": "Web3 Chat App",
+    "team": "Soft Wizards",
+    "hackathon": "HackForBengal 2.0",
+    "organization": {
+      "orgName": "SRM Uni",
+      "platform": "IIIT Kalyani"
+    },
+    "company": "sssssssss",
+    "description": "An app where users can anonymously post and raise awareness about exploits within their organization.",
+    "tech": [
+      "Solana",
+      "Rust",
+      "React Native",
+      "Next Js"
+    ],
+    "externalLink": "sussssssssssssssssssss",
+    "gitHub": "",
+    "install": ""
   }
 ]
 

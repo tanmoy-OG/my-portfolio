@@ -53,12 +53,13 @@ const Experience = () => {
               title={data.title}
               team={data.team}
               hackathon={data.hackathon}
-              org={data.organization}
-              desc={data.description}
+              organization={data.organization}
+              company={data.company}
+              description={data.description}
               tech={data.tech}
               externalLink={data.externalLink}
               gitHub={data.gitHub}
-              installs={data.install}
+              install={data.install}
             />
           ))}
           <Link href='/archive/project' className='w-fit group z-10'>
