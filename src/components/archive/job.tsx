@@ -5,10 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/ui/button";
 import { LuArrowUpDown } from "react-icons/lu";
 
-export const Project: ColumnDef<Proj>[] = [
+const Job: ColumnDef<Proj>[] = [
     {
         accessorKey: "date.from.year",
-        // header: "Year",
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">Year
@@ -39,12 +38,7 @@ export const Project: ColumnDef<Proj>[] = [
             return (
                 <div className='flex gap-2'>
                     {tech.map((data, id) => (
-                        <Badge
-                            key={id}
-                            className='rounded-full bg-cyan-950 text-accent px-3'
-                        >
-                            {data}
-                        </Badge>
+                        <Badge key={id}>{data}</Badge>
                     ))}
                 </div>
             );
@@ -68,3 +62,5 @@ export const Project: ColumnDef<Proj>[] = [
         },
     }
 ]
+
+export default Job

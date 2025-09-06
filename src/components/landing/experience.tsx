@@ -35,7 +35,7 @@ const Experience = () => {
             portal={data.portal}
           />
         ))}
-        <Link href='/archive/job' className='w-fit group z-10'>
+        <Link href='/archive/jobs' className='w-fit group z-10'>
           <h1 className='text-xl font-medium'>{'View Career History ->'}</h1>
           <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
         </Link>
@@ -62,7 +62,7 @@ const Experience = () => {
               install={data.install}
             />
           ))}
-          <Link href='/archive/project' className='w-fit group z-10'>
+          <Link href='/archive/projects' className='w-fit group z-10'>
             <h1 className='text-xl font-medium'>
               {'View Full Project Archive ->'}
             </h1>

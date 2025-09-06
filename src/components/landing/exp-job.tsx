@@ -23,12 +23,7 @@ const ExpJob = ({ date, company, designation, location, work, tech, portal }: Jo
           </p>
           <div className='flex gap-2'>
             {tech.map((data, id) => (
-              <Badge
-                key={id}
-                className='rounded-full bg-cyan-950 text-accent px-3'
-              >
-                {data}
-              </Badge>
+              <Badge key={id}>{data}</Badge>
             ))}
           </div>
         </div>
