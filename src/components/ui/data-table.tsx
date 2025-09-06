@@ -35,21 +35,25 @@ export function DataTable<TData, TValue>({
     })
 
     return (
-        <div className="overflow-hidden">
-            <Table className="table-fixed w-full">
+        <div className="overflow-x-auto">
+            <Table className="table-auto w-full min-w-full">
                 <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id}>
                             {headerGroup.headers.map((header, index) => {
-                                const widthClasses = [
-                                    "w-1/12", // Year
-                                    "w-2/12", // Title
-                                    "w-2/12", // Made At
-                                    "w-4/12", // Tech Stack
-                                    "w-2/12"  // Link
+                                const minWidthClasses = [
+                                    "min-w-[8.33%]", // Year - equivalent to w-1/12
+                                    "min-w-[16.67%]", // Title - equivalent to w-2/12
+                                    "min-w-[16.67%]", // Made At - equivalent to w-2/12
+                                    "min-w-[33.33%]", // Tech Stack - equivalent to w-4/12
+                                    "min-w-[16.67%]"  // Link - equivalent to w-2/12
                                 ];
                                 return (
-                                    <TableHead key={header.id} className={widthClasses[index]}>
+                                    <TableHead
+                                        key={header.id}
+                                        className={`${minWidthClasses[index]} w-auto`}
+                                        style={{ width: 'auto' }}
+                                    >
                                         {header.isPlaceholder
                                             ? null
                                             : flexRender(
@@ -70,15 +74,19 @@ export function DataTable<TData, TValue>({
                                 data-state={row.getIsSelected() && "selected"}
                             >
                                 {row.getVisibleCells().map((cell, index) => {
-                                    const widthClasses = [
-                                        "w-1/12", // Year
-                                        "w-2/12", // Title
-                                        "w-2/12", // Made At
-                                        "w-4/12", // Tech Stack
-                                        "w-2/12"  // Link
+                                    const minWidthClasses = [
+                                        "min-w-[8.33%]", // Year - equivalent to w-1/12
+                                        "min-w-[16.67%]", // Title - equivalent to w-2/12
+                                        "min-w-[16.67%]", // Made At - equivalent to w-2/12
+                                        "min-w-[33.33%]", // Tech Stack - equivalent to w-4/12
+                                        "min-w-[16.67%]"  // Link - equivalent to w-2/12
                                     ];
                                     return (
-                                        <TableCell key={cell.id} className={widthClasses[index]}>
+                                        <TableCell
+                                            key={cell.id}
+                                            className={`${minWidthClasses[index]} w-auto`}
+                                            style={{ width: 'auto' }}
+                                        >
                                             {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                         </TableCell>
                                     )

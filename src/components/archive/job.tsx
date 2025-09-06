@@ -1,16 +1,18 @@
 import { ColumnDef } from "@tanstack/react-table"
-import { Proj } from "@/types/api";
+import { Job } from "@/types/api";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/ui/button";
 import { LuArrowUpDown } from "react-icons/lu";
+import { BsDashLg } from "react-icons/bs";
 
-const Job: ColumnDef<Proj>[] = [
+const JobCol: ColumnDef<Job>[] = [
     {
         accessorKey: "date.from.year",
         header: ({ column }) => {
             return (
-                <div className="flex gap-2 items-center">Year
+                <div className="flex gap-2 items-center">
+                    <h1 className='font-sans-desc font-extrabold'>{'Year'}</h1>
                     <Button
                         variant="ghost"
                         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
@@ -21,18 +23,55 @@ const Job: ColumnDef<Proj>[] = [
                 </div>
             )
         },
-    },
-    {
-        accessorKey: "title",
-        header: "Title",
+        cell: ({ getValue }) => {
+            const year = getValue() as string;
+            return (
+                <h1 className='font-sans-desc font-medium opacity-70'>{year}</h1>
+            );
+        },
     },
     {
         accessorKey: "company",
-        header: "Made At",
+        header: () => {
+            return (
+                <h1 className='font-sans-desc font-extrabold'>{'Company / Client'}</h1>
+            )
+        },
+        cell: ({ getValue }) => {
+            const company = getValue() as string;
+            return (
+                <h1 className='font-sans-desc font-medium opacity-70'>{company}</h1>
+            );
+        },
+    },
+    {
+        accessorKey: "designation",
+        header: () => {
+            return (
+                <h1 className='font-sans-desc font-extrabold'>{'Designation'}</h1>
+            )
+        },
+        cell: ({ getValue }) => {
+            const title = getValue() as string;
+            return (
+                <Link
+                    href={'/archive/projects/' + title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='font-sans-desc font-extrabold hover:text-accent transition-all'
+                >
+                    {title}
+                </Link>
+            );
+        },
     },
     {
         accessorKey: "tech",
-        header: "Tech Stack",
+        header: () => {
+            return (
+                <h1 className='font-sans-desc font-extrabold'>{'Tech Stack'}</h1>
+            )
+        },
         cell: ({ getValue }) => {
             const tech = getValue() as string[];
             return (
@@ -45,22 +84,23 @@ const Job: ColumnDef<Proj>[] = [
         },
     },
     {
-        accessorKey: "externalLink",
-        header: "Link",
+        accessorKey: "location",
+        header: () => {
+            return (
+                <h1 className='font-sans-desc font-extrabold'>{'Location'}</h1>
+            )
+        },
         cell: ({ getValue }) => {
-            const link = getValue() as string;
-            return link && (
-                <Link
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className=""
-                >
-                    {link}
-                </Link>
+            const location = getValue() as { city?: string; country?: string } | undefined;
+            return (
+                <h1 className='font-sans-desc font-medium opacity-70 flex gap-1 items-center'>
+                    {location?.city ?? ''}
+                    {location?.city && location.country && <BsDashLg className='mt-0.5' />}
+                    {location?.country ?? ''}
+                </h1>
             )
         },
     }
 ]
 
-export default Job
+export default JobCol

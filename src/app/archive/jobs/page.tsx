@@ -1,8 +1,8 @@
 "use client"
-import Project from "@/components/archive/project";
+import JobCol from "@/components/archive/job";
 import { DataTable } from "@/ui/data-table";
 
-import data from "@/data/projects.json"
+import data from "@/data/experience.json"
 import Link from "next/link";
 import { LuArrowLeft } from "react-icons/lu";
 
@@ -16,9 +16,9 @@ const Page = () => {
                         {'Tanmoy_OG'}
                     </h1>
                 </Link>
-                <h1 className='text-5xl font-sans'>{'All Projects'}</h1>
+                <h1 className='text-5xl font-sans'>{'Work History'}</h1>
             </div>
-            <DataTable columns={Project} data={data} />
+            <DataTable columns={JobCol} data={data} />
         </div>
     );
 }

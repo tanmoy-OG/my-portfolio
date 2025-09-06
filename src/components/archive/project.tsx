@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/ui/button";
 import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
 
-export const Project: ColumnDef<Proj>[] = [
+const Project: ColumnDef<Proj>[] = [
     {
         accessorKey: "date.from.year",
         header: ({ column }) => {
@@ -105,3 +105,5 @@ export const Project: ColumnDef<Proj>[] = [
         },
     }
 ]
+
+export default Project
