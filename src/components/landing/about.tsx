@@ -15,7 +15,7 @@ const About = () => {
             {'</h1>'}
           </h1>
           <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'<p>'}</h1>
-          <div className='flex flex-col gap-4 font-sans-desc opacity-50'>
+          <div className='flex flex-col gap-4 font-sans-desc opacity-70'>
             <p className=''>{para1}</p>
             <p className=''>{para2}</p>
             <p className=''>{para3}</p>
@@ -29,7 +29,7 @@ const About = () => {
                 {'What can I do?'}
               </CardTitle>
             </CardHeader>
-            <CardContent className='flex flex-col gap-4 px-8 font-sans-desc opacity-50'>
+            <CardContent className='flex flex-col gap-4 px-8 font-sans-desc opacity-70'>
               <p>{'I mainly do full-stack Web Development and UI/UX Design'}</p>
               <p>{'Currently I am also learning React-Native for Android'}</p>
               <p>{"I've also started learning ML"}</p>

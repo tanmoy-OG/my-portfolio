@@ -23,7 +23,7 @@ const SkillNAchieve = () => {
         <div className='w-1/2 flex flex-col gap-8'>
           <div className="flex flex-col gap-4">
             {achievements.map((data, id) => (
-              <p key={id} className='font-sans-desc opacity-50'>
+              <p key={id} className='font-sans-desc opacity-70'>
                 <span>{data.desc}</span>
                 {' - '}
                 <span>{data.event}</span>

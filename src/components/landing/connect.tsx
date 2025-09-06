@@ -15,7 +15,7 @@ const Connect = () => {
         </h1>
         <div className=''>
           <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'<p>'}</h1>
-          <div className='flex flex-col gap-4 font-sans-desc opacity-50'>
+          <div className='flex flex-col gap-4 font-sans-desc opacity-70'>
             <p className=''>{para1}</p>
             <p className=''>{para2}</p>
           </div>
