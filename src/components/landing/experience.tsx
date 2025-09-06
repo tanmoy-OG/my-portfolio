@@ -5,6 +5,7 @@ import projList from '@/data/projects.json';
 
 import ExpJob from './exp-job';
 import ExpProject from './exp-project';
+import { LuArrowRight } from "react-icons/lu";
 
 const Experience = () => {
   return (
@@ -35,9 +36,9 @@ const Experience = () => {
             portal={data.portal}
           />
         ))}
-        <Link href='/archive/jobs' className='w-fit group z-10'>
-          <h1 className='text-xl font-medium'>{'View Career History ->'}</h1>
-          <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+        <Link href='/archive/jobs' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+          <h1 className='font-sans-desc font-bold'>{'View Career History'}</h1>
+          <LuArrowRight className='group-hover:translate-x-2 transition-all' />
         </Link>
       </div>
       <div className='relative'>
@@ -62,11 +63,11 @@ const Experience = () => {
               install={data.install}
             />
           ))}
-          <Link href='/archive/projects' className='w-fit group z-10'>
-            <h1 className='text-xl font-medium'>
-              {'View Full Project Archive ->'}
+          <Link href='/archive/projects' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+            <h1 className='font-sans-desc font-bold'>
+              {'View Full Project Archive'}
             </h1>
-            <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+            <LuArrowRight className='group-hover:translate-x-2 transition-all' />
           </Link>
           <h1 className='-ml-12 opacity-20 font-cursive text-lg'>
             {'</section>'}

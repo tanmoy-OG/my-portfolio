@@ -11,8 +11,8 @@ const Page = () => {
         <div className='container bg-primary h-full min-h-screen mx-auto px-10 py-20 flex flex-col gap-16'>
             <div className="flex flex-col gap-4">
                 <Link href='/' className='w-fit group z-10 flex gap-1 items-center text-accent'>
-                    <LuArrowLeft className='size-5 -ml-1 pt-1 group-hover:-translate-x-2 transition-all' />
-                    <h1 className='text-lg font-medium'>
+                    <LuArrowLeft className='-ml-1 pt-0.5 group-hover:-translate-x-2 transition-all' />
+                    <h1 className='font-bold font-sans-desc'>
                         {'Tanmoy_OG'}
                     </h1>
                 </Link>

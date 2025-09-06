@@ -4,6 +4,7 @@ import { TagCloud, TagCloudOptions } from '@frank-mayer/react-tag-cloud';
 import achievements from '@/data/achievements.json';
 import skills from '@/data/skills.json';
 import Link from 'next/link';
+import { LuArrowRight } from 'react-icons/lu';
 
 const SkillNAchieve = () => {
   return (
@@ -33,17 +34,17 @@ const SkillNAchieve = () => {
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            <Link href='/archive/achievements' className='w-fit group z-10'>
-              <h1 className='text-xl font-medium'>
-                {'View All Achievements ->'}
+            <Link href='/archive/achievements' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+              <h1 className='font-sans-desc font-bold'>
+                {'View All Achievements'}
               </h1>
-              <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+              <LuArrowRight className='group-hover:translate-x-2 transition-all' />
             </Link>
-            <Link href='/archive/certificates' className='w-fit group z-10'>
-              <h1 className='text-xl font-medium'>
-                {'View All Certifications ->'}
+            <Link href='/archive/certificates' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+              <h1 className='font-sans-desc font-bold'>
+                {'View All Certifications'}
               </h1>
-              <div className='h-0.5 bg-accent opacity-0 group-hover:opacity-100 transition-all'></div>
+              <LuArrowRight className='group-hover:translate-x-2 transition-all' />
             </Link>
           </div>
         </div>

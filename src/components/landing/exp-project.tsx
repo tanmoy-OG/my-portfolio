@@ -5,7 +5,7 @@ import { Badge } from '@/ui/badge';
 import { Card, CardContent } from '@/ui/card';
 import Link from 'next/link';
 import { BsDashLg } from "react-icons/bs";
-import { LuArrowUpRight, LuDot } from 'react-icons/lu';
+import { LuArrowUpRight } from 'react-icons/lu';
 
 const ExpProject = ({
   gallery,
