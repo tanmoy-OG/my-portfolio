@@ -4,7 +4,8 @@ import { TagCloud, TagCloudOptions } from '@frank-mayer/react-tag-cloud';
 import achievements from '@/data/achievements.json';
 import skills from '@/data/skills.json';
 import Link from 'next/link';
-import { LuArrowRight } from 'react-icons/lu';
+import { LuArrowRight, LuArrowUpRight } from 'react-icons/lu';
+import { BsDashLg } from "react-icons/bs";
 
 const SkillNAchieve = () => {
   return (
@@ -23,14 +24,17 @@ const SkillNAchieve = () => {
         <div className='w-1/2 flex flex-col gap-8'>
           <div className="flex flex-col gap-4">
             {achievements.map((data, id) => (
-              <p key={id} className='font-sans-desc opacity-70'>
-                <span>{data.desc}</span>
-                {' - '}
-                <span>{data.event}</span>
-                {' ('}
-                <span>{data.org}</span>
-                {')'}
-              </p>
+              <Link key={id} href={data.certificate} className='font-sans-desc opacity-70 group hover:text-accent hover:opacity-100 transition-all hover:cursor-pointer'>
+                <span>{data.description}</span>
+                <span className='flex flex-wrap gap-1 items-center'>
+                  <BsDashLg className='mt-0.5' />
+                  {data.event}
+                  {'('}
+                  {data.organization}
+                  {')'}
+                  <LuArrowUpRight className='group-hover:translate-x-1 group-hover:-translate-y-1 transition-all' />
+                </span>
+              </Link>
             ))}
           </div>
           <div className="flex flex-col gap-2">

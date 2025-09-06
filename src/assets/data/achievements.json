@@ -1,17 +1,23 @@
 [
   {
-    "desc": "Top 20 finalists out of 350 participants",
+    "year": "2024",
+    "description": "Top 20 finalists out of 350 participants",
     "event": "Rebase<01>",
-    "org": "GDS IIIT Kalyani"
+    "organization": "GDS IIIT Kalyani",
+    "certificate": ""
   },
   {
-    "desc": "Finalists in 36 hr Hackathon",
+    "year": "2024",
+    "description": "Finalists in 36 hr Hackathon",
     "event": "Diversion 2k24",
-    "org": "IEM"
+    "organization": "IEM",
+    "certificate": ""
   },
   {
-    "desc": "Secured 4th rank in HackForHumanity Hackathon event",
+    "year": "2023",
+    "description": "Secured 4th rank in HackForHumanity Hackathon event",
     "event": "Srijan 2k23",
-    "org": "Jadavpur Uni"
+    "organization": "Jadavpur Uni",
+    "certificate": ""
   }
 ]

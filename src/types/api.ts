@@ -62,13 +62,13 @@ export interface Proj {
   install: string;
 }
 
-// export type ProjCol = {
-//   year: string
-//   title: string
-//   company: string
-//   tech: string[]
-//   externalLink: string
-// }
+export interface Achievement {
+  year: string
+  description: string
+  event: string
+  organization: string
+  certificate: string
+}
 
 export interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
