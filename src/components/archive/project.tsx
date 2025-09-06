@@ -96,7 +96,7 @@ export const Project: ColumnDef<Proj>[] = [
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 flex gap-1 items-center hover:opacity-100 transition-all group w-fit'
                 >
                     <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{link}</h1>
                     <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
