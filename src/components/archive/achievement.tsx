@@ -10,7 +10,7 @@ const AchievementCol: ColumnDef<Achievement>[] = [
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
-                    <h1 className='font-sans-desc font-extrabold'>{'Year'}</h1>
+                    <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Year'}</h1>
                     <Button
                         variant="ghost"
                         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
@@ -32,7 +32,7 @@ const AchievementCol: ColumnDef<Achievement>[] = [
         accessorKey: "description",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Highlights'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Highlights'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -46,7 +46,7 @@ const AchievementCol: ColumnDef<Achievement>[] = [
         accessorKey: "event",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Event'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Event'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -60,7 +60,7 @@ const AchievementCol: ColumnDef<Achievement>[] = [
         accessorKey: "organization",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Organizer'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Organizer'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -74,7 +74,7 @@ const AchievementCol: ColumnDef<Achievement>[] = [
         accessorKey: "certificate",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Certificate Link'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Certificate Link'}</h1>
             )
         },
         cell: ({ getValue }) => {

@@ -1,0 +1,15 @@
+[
+    {
+        "date": {
+            "month": "Feb",
+            "year": "2022"
+        },
+        "title": "Bits and Bytes of Computer Networking",
+        "provider": "google.com",
+        "platform": "coursera.com",
+        "skills": [
+            "Computer Networking"
+        ],
+        "link": "abc.com"
+    }
+]

@@ -12,7 +12,7 @@ const JobCol: ColumnDef<Job>[] = [
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
-                    <h1 className='font-sans-desc font-extrabold'>{'Year'}</h1>
+                    <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Year'}</h1>
                     <Button
                         variant="ghost"
                         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
@@ -34,7 +34,7 @@ const JobCol: ColumnDef<Job>[] = [
         accessorKey: "company",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Company / Client'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Company / Client'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -48,7 +48,7 @@ const JobCol: ColumnDef<Job>[] = [
         accessorKey: "designation",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Designation'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Designation'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -69,13 +69,13 @@ const JobCol: ColumnDef<Job>[] = [
         accessorKey: "tech",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Tech Stack'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Tech Stack'}</h1>
             )
         },
         cell: ({ getValue }) => {
             const tech = getValue() as string[];
             return (
-                <div className='flex gap-2'>
+                <div className='flex gap-2 flex-wrap'>
                     {tech.map((data, id) => (
                         <Badge key={id}>{data}</Badge>
                     ))}
@@ -87,7 +87,7 @@ const JobCol: ColumnDef<Job>[] = [
         accessorKey: "location",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Location'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Location'}</h1>
             )
         },
         cell: ({ getValue }) => {

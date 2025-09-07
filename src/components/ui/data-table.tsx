@@ -84,7 +84,7 @@ export function DataTable<TData, TValue>({
                                     return (
                                         <TableCell
                                             key={cell.id}
-                                            className={`${minWidthClasses[index]} w-auto`}
+                                            className={`${minWidthClasses[index]} w-auto content-start`}
                                             style={{ width: 'auto' }}
                                         >
                                             {flexRender(cell.column.columnDef.cell, cell.getContext())}

@@ -11,7 +11,7 @@ const Project: ColumnDef<Proj>[] = [
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
-                    <h1 className='font-sans-desc font-extrabold'>{'Year'}</h1>
+                    <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Year'}</h1>
                     <Button
                         variant="ghost"
                         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
@@ -33,7 +33,7 @@ const Project: ColumnDef<Proj>[] = [
         accessorKey: "title",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Title'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Title'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -54,7 +54,7 @@ const Project: ColumnDef<Proj>[] = [
         accessorKey: "company",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Made At'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Made At'}</h1>
             )
         },
         cell: ({ getValue }) => {
@@ -68,13 +68,13 @@ const Project: ColumnDef<Proj>[] = [
         accessorKey: "tech",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Tech Stack'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Tech Stack'}</h1>
             )
         },
         cell: ({ getValue }) => {
             const tech = getValue() as string[];
             return (
-                <div className='flex gap-2'>
+                <div className='flex gap-2 flex-wrap'>
                     {tech.map((data, id) => (
                         <Badge key={id}>{data}</Badge>
                     ))}
@@ -86,7 +86,7 @@ const Project: ColumnDef<Proj>[] = [
         accessorKey: "externalLink",
         header: () => {
             return (
-                <h1 className='font-sans-desc font-extrabold'>{'Link'}</h1>
+                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Link'}</h1>
             )
         },
         cell: ({ getValue }) => {
