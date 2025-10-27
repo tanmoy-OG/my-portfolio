@@ -1,15 +1,27 @@
 import { ColumnDef } from "@tanstack/react-table"
 
-export interface ContactEmailTemplateProps {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+export interface PageProps {
+  params: {
+    id: string
+  }
 }
 
 export interface NavProps {
   path: string;
   linkName: string;
+}
+
+export interface HeroStats {
+  count: number;
+  line1: string;
+  line2: string;
+}
+
+export interface ContactEmailTemplateProps {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 export interface Job {

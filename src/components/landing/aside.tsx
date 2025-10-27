@@ -17,7 +17,7 @@ const Aside = () => {
         <NavigationLink path='#experience' linkName='Experience' />
         <NavigationLink path='#projects' linkName='Projects' />
         <NavigationLink path='#skills' linkName='Skills' />
-        <NavigationLink path='#blog' linkName='Blog' />
+        {/* <NavigationLink path='#blog' linkName='Blog' /> */}
         <NavigationLink path='#connect' linkName='Get in Touch' />
       </div>
       <div className='!pb-8'>
