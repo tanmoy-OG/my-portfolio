@@ -39,7 +39,7 @@ const Hero = () => {
             <Stats count={10} line1='Technologies' line2='Mastered' />
             <Stats count={614} line1='Github' line2='Commits' />
           </div>
-          <h1 className='-ml-4 opacity-20 font-cursive text-lg'>
+          <h1 className='-ml-4 opacity-20 font-cursive text-lg' id='about'>
             {'</section>'}
           </h1>
         </div>

@@ -1,4 +1,5 @@
 // app/project/[id]/page.tsx
+"use client"
 import * as React from "react"
 import { notFound } from 'next/navigation';
 import data from '@/data/projects.json';
@@ -7,6 +8,7 @@ import Link from 'next/link';
 import { LuArrowLeft } from 'react-icons/lu';
 import { Card, CardTitle, CardHeader, CardContent } from '@/ui/card';
 import { Badge } from '@/ui/badge';
+import DialogueImage from '@/projects/dialogue-image';
 import {
     Carousel,
     CarouselContent,
@@ -15,6 +17,7 @@ import {
     CarouselPrevious,
 } from "@/ui/carousel"
 import Image from "next/image";
+import { useState } from "react";
 
 function toSlug(input: string) {
     return input
@@ -42,6 +45,7 @@ export default function ProjectPage({ params }: PageProps) {
     const list = data as Proj[];
     const { slug, raw } = normalizeParam(id);
     const project = list.find((p) => toSlug(p.title) === slug || p.title === raw);
+    const [popup, isPopup] = useState(false);
 
     if (!project) {
         notFound();
@@ -87,7 +91,9 @@ export default function ProjectPage({ params }: PageProps) {
                                     <div className="p-1">
                                         <Card className="p-0 group">
                                             <CardContent className="flex items-center justify-center p-0">
-                                                <Image src={link} alt={project.title} width={100} height={100} className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all' />
+                                                <Image src={link} alt={project.title} width={100} height={100} className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all'
+                                                onClick={() => isPopup(true)} 
+                                                />
                                             </CardContent>
                                         </Card>
                                     </div>
@@ -98,8 +104,8 @@ export default function ProjectPage({ params }: PageProps) {
                         <CarouselNext />
                     </Carousel>
                 </div>
-
             </div>
+            {popup && <DialogueImage title={project.title} gallery={project.gallery} isPopup={isPopup} />}
         </div>
     );
 }

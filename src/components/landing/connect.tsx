@@ -6,7 +6,7 @@ const Connect = () => {
   const para2 = `Feel free to send me a message via the form below. Or use the contact links listed beside.`;
 
   return (
-    <div className='px-16 flex flex-col justify-between gap-8'>
+    <div className='px-16 flex flex-col justify-between gap-8' id='connect'>
       <div className='w-1/2'>
         <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'<h1>'}</h1>
         <h1 className='text-5xl text-accent'>{"Let's Talk"}</h1>

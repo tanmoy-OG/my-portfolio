@@ -10,7 +10,7 @@ import { LuArrowRight } from "react-icons/lu";
 const Experience = () => {
   return (
     <div className='flex flex-col justify-between gap-32 px-16 z-20 relative'>
-      <div className='relative'>
+      <div className='relative' id='experience'>
         <h1 className='absolute font-sans-bg font-extrabold text-[20rem] -ml-80 -mt-64 opacity-10'>
           {'WORK'}
         </h1>
@@ -41,7 +41,7 @@ const Experience = () => {
           <LuArrowRight className='group-hover:translate-x-2 transition-all' />
         </Link>
       </div>
-      <div className='relative'>
+      <div className='relative' id='projects'>
         <div className='absolute font-sans-bg font-extrabold text-[20rem] ml-16 -mt-52 opacity-10'>
           {'PROJECTS'}
         </div>
@@ -69,7 +69,7 @@ const Experience = () => {
             </h1>
             <LuArrowRight className='group-hover:translate-x-2 transition-all' />
           </Link>
-          <h1 className='-ml-12 opacity-20 font-cursive text-lg'>
+          <h1 className='-ml-12 opacity-20 font-cursive text-lg' id='skills'>
             {'</section>'}
           </h1>
         </div>

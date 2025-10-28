@@ -32,6 +32,7 @@
     "paths": {
       "@/data/*": ["./src/assets/data/*"],
       "@/landing/*": ["./src/components/landing/*"],
+      "@/projects/*": ["./src/components/projects/*"],
       "@/ui/*": ["./src/components/ui/*"],
       "@/email/*": ["./src/components/email/*"],
       "@/lib/*": ["./src/lib/*"],
