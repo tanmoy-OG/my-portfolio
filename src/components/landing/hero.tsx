@@ -1,8 +1,12 @@
 import { FaLinkedin, FaXTwitter, FaGithub, FaInstagram } from 'react-icons/fa6';
 
 import Stats from './hero-stats';
+import { getGithubContributions } from '@/lib/github';
+import projects from '@/assets/data/projects.json';
+import skills from '@/assets/data/skills.json';
 
-const Hero = () => {
+const Hero = async () => {
+  const githubCommits = await getGithubContributions('tanmoy-OG');
   return (
     <div className='text-2xl'>
       <h1 className='opacity-20 font-cursive text-lg'>{'<html>'}</h1>
@@ -35,9 +39,9 @@ const Hero = () => {
             {'<section>'}
           </h1>
           <div className='mx-8 flex justify-between'>
-            <Stats count={6} line1='Projects' line2='Completed' />
-            <Stats count={10} line1='Technologies' line2='Mastered' />
-            <Stats count={614} line1='Github' line2='Commits' />
+            <Stats count={projects.length} line1='Projects' line2='Completed' />
+            <Stats count={skills.length} line1='Technologies' line2='Mastered' />
+            <Stats count={githubCommits} line1='Github(2025)' line2='Contributions' />
           </div>
           <h1 className='-ml-4 opacity-20 font-cursive text-lg' id='about'>
             {'</section>'}
