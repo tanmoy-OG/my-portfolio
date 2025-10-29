@@ -1,4 +1,5 @@
 import { Card, CardTitle, CardHeader, CardContent } from '@/ui/card';
+import { GlobeDemo } from '@/ui/github-globe';
 
 const para1 = `I was introduced to the world of programming back in middle school (2014), when JAVA was introduced to the curriculum. Back then the lab computers were still running on windows XP. Fast-forward to today, I am a web developer based in Kolkata.`;
 const para2 = `I started digging the rabbit hole of web technologies and ui design during my 3rd year of university, after my first hackathon experience. These past years, I've had the privilege to participate in multiple hackathon and work with other aspiring and amazing devs.`;
@@ -7,7 +8,7 @@ const para3 = `Apart from my work- I'm also a digital art hobbyist, I do fan art
 const About = () => {
   return (
     <div className='flex flex-col px-8'>
-      <div className='flex justify-between gap-28 px-8'>
+      <div className='flex justify-between gap-28 px-8 z-20'>
         <div className='w-1/2'>
           <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'<h1>'}</h1>
           <h1 className='text-5xl text-accent'>{'Know Me'}</h1>
@@ -23,7 +24,7 @@ const About = () => {
           <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'</p>'}</h1>
         </div>
         <div className='w-1/2'>
-          <Card className='w-full max-w-sm flex flex-col py-8 gap-8 bg-muted border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:-translate-y-2 transition-all'>
+          <Card className='w-full max-w-sm flex flex-col py-8 gap-8 bg-muted/70 backdrop-blur-sm border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-lg hover:-translate-y-2 transition-all'>
             <CardHeader>
               <CardTitle className='text-5xl text-accent font-normal'>
                 {'What can I do?'}
@@ -36,6 +37,9 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
+      </div>
+      <div className="absolute w-full -mt-80 ml-52 opacity-50">
+        <GlobeDemo />
       </div>
     </div>
   );
