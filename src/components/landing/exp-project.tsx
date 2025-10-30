@@ -23,7 +23,7 @@ const ExpProject = ({
   const projHref = `/archive/projects/${title}`
   const titleHref = externalLink ? externalLink : projHref
   return (
-    <Card className='py-8 bg-secondary/50 backdrop-blur-xs shadow-secondary border-foreground/10 hover:border-foreground/20 hover:shadow-accent hover:shadow-lg/50 hover:-translate-y-2 hover:backdrop-blur-sm transition-all group'>
+    <Card className='py-8 z-20 bg-secondary/50 backdrop-blur-xs shadow-secondary border-foreground/10 hover:border-foreground/20 hover:shadow-accent hover:shadow-lg/50 hover:-translate-y-2 hover:backdrop-blur-sm transition-all group'>
       <Link href={projHref} className="absolute inset-0 z-10" />
       <CardContent className='flex w-full flex-row gap-8'>
         <div className='basis-1/4 flex flex-col gap-2'>

@@ -84,7 +84,7 @@ const ConnectMessage = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setInputs({ ...inputs, name: e.target.value })
                     }
-                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc'
+                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
                 />
                 <Input
                     type='email'
@@ -93,7 +93,7 @@ const ConnectMessage = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setInputs({ ...inputs, email: e.target.value })
                     }
-                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc'
+                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
                 />
             </div>
             <Input
@@ -103,7 +103,7 @@ const ConnectMessage = () => {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setInputs({ ...inputs, subject: e.target.value })
                 }
-                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc'
+                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
             />
             <Textarea
                 placeholder='Message'
@@ -111,12 +111,12 @@ const ConnectMessage = () => {
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                     setInputs({ ...inputs, message: e.target.value })
                 }
-                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc resize-none h-40'
+                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc resize-none h-40 z-20'
             />
             <Button
                 type='submit'
                 onClick={handleSubmit}
-                className={`bg-muted border border-foreground/10 shadow-secondary w-1/3 px-8 text-accent self-end hover:cursor-pointer hover:bg-muted hover:shadow-accent hover:shadow-md/50 hover:border-foreground/20 hover:-translate-y-1 active:shadow-xs/50 active:border-accent/50 active:translate-0 transition-all`}
+                className={`bg-muted border border-foreground/10 shadow-secondary w-1/3 px-8 text-accent self-end hover:cursor-pointer hover:bg-muted hover:shadow-accent hover:shadow-md/50 hover:border-foreground/20 hover:-translate-y-1 active:shadow-xs/50 active:border-accent/50 active:translate-0 transition-all z-20`}
                 disabled={isSubmitting}
             >
                 {isSubmitting ? <span className='flex gap-2 items-center'><BiLoaderAlt className='animate-spin' /> {'Sending Message'}</span> : 'Send Message'}

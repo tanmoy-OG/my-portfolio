@@ -6,14 +6,13 @@ import skills from '@/data/skills.json';
 import Link from 'next/link';
 import { LuArrowRight, LuArrowUpRight } from 'react-icons/lu';
 import { BsDashLg } from "react-icons/bs";
+import ShimmerText from './shimmer-text';
 
 const SkillNAchieve = () => {
   return (
     <div className='px-16 flex flex-col justify-between gap-8'>
       <div className='relative'>
-        <h1 className='absolute font-sans-bg font-extrabold text-[20rem] ml-64 -mt-80 opacity-10'>
-          {'SKILLS'}
-        </h1>
+        <ShimmerText mt={140} ml={64} mlNegative={false} text='Skills' />
         <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'<h1>'}</h1>
         <h1 className='text-5xl text-accent'>{'Skills & Achievements'}</h1>
         <h1 className='ml-108 -mt-6 opacity-20 font-cursive text-lg'>
@@ -38,13 +37,13 @@ const SkillNAchieve = () => {
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            <Link href='/archive/achievements' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+            <Link href='/archive/achievements' className='w-fit group z-20 flex gap-1 items-center hover:text-accent'>
               <h1 className='font-sans-desc font-bold'>
                 {'View All Achievements'}
               </h1>
               <LuArrowRight className='group-hover:translate-x-2 transition-all' />
             </Link>
-            <Link href='/archive/certificates' className='w-fit group z-10 flex gap-1 items-center hover:text-accent'>
+            <Link href='/archive/certificates' className='w-fit group z-20 flex gap-1 items-center hover:text-accent' id='connect'>
               <h1 className='font-sans-desc font-bold'>
                 {'View All Certifications'}
               </h1>

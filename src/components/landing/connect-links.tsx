@@ -8,7 +8,7 @@ const ConnectLink = () => {
         <div className='w-1/3 flex flex-col gap-4'>
             <Link
                 href='mailto:connect@tanmoy-og.dev'
-                className='flex gap-4 items-center'
+                className='flex gap-4 items-center z-20'
             >
                 <MdOutlineEmail className='size-5' />
                 <div className='w-fit group'>
@@ -18,7 +18,7 @@ const ConnectLink = () => {
             </Link>
             <Link
                 href='tel:+91 82401 06882'
-                className='flex gap-4 items-center'
+                className='flex gap-4 items-center z-20'
             >
                 <LuPhone className='size-5' />
                 <div className='w-fit group'>
@@ -28,7 +28,7 @@ const ConnectLink = () => {
             </Link>
             <Link
                 href='https://wa.me/918240106882'
-                className='flex gap-4 items-center'
+                className='flex gap-4 items-center z-20'
             >
                 <FaWhatsapp className='size-5' />
                 <div className='w-fit group'>
@@ -38,7 +38,7 @@ const ConnectLink = () => {
             </Link>
             <Link
                 href='https://maps.app.goo.gl/o2tqHirK8JoKfx4U9'
-                className='flex gap-4 items-center'
+                className='flex gap-4 items-center z-20'
             >
                 <LuMapPin className='size-5' />
                 <div className='w-fit group'>

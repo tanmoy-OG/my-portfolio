@@ -21,7 +21,7 @@ const About = () => {
             <p className=''>{para2}</p>
             <p className=''>{para3}</p>
           </div>
-          <h1 className='-ml-8 opacity-20 font-cursive text-lg'>{'</p>'}</h1>
+          <h1 className='-ml-8 opacity-20 font-cursive text-lg' id='experience'>{'</p>'}</h1>
         </div>
         <div className='w-1/2'>
           <Card className='w-full max-w-sm flex flex-col py-8 gap-8 bg-muted/70 backdrop-blur-sm border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-lg hover:-translate-y-2 transition-all'>
