@@ -70,7 +70,7 @@ export default function ProjectPage({ params }: PageProps) {
             <div className="flex justify-between gap-28 px-8">
                 <div className="text-sm w-1/2 flex flex-col gap-8">
                     <p className='opacity-70'>{project.description}</p>
-                    <Card className='w-full max-w-sm flex flex-col py-8 gap-2 bg-muted border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:-translate-y-2 transition-all'>
+                    <Card className='w-full max-w-sm flex flex-col py-8 gap-2 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-sm hover:-translate-y-2 transition-all'>
                         <CardHeader>
                             <CardTitle className='text-base text-accent font-bold font-sans-desc'>
                                 {'Features'}

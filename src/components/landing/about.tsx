@@ -24,7 +24,7 @@ const About = () => {
           <h1 className='-ml-8 opacity-20 font-cursive text-lg' id='experience'>{'</p>'}</h1>
         </div>
         <div className='w-1/2'>
-          <Card className='w-full max-w-sm flex flex-col py-8 gap-8 bg-muted/70 backdrop-blur-sm border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-lg hover:-translate-y-2 transition-all'>
+          <Card className='w-full max-w-sm flex flex-col py-8 gap-8 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-sm hover:-translate-y-2 transition-all'>
             <CardHeader>
               <CardTitle className='text-5xl text-accent font-normal'>
                 {'What can I do?'}

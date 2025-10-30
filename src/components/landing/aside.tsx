@@ -1,6 +1,5 @@
-import Link from 'next/link';
-
 import NavigationLink from './aside-nav-links';
+import { LinkPreview } from '@/ui/link-preview';
 
 const Aside = () => {
   return (
@@ -23,10 +22,18 @@ const Aside = () => {
       <div className='!pb-8'>
         <h1 className='text-accent'>Coding Profiles</h1>
         <div className='flex flex-col gap-1 *:text-xs'>
-          <Link href='path'>LeetCode</Link>
-          <Link href='path'>Codeforces</Link>
-          <Link href='path'>CodeChef</Link>
-          <Link href='path'>GeeksForGeeks</Link>
+          <LinkPreview url="https://leetcode.com/u/tanmoy_og/" className="">
+            LeetCode
+          </LinkPreview>
+          <LinkPreview url="https://codeforces.com/profile/tanmoy_OG" className="">
+            Codeforces
+          </LinkPreview>
+          {/* <LinkPreview url="https://leetcode.com/u/tanmoy_og/" className="">
+            CodeChef
+          </LinkPreview> */}
+          <LinkPreview url="https://www.geeksforgeeks.org/user/tanmoyog/" className="">
+            GeeksForGeeks
+          </LinkPreview>
         </div>
       </div>
     </aside>
