@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 import { NavProps } from '@/types/api';
 
-const NavigationLink = ({ path, linkName }: NavProps) => {
+const NavigationLink = ({ path, linkName, onClick }: NavProps & { onClick?: () => void }) => {
   return (
-    <Link href={path} className='group w-fit hover:cursor-pointer'>
+    <Link href={path} onClick={onClick} className='group w-fit hover:cursor-pointer'>
       <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
       {linkName}
     </Link>

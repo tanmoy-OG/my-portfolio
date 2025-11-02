@@ -18,6 +18,10 @@ export default function CursorTrail() {
     const canvas = canvasRef.current;
     if (!container || !canvas) return;
 
+    // Disable on mobile/tablet devices
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -241,7 +245,7 @@ export default function CursorTrail() {
   }, []);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 pointer-events-none select-none z-0">
+    <div ref={containerRef} className="hidden lg:block absolute inset-0 pointer-events-none select-none z-0">
       <canvas ref={canvasRef} className="w-full h-full -z-10 opacity-50" />
     </div>
   );

@@ -27,7 +27,7 @@ const ShimmerText = ({ mt, ml, mlNegative, text }: Props) => {
     return (
         <div
             ref={containerRef}
-            className={`absolute flex flex-col justify-center font-sans-bg font-extrabold text-[20rem] opacity-10 select-none h-[200vh] z-10 -mt-${mt}`}
+            className={`hidden md:flex absolute flex-col justify-center font-sans-bg font-extrabold text-[10rem] md:text-[15rem] lg:text-[20rem] opacity-10 select-none h-[200vh] z-10 -mt-${mt}`}
             onMouseMove={handleMouseMove}
         >
             {mlNegative ? (<span

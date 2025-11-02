@@ -75,8 +75,8 @@ const ConnectMessage = () => {
     };
 
     return (
-        <div className='w-2/3 flex flex-col gap-4 font-sans-desc'>
-            <div className='flex gap-4'>
+        <div className='w-full lg:w-2/3 flex flex-col gap-3 md:gap-4 font-sans-desc'>
+            <div className='flex flex-col sm:flex-row gap-3 md:gap-4'>
                 <Input
                     type='text'
                     placeholder='Name'
@@ -84,7 +84,7 @@ const ConnectMessage = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setInputs({ ...inputs, name: e.target.value })
                     }
-                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
+                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20 text-sm md:text-base'
                 />
                 <Input
                     type='email'
@@ -93,7 +93,7 @@ const ConnectMessage = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setInputs({ ...inputs, email: e.target.value })
                     }
-                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
+                    className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20 text-sm md:text-base'
                 />
             </div>
             <Input
@@ -103,7 +103,7 @@ const ConnectMessage = () => {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setInputs({ ...inputs, subject: e.target.value })
                 }
-                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20'
+                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc z-20 text-sm md:text-base'
             />
             <Textarea
                 placeholder='Message'
@@ -111,12 +111,12 @@ const ConnectMessage = () => {
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                     setInputs({ ...inputs, message: e.target.value })
                 }
-                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc resize-none h-40 z-20'
+                className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc resize-none h-32 md:h-36 lg:h-40 z-20 text-sm md:text-base'
             />
             <Button
                 type='submit'
                 onClick={handleSubmit}
-                className={`bg-muted border border-foreground/10 shadow-secondary w-1/3 px-8 text-accent self-end hover:cursor-pointer hover:bg-muted hover:shadow-accent hover:shadow-md/50 hover:border-foreground/20 hover:-translate-y-1 active:shadow-xs/50 active:border-accent/50 active:translate-0 transition-all z-20`}
+                className={`bg-muted border border-foreground/10 shadow-secondary w-full sm:w-1/2 lg:w-1/3 px-6 md:px-8 text-accent self-end hover:cursor-pointer hover:bg-muted hover:shadow-accent hover:shadow-md/50 hover:border-foreground/20 hover:-translate-y-1 active:shadow-xs/50 active:border-accent/50 active:translate-0 transition-all z-20 text-sm md:text-base py-2 md:py-3`}
                 disabled={isSubmitting}
             >
                 {isSubmitting ? <span className='flex gap-2 items-center'><BiLoaderAlt className='animate-spin' /> {'Sending Message'}</span> : 'Send Message'}
