@@ -14,8 +14,8 @@ export default function Home() {
         <CursorTrail />
         <div className='px-4 md:p-6 lg:p-8 flex flex-col gap-20 md:gap-28 lg:gap-36 relative z-10'>
           <div className="flex flex-col gap-0 md:gap-20">
-          <Hero />
-          <About />
+            <Hero />
+            <About />
           </div>
           <Experience />
           <SkillNAchieve />
