@@ -8,7 +8,7 @@ const para3 = `Apart from my work- I'm also a digital art hobbyist, I do fan art
 const About = () => {
   return (
     <div className='flex flex-col px-4 md:px-6 lg:px-8 relative'>
-      <div className='flex flex-col lg:flex-row justify-between gap-12 md:gap-16 lg:gap-28 md:px-6 lg:px-8 z-20'>
+      <div className='flex flex-col lg:flex-row justify-between gap-12 md:gap-16 lg:gap-28 md:px-8 z-20'>
         <div className='w-full flex flex-col gap-4 lg:w-1/2'>
           <div className="text-base lg:text-lg">
             <h1 className='md:-ml-6 lg:-ml-8 opacity-20 font-cursive'>{'<h1>'}</h1>

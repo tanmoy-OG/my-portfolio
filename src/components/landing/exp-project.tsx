@@ -36,13 +36,13 @@ const ExpProject = ({
               className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all'
             />
           )}
-          <h1 className='mt-1 text-xs md:text-sm font-sans-desc opacity-70 flex gap-1 items-center'>
+          <h1 className='mt-1 text-xs md:text-sm font-sans-desc opacity-70 flex flex-wrap gap-1 items-center'>
             {`${date.from.month} ${date.from.year}`}
             <BsDashLg className='mt-0.5' />
             {`${date.to.month} ${date.to.year}`}
           </h1>
         </div>
-        <div className='basis-3/4 flex flex-col gap-3 md:gap-4'>
+        <div className='basis-3/4 flex flex-col gap-4'>
           <div className='flex flex-col gap-2'>
             <Link
               href={titleHref}
@@ -64,7 +64,7 @@ const ExpProject = ({
               </p>
             </div>
           </div>
-          <p className='flex flex-col pr-2 gap-3 md:gap-4 text-xs md:text-sm font-sans-desc opacity-70'>
+          <p className='flex flex-col pr-2 gap-4 text-xs md:text-sm font-sans-desc opacity-70'>
             {description}
           </p>
           <div className='flex flex-wrap gap-2'>
