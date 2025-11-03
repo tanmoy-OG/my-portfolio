@@ -13,7 +13,7 @@ export default function Home() {
       <div className='w-full lg:basis-4/5 flex flex-col gap-20 md:gap-32 lg:gap-40 relative overflow-hidden'>
         <CursorTrail />
         <div className='px-4 md:p-6 lg:p-8 flex flex-col gap-20 md:gap-28 lg:gap-36 relative z-10'>
-          <div className="flex flex-col gap-0 md:gap-20">
+          <div className="flex flex-col gap-0 lg:gap-20">
             <Hero />
             <About />
           </div>
