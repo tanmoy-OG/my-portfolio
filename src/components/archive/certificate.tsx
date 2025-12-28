@@ -8,6 +8,9 @@ import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
 const CertificateCol: ColumnDef<Certificate>[] = [
     {
         accessorKey: "date",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
@@ -31,6 +34,9 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     },
     {
         accessorKey: "title",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Certificate'}</h1>
@@ -45,6 +51,9 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     },
     {
         accessorKey: "provider",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Provider'}</h1>
@@ -67,6 +76,9 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     },
     {
         accessorKey: "platform",
+        meta: {
+            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Platform'}</h1>
@@ -89,6 +101,9 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     },
     {
         accessorKey: "skills",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Skills'}</h1>
@@ -107,6 +122,9 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     },
     {
         accessorKey: "link",
+        meta: {
+            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Certificate Link'}</h1>

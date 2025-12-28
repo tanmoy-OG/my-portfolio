@@ -8,6 +8,9 @@ import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
 const Project: ColumnDef<Proj>[] = [
     {
         accessorKey: "date.from.year",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
@@ -31,6 +34,9 @@ const Project: ColumnDef<Proj>[] = [
     },
     {
         accessorKey: "title",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Title'}</h1>
@@ -52,6 +58,9 @@ const Project: ColumnDef<Proj>[] = [
     },
     {
         accessorKey: "company",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Made At'}</h1>
@@ -66,6 +75,9 @@ const Project: ColumnDef<Proj>[] = [
     },
     {
         accessorKey: "tech",
+        meta: {
+            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Tech Stack'}</h1>
@@ -84,6 +96,9 @@ const Project: ColumnDef<Proj>[] = [
     },
     {
         accessorKey: "externalLink",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Link'}</h1>

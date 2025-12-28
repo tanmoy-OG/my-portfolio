@@ -48,10 +48,11 @@ export function DataTable<TData, TValue>({
                                     "min-w-[33.33%]", // Tech Stack - equivalent to w-4/12
                                     "min-w-[16.67%]"  // Link - equivalent to w-2/12
                                 ];
+                                const responsiveClass = (header.column.columnDef.meta as { responsiveClass?: string })?.responsiveClass || "";
                                 return (
                                     <TableHead
                                         key={header.id}
-                                        className={`${minWidthClasses[index]} w-auto`}
+                                        className={`${minWidthClasses[index]} w-auto ${responsiveClass}`}
                                         style={{ width: 'auto' }}
                                     >
                                         {header.isPlaceholder
@@ -81,10 +82,11 @@ export function DataTable<TData, TValue>({
                                         "min-w-[33.33%]", // Tech Stack - equivalent to w-4/12
                                         "min-w-[16.67%]"  // Link - equivalent to w-2/12
                                     ];
+                                    const responsiveClass = (cell.column.columnDef.meta as { responsiveClass?: string })?.responsiveClass || "";
                                     return (
                                         <TableCell
                                             key={cell.id}
-                                            className={`${minWidthClasses[index]} w-auto content-start`}
+                                            className={`${minWidthClasses[index]} w-auto content-start ${responsiveClass}`}
                                             style={{ width: 'auto' }}
                                         >
                                             {flexRender(cell.column.columnDef.cell, cell.getContext())}

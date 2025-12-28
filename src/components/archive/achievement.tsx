@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 import { ColumnDef } from "@tanstack/react-table"
 import { Achievement } from "@/types/api";
 import Link from "next/link";
@@ -7,6 +17,9 @@ import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
 const AchievementCol: ColumnDef<Achievement>[] = [
     {
         accessorKey: "year",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
@@ -30,6 +43,9 @@ const AchievementCol: ColumnDef<Achievement>[] = [
     },
     {
         accessorKey: "description",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Highlights'}</h1>
@@ -44,6 +60,9 @@ const AchievementCol: ColumnDef<Achievement>[] = [
     },
     {
         accessorKey: "event",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Event'}</h1>
@@ -58,6 +77,9 @@ const AchievementCol: ColumnDef<Achievement>[] = [
     },
     {
         accessorKey: "organization",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Organizer'}</h1>
@@ -72,6 +94,9 @@ const AchievementCol: ColumnDef<Achievement>[] = [
     },
     {
         accessorKey: "certificate",
+        meta: {
+            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Certificate Link'}</h1>

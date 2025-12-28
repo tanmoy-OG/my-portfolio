@@ -9,6 +9,9 @@ import { BsDashLg } from "react-icons/bs";
 const JobCol: ColumnDef<Job>[] = [
     {
         accessorKey: "date.from.year",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: ({ column }) => {
             return (
                 <div className="flex gap-2 items-center">
@@ -32,6 +35,9 @@ const JobCol: ColumnDef<Job>[] = [
     },
     {
         accessorKey: "company",
+        meta: {
+            responsiveClass: "", // Always visible
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Company / Client'}</h1>
@@ -46,6 +52,9 @@ const JobCol: ColumnDef<Job>[] = [
     },
     {
         accessorKey: "designation",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Designation'}</h1>
@@ -67,6 +76,9 @@ const JobCol: ColumnDef<Job>[] = [
     },
     {
         accessorKey: "tech",
+        meta: {
+            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Tech Stack'}</h1>
@@ -85,6 +97,9 @@ const JobCol: ColumnDef<Job>[] = [
     },
     {
         accessorKey: "location",
+        meta: {
+            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+        },
         header: () => {
             return (
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Location'}</h1>
