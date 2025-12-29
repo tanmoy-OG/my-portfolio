@@ -1,9 +1,9 @@
 import { ColumnDef } from "@tanstack/react-table"
 
 export interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export interface NavProps {

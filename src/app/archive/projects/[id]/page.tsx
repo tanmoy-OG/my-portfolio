@@ -41,7 +41,7 @@ function normalizeParam(id: string) {
 }
 
 export default function ProjectPage({ params }: PageProps) {
-    const { id } = params;
+    const { id } = React.use(params);
     const list = data as Proj[];
     const { slug, raw } = normalizeParam(id);
     const project = list.find((p) => toSlug(p.title) === slug || p.title === raw);

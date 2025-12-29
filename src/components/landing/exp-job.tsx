@@ -8,7 +8,10 @@ import { LuArrowUpRight, LuDot } from "react-icons/lu";
 const ExpJob = ({ date, company, designation, location, work, tech, portal }: Job) => {
   return (
     <Card className='py-6 md:py-7 lg:py-8 z-20 bg-secondary/50 backdrop-blur-xs shadow-secondary border-foreground/10 hover:border-foreground/20 hover:shadow-accent hover:shadow-lg/50 hover:-translate-y-2 hover:backdrop-blur-sm transition-all group'>
-      {portal && <Link href={portal} className="absolute inset-0 z-10" />}
+      {portal && <Link href={portal}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute inset-0 z-10" />}
       <CardContent className='flex w-full flex-col md:flex-row gap-4 md:gap-6 lg:gap-8'>
         <div className='basis-1/4 md:basis-1/4'>
           <h1 className='mt-1 text-xs md:text-sm font-sans-desc opacity-70 flex flex-wrap gap-1 items-center'>
