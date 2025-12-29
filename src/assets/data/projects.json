@@ -2,8 +2,8 @@
   {
     "gallery": [
       "/img1.webp",
-      "/img1.webp",
-      "/img1.webp"
+      "/img2.webp",
+      "/img3.webp"
     ],
     "date": {
       "from": {
@@ -37,8 +37,8 @@
   {
     "gallery": [
       "/img1.webp",
-      "/img1.webp",
-      "/img1.webp"
+      "/img2.webp",
+      "/img3.webp"
     ],
     "date": {
       "from": {
@@ -70,4 +70,3 @@
     "install": ""
   }
 ]
-
