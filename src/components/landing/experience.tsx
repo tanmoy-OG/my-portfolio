@@ -25,7 +25,7 @@ const Experience = () => {
             {'<section>'}
           </h1>
           <div className="flex flex-col gap-8">
-            {jobList.map((data, id) => (
+            {jobList.slice(0, 4).map((data, id) => (
               <ExpJob
                 key={id}
                 date={data.date}
@@ -47,7 +47,7 @@ const Experience = () => {
       <div className='relative md:px-8'>
         <ShimmerText mt={130} ml={16} mlNegative={false} text='Projects' />
         <div className='mt-12 md:mt-18 lg:mt-24 flex flex-col gap-8'>
-          {projList.map((data, id) => (
+          {projList.slice(0, 4).map((data, id) => (
             <ExpProject
               key={id}
               gallery={data.gallery}

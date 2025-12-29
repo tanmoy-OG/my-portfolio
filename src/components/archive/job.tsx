@@ -3,7 +3,7 @@ import { Job } from "@/types/api";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/ui/button";
-import { LuArrowUpDown } from "react-icons/lu";
+import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
 import { BsDashLg } from "react-icons/bs";
 
 const JobCol: ColumnDef<Job>[] = [
@@ -43,10 +43,29 @@ const JobCol: ColumnDef<Job>[] = [
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Company / Client'}</h1>
             )
         },
-        cell: ({ getValue }) => {
+        cell: ({ row, getValue }) => {
             const company = getValue() as string;
+            const portal = (row.original as Job).portal as string | undefined;
+
             return (
-                <h1 className='font-sans-desc font-medium opacity-70'>{company}</h1>
+                <>
+                    {portal ? (
+                        <Link
+                            href={portal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex gap-1 items-center transition-all group w-fit"
+                        >
+                            <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all'>{company}</h1>
+
+                            <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                        </Link>
+                    ) : (
+                        <h1 className='font-sans-desc font-bold text-base md:hidden'>
+                            {company}
+                        </h1>
+                    )}
+                </>
             );
         },
     },
@@ -63,14 +82,7 @@ const JobCol: ColumnDef<Job>[] = [
         cell: ({ getValue }) => {
             const title = getValue() as string;
             return (
-                <Link
-                    href={'/archive/projects/' + title}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className='font-sans-desc font-extrabold hover:text-accent transition-all'
-                >
-                    {title}
-                </Link>
+                <h1 className='font-sans-desc font-medium opacity-70'>{title}</h1>
             );
         },
     },

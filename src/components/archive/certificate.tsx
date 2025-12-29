@@ -42,10 +42,35 @@ const CertificateCol: ColumnDef<Certificate>[] = [
                 <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Certificate'}</h1>
             )
         },
-        cell: ({ getValue }) => {
+        cell: ({ row, getValue }) => {
             const title = getValue() as string;
+            const link = (row.original as Certificate).link as string | undefined;
+
             return (
-                <h1 className='font-sans-desc font-medium opacity-70'>{title}</h1>
+                <>
+                    {/* Desktop (>= 1024px): show plain text */}
+                    <h1 className='hidden lg:block font-sans-desc font-medium opacity-70'>
+                        {title}
+                    </h1>
+
+                    {/* Mobile / tablet (< 1024px): show text as a link to certificate */}
+                    {link ? (
+                        <Link
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="lg:hidden flex gap-1 items-center transition-all group w-fit"
+                        >
+                            <h1 className='font-sans-desc font-medium opacity-70 group-hover:text-accent group-hover:opacity-100 transition-all'>{title}</h1>
+
+                            <LuArrowUpRight className='size-4 mt-0.5 opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent group-hover:opacity-100 transition-all' />
+                        </Link>
+                    ) : (
+                        <h1 className='font-sans-desc font-medium opacity-70 lg:hidden'>
+                            {title}
+                        </h1>
+                    )}
+                </>
             );
         },
     },

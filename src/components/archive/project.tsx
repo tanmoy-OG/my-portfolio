@@ -49,9 +49,10 @@ const Project: ColumnDef<Proj>[] = [
                     href={'/archive/projects/' + title}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='font-sans-desc font-extrabold hover:text-accent transition-all'
+                    className='flex gap-1 items-center transition-all group w-fit'
                 >
-                    {title}
+                    <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all'>{title}</h1>
+                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             );
         },
@@ -108,10 +109,10 @@ const Project: ColumnDef<Proj>[] = [
             const link = getValue() as string;
             return link && (
                 <Link
-                    href={link}
+                    href={"https://" + link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex gap-1 items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 flex gap-2 items-center hover:opacity-100 transition-all group w-fit'
                 >
                     <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{link}</h1>
                     <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
