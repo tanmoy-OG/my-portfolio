@@ -5,6 +5,9 @@ import { getGithubContributions } from '@/lib/github';
 import projects from '@/assets/data/projects.json';
 import skills from '@/assets/data/skills.json';
 import Link from 'next/link';
+import { LuDownload } from 'react-icons/lu';
+import { Badge } from '@/ui/badge';
+import { MdDownloadForOffline } from 'react-icons/md';
 
 const Hero = async () => {
   const githubCommits = await getGithubContributions('tanmoy-OG');
@@ -36,18 +39,26 @@ const Hero = async () => {
           </div>
           <div className="">
             <h1 className='mt-2 opacity-20 font-cursive text-base md:mt-4 md:text-lg'>{'<div>'}</h1>
-            <div className='flex gap-6 mx-4 mt-2 md:mx-6 lg:gap-8 lg:mx-8'>
-              <Link href="https://linkedin.com/in/tanmoy-choudhury/" className="hover:shadow-lg/50 hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:scale-90 transition-all">
+            <div className='flex md:mt-0 mx-4 md:mx-6 gap-4 md:gap-10 lg:gap-8 lg:mx-8 items-center'>
+              <Link href="https://linkedin.com/in/tanmoy-choudhury/" className="hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all">
                 <FaLinkedin className='size-10 md:size-16 lg:size-8' />
               </Link>
-              <Link href="https://x.com/tanmoy_OG" className="hover:shadow-lg/50 hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:scale-90 transition-all">
+              <Link href="https://x.com/tanmoy_OG" className="hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all">
                 <FaXTwitter className='size-10 md:size-16 lg:size-8' />
               </Link>
-              <Link href="https://github.com/tanmoy-OG/" className="hover:shadow-lg/50 hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:scale-90 transition-all">
+              <Link href="https://github.com/tanmoy-OG/" className="hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all">
                 <FaGithub className='size-10 md:size-16 lg:size-8' />
               </Link>
-              <Link href="https://instagram.com/tanmoy_og/" className="hover:shadow-lg/50 hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:scale-90 transition-all">
+              <Link href="https://instagram.com/tanmoy_og/" className="hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all hidden md:block">
                 <FaInstagram className='size-10 md:size-16 lg:size-8' />
+              </Link>
+              <Link href="https://instagram.com/tanmoy_og/" className="hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all">
+                <Badge className='flex gap-2 pl-3.5 md:pl-6 lg:pl-3.5 pr-1 hover:shadow-lg/50 transition-all'>
+                  <h1 className='font-sans-desc text-lg md:text-3xl lg:text-xl'>Resume</h1>
+                  <div className="">
+                    <MdDownloadForOffline className='size-10 md:size-16 lg:size-8' />
+                  </div>
+                </Badge>
               </Link>
             </div>
             <h1 className='mt-2 opacity-20 font-cursive text-base md:text-lg'>{'</div>'}</h1>
