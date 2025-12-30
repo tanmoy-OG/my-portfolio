@@ -5,7 +5,6 @@ import { getGithubContributions } from '@/lib/github';
 import projects from '@/assets/data/projects.json';
 import skills from '@/assets/data/skills.json';
 import Link from 'next/link';
-import { LuDownload } from 'react-icons/lu';
 import { Badge } from '@/ui/badge';
 import { MdDownloadForOffline } from 'react-icons/md';
 
@@ -72,7 +71,7 @@ const Hero = async () => {
               <Stats count={skills.length} line1='Technologies' line2='Mastered' />
               <Stats count={githubCommits} line1='Github(2025)' line2='Contributions' />
             </div>
-            <h1 className='-ml-2 opacity-20 font-cursive text-lg md:-ml-4' id='about'>
+            <h1 className='-ml-2 opacity-20 font-cursive text-lg md:-ml-4'>
               {'</section>'}
             </h1>
           </div>

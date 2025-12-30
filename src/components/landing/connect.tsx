@@ -8,7 +8,7 @@ const Connect = () => {
   const para2 = `Feel free to send me a message via the form below. Or use the contact links listed beside.`;
 
   return (
-    <div className='px-4 md:px-8 lg:px-16 flex flex-col justify-between gap-6 md:gap-12 lg:gap-8'>
+    <div id='connect' className='px-4 md:px-8 lg:px-16 flex flex-col justify-between gap-6 md:gap-12 lg:gap-8'>
       <div className="flex flex-col lg:flex-row justify-between gap-6 md:gap-12 lg:gap-16">
         <div className='w-full lg:w-1/2 relative'>
           <ShimmerText mt={140} ml={96} mlNegative={false} text='Dm' />

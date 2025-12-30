@@ -10,7 +10,7 @@ import ShimmerText from './shimmer-text';
 
 const SkillNAchieve = () => {
   return (
-    <div className='px-4 md:px-6 lg:px-8 flex flex-col justify-between gap-6 md:gap-7 lg:gap-8'>
+    <div id='skills' className='px-4 md:px-6 lg:px-8 flex flex-col justify-between gap-6 md:gap-7 lg:gap-8'>
       <div className='relative md:px-8'>
         <ShimmerText mt={140} ml={64} mlNegative={false} text='Skills' />
         <h1 className='md:-ml-6 lg:-ml-8 opacity-20 font-cursive text-base lg:text-lg'>{'<h1>'}</h1>
@@ -43,7 +43,7 @@ const SkillNAchieve = () => {
               </h1>
               <LuArrowRight className='group-hover:translate-x-2 transition-all size-4 md:size-5' />
             </Link>
-            <Link href='/archive/certificates' className='w-fit group z-20 flex gap-1 items-center hover:text-accent' id='connect'>
+            <Link href='/archive/certificates' className='w-fit group z-20 flex gap-1 items-center hover:text-accent'>
               <h1 className='font-sans-desc font-bold text-sm md:text-base'>
                 {'View All Certifications'}
               </h1>

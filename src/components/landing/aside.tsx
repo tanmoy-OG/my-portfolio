@@ -42,6 +42,7 @@ const Aside = () => {
       <aside className='hidden lg:flex fixed left-0 w-1/5 z-30 bg-background h-screen basis-1/5 flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
         <div className='!pt-8'>
           <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
+          {/* <NavigationLink path='#home' linkName='Tanmoy_OG' /> */}
           <h1 className='text-lg/6'>{'Web Developer & Designer'}</h1>
           <p className='text-xs opacity-50 font-sans-desc'>
             {'Software Engineer / Web Developer / UI/UX Designer'}
