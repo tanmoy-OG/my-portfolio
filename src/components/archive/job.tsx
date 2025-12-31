@@ -54,11 +54,11 @@ const JobCol: ColumnDef<Job>[] = [
                             href={portal}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex gap-1 items-center transition-all group w-fit"
+                            className="inline items-center transition-all group w-fit"
                         >
-                            <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all'>{company}</h1>
+                            <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all inline'>{company}</h1>
 
-                            <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                            <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                         </Link>
                     ) : (
                         <h1 className='font-sans-desc font-bold text-base md:hidden'>

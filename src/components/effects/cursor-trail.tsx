@@ -37,13 +37,14 @@ export default function CursorTrail() {
       baseSpring: 0.4,
       baseFriction: 0.5,
       unifiedHeadLength: 8, // Number of points that stay unified at the start
+      cursorOffset: { x: -60, y: -60 }, // Offset the trail from the actual cursor position
     };
 
     // Define multiple stroke layers with different colors and path variations
     const strokeLayers = [
       { color: "#5eead4", widthScale: 0.5, alpha: 0.9, springOffset: 0.0, frictionOffset: 0.0, positionOffset: { x: 0, y: 0 } },      // sky blue - main
       { color: "#0ea5e9", widthScale: 0.4, alpha: 0.7, springOffset: 0.02, frictionOffset: 0.01, positionOffset: { x: -2, y: -1 } }, // cyan - slightly different
-      { color: "#5eead4", widthScale: 0.3, alpha: 0.6, springOffset: -0.01, frictionOffset: 0.02, positionOffset: { x: 2, y: 1 } },   // violet
+      { color: "#ff66cc", widthScale: 0.3, alpha: 0.6, springOffset: -0.01, frictionOffset: 0.02, positionOffset: { x: 2, y: 1 } },   // violet
       { color: "#0ea5e9", widthScale: 0.2, alpha: 0.55, springOffset: 0.03, frictionOffset: -0.01, positionOffset: { x: -1, y: 2 } }, // pink
       { color: "#5eead4", widthScale: 0.1, alpha: 0.5, springOffset: -0.02, frictionOffset: 0.03, positionOffset: { x: 1, y: -2 } },  // rose
     ];
@@ -119,10 +120,12 @@ export default function CursorTrail() {
       // Update base trail - all layers will follow this for the unified head
       baseTrail.forEach((p, i) => {
         if (i === 0) {
-          // First point always follows cursor directly (no offset)
+          // First point follows cursor with offset
           const springFactor = 0.4 * baseSpring;
-          p.dx += (pointer.x - p.x) * springFactor;
-          p.dy += (pointer.y - p.y) * springFactor;
+          const targetX = pointer.x + params.cursorOffset.x;
+          const targetY = pointer.y + params.cursorOffset.y;
+          p.dx += (targetX - p.x) * springFactor;
+          p.dy += (targetY - p.y) * springFactor;
         } else {
           // Subsequent points follow the previous point
           const prev = baseTrail[i - 1]!;
@@ -146,10 +149,12 @@ export default function CursorTrail() {
         // Physics for trail points
         trail.forEach((p, i) => {
           if (i === 0) {
-            // First point always follows cursor directly (unified)
+            // First point follows cursor with offset (unified)
             const springFactor = 0.4 * spring;
-            p.dx += (pointer.x - p.x) * springFactor;
-            p.dy += (pointer.y - p.y) * springFactor;
+            const targetX = pointer.x + params.cursorOffset.x;
+            const targetY = pointer.y + params.cursorOffset.y;
+            p.dx += (targetX - p.x) * springFactor;
+            p.dy += (targetY - p.y) * springFactor;
           } else if (i < params.unifiedHeadLength) {
             // Unified head section - follow the base trail
             const basePoint = baseTrail[i]!;
@@ -245,7 +250,7 @@ export default function CursorTrail() {
   }, []);
 
   return (
-    <div ref={containerRef} className="hidden lg:block absolute inset-0 pointer-events-none select-none z-0">
+    <div ref={containerRef} className="hidden lg:block absolute inset-0 pointer-events-none select-none z-0 opacity-50">
       <canvas ref={canvasRef} className="w-full h-full -z-10 opacity-50" />
     </div>
   );

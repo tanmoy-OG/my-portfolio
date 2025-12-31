@@ -49,10 +49,10 @@ const Project: ColumnDef<Proj>[] = [
                     href={'/archive/projects/' + title}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='flex gap-1 items-center transition-all group w-fit'
+                    className='inline items-center transition-all group w-fit'
                 >
-                    <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all'>{title}</h1>
-                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                    <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all inline'>{title}</h1>
+                    <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             );
         },
@@ -98,7 +98,7 @@ const Project: ColumnDef<Proj>[] = [
     {
         accessorKey: "externalLink",
         meta: {
-            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
+            responsiveClass: "hidden md:table-cell max-w-40 lg:max-w-80", // Hidden on < 768px, visible on >= 768px
         },
         header: () => {
             return (
@@ -108,14 +108,14 @@ const Project: ColumnDef<Proj>[] = [
         cell: ({ getValue }) => {
             const link = getValue() as string;
             return link && (
-                <Link
+                link && <Link
                     href={"https://" + link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex gap-2 items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 inline hover:opacity-100 transition-all group'
                 >
-                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{link}</h1>
-                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all inline break-all'>{link}</h1>
+                    <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             )
         },

@@ -87,14 +87,14 @@ const CertificateCol: ColumnDef<Certificate>[] = [
         cell: ({ getValue }) => {
             const provider = getValue() as string;
             return (
-                <Link
-                    href={provider}
+                provider && <Link
+                    href={"https://" + provider}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex gap-1 items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 inline hover:opacity-100 transition-all group'
                 >
-                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{provider}</h1>
-                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all inline'>{provider}</h1>
+                    <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             );
         },
@@ -112,14 +112,14 @@ const CertificateCol: ColumnDef<Certificate>[] = [
         cell: ({ getValue }) => {
             const platform = getValue() as string;
             return (
-                <Link
-                    href={platform}
+                platform && <Link
+                    href={"https://" + platform}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex gap-1 items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 inline hover:opacity-100 transition-all group'
                 >
-                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{platform}</h1>
-                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all inline break-all'>{platform}</h1>
+                    <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             );
         },
@@ -148,7 +148,7 @@ const CertificateCol: ColumnDef<Certificate>[] = [
     {
         accessorKey: "link",
         meta: {
-            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+            responsiveClass: "hidden lg:table-cell max-w-80", // Hidden on < 1024px, visible on >= 1024px
         },
         header: () => {
             return (
@@ -158,14 +158,14 @@ const CertificateCol: ColumnDef<Certificate>[] = [
         cell: ({ getValue }) => {
             const link = getValue() as string;
             return (
-                <Link
-                    href={link}
+                link && <Link
+                    href={"https://" + link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className='opacity-70 flex gap-1 items-center hover:opacity-100 transition-all group w-fit'
+                    className='opacity-70 inline hover:opacity-100 transition-all group'
                 >
-                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all'>{link}</h1>
-                    <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+                    <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all inline break-all'>{link}</h1>
+                    <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                 </Link>
             );
         },

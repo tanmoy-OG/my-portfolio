@@ -23,7 +23,7 @@ const SkillNAchieve = () => {
         <div className='w-full lg:w-1/2 flex flex-col gap-6 md:gap-7 lg:gap-8'>
           <div className="flex flex-col gap-3 md:gap-4">
             {achievements.slice(0, 4).map((data, id) => (
-              <Link key={id} href={data.certificate} className='ml-4 md:ml-0 font-sans-desc opacity-70 group hover:text-accent hover:opacity-100 transition-all hover:cursor-pointer text-sm md:text-lg lg:text-base z-20'>
+              <Link key={id} href={data.certificate} target="_blank" rel="noopener noreferrer" className='ml-4 md:ml-0 font-sans-desc opacity-70 group hover:text-accent hover:opacity-100 transition-all hover:cursor-pointer text-sm md:text-lg lg:text-base z-20'>
                 <span>{data.description}</span>
                 <span className='flex flex-wrap gap-1 items-center'>
                   <BsDashLg className='mt-0.5' />
