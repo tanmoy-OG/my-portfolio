@@ -7,6 +7,7 @@ export interface PageProps {
 }
 
 export interface NavProps {
+  type: string;
   path: string;
   linkName: string;
 }

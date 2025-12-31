@@ -4,7 +4,7 @@ import type { MouseEventHandler } from 'react';
 
 import { NavProps } from '@/types/api';
 
-const NavigationLink = ({ path, linkName, onClick }: NavProps & { onClick?: MouseEventHandler<HTMLAnchorElement> }) => {
+const NavigationLink = ({ type: variant, path, linkName, onClick }: NavProps & { onClick?: MouseEventHandler<HTMLAnchorElement> }) => {
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (event) => {
     if (onClick) {
       onClick(event);
@@ -25,10 +25,14 @@ const NavigationLink = ({ path, linkName, onClick }: NavProps & { onClick?: Mous
     }
   };
 
-  return (
+  return variant === 'link' ? (
     <Link href={path} onClick={handleClick} className='group w-fit hover:cursor-pointer'>
-      <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-16 transition-all'></div>
+      <div className='h-0.5 w-6 rounded bg-foreground group-hover:w-10 transition-all'></div>
       {linkName}
+    </Link>
+  ) : (
+    <Link href={path} onClick={handleClick} className='hover:cursor-pointer transition-all'>
+      <h1 className='text-lg text-accent'>{linkName}</h1>
     </Link>
   );
 };

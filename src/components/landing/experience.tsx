@@ -14,14 +14,14 @@ const Experience = () => {
       <div className="flex flex-col gap-8 md:gap-20 md:px-8">
         <div className='text-base lg:text-lg relative'>
           <ShimmerText mt={140} ml={80} mlNegative={true} text='Work' />
-          <h1 className='md:-ml-6 lg:-ml-8 opacity-20 font-cursive'>{'<h1>'}</h1>
+          <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>{'<h1>'}</h1>
           <h1 className='ml-4 md:ml-0 text-4xl md:text-5xl text-accent'>{'My Portfolio'}</h1>
-          <h1 className='ml-48 md:ml-60 -mt-6 opacity-20 font-cursive'>
+          <h1 className='ml-48 md:ml-60 -mt-6 opacity-15 font-cursive'>
             {'</h1>'}
           </h1>
         </div>
         <div className='flex flex-col gap-4 lg:gap-8'>
-          <h1 className='-ml-4 md:-ml-10 lg:-ml-12 opacity-20 font-cursive text-base lg:text-lg'>
+          <h1 className='-ml-4 md:-ml-10 lg:-ml-12 opacity-15 font-cursive text-base lg:text-lg'>
             {'<section>'}
           </h1>
           <div className="flex flex-col gap-8">
@@ -70,7 +70,7 @@ const Experience = () => {
             </h1>
             <LuArrowRight className='group-hover:translate-x-2 transition-all size-4 md:size-5' />
           </Link>
-          <h1 className='-ml-4 md:-ml-10 lg:-ml-12 -mt-4 lg:mt-0 opacity-20 font-cursive text-sm md:text-base lg:text-lg'>
+          <h1 className='-ml-4 md:-ml-10 lg:-ml-12 -mt-4 lg:mt-0 opacity-15 font-cursive text-sm md:text-base lg:text-lg'>
             {'</section>'}
           </h1>
         </div>

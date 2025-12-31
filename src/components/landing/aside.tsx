@@ -41,20 +41,23 @@ const Aside = () => {
       {/* Sidebar - Desktop */}
       <aside className='hidden lg:flex fixed left-0 w-1/5 z-30 bg-background h-screen basis-1/5 flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
         <div className='!pt-8'>
-          <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
+          {/* <Link href="#home" onClick={handleClick} className='hover:cursor-pointer transition-all'>
+            <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
+          </Link> */}
+          <NavigationLink type='home' path='#home' linkName='Tanmoy_OG' />
           {/* <NavigationLink path='#home' linkName='Tanmoy_OG' /> */}
           <h1 className='text-lg/6'>{'Web Developer & Designer'}</h1>
           <p className='text-xs opacity-50 font-sans-desc'>
             {'Software Engineer / Web Developer / UI/UX Designer'}
           </p>
         </div>
-        <div className='*:text-xs *:font-bold *:uppercase *:tracking-wide *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100'>
-          <NavigationLink path='#about' linkName='About' />
-          <NavigationLink path='#experience' linkName='Experience' />
-          <NavigationLink path='#projects' linkName='Projects' />
-          <NavigationLink path='#skills' linkName='Skills' />
-          {/* <NavigationLink path='#blog' linkName='Blog' /> */}
-          <NavigationLink path='#connect' linkName='Get in Touch' />
+        <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100 *:hover:tracking-widest'>
+          <NavigationLink type='link' path='#about' linkName='About' />
+          <NavigationLink type='link' path='#experience' linkName='Experience' />
+          <NavigationLink type='link' path='#projects' linkName='Projects' />
+          <NavigationLink type='link' path='#skills' linkName='Skills' />
+          {/* <NavigationLink type='link' path='#blog' linkName='Blog' /> */}
+          <NavigationLink type='link' path='#connect' linkName='Get in Touch' />
         </div>
         <div className='!pb-8'>
           <h1 className='text-accent'>Coding Profiles</h1>
@@ -77,33 +80,25 @@ const Aside = () => {
 
       {/* Mobile Menu Popup */}
       <aside
-        className={`fixed top-0 left-0 w-4/5 max-w-sm h-screen z-50 bg-background border-r border-foreground/10 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 w-4/5 max-w-sm h-screen z-50 bg-background border-r border-foreground/10 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className='!pt-8'>
           <div className='flex justify-between items-center mb-4'>
             <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
-            <button
-              onClick={closeMenu}
-              className='p-2 hover:bg-muted rounded-md transition-colors'
-              aria-label='Close menu'
-            >
-              <LuX className='size-6 text-foreground' />
-            </button>
           </div>
           <h1 className='text-lg/6'>{'Web Developer & Designer'}</h1>
           <p className='text-xs opacity-50 font-sans-desc'>
             {'Software Engineer / Web Developer / UI/UX Designer'}
           </p>
         </div>
-        <div className='*:text-xs *:font-bold *:uppercase *:tracking-wide *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100'>
-          <NavigationLink path='#about' linkName='About' onClick={closeMenu} />
-          <NavigationLink path='#experience' linkName='Experience' onClick={closeMenu} />
-          <NavigationLink path='#projects' linkName='Projects' onClick={closeMenu} />
-          <NavigationLink path='#skills' linkName='Skills' onClick={closeMenu} />
-          {/* <NavigationLink path='#blog' linkName='Blog' onClick={closeMenu} /> */}
-          <NavigationLink path='#connect' linkName='Get in Touch' onClick={closeMenu} />
+        <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100 *:hover:tracking-widest'>
+          <NavigationLink type='link' path='#about' linkName='About' onClick={closeMenu} />
+          <NavigationLink type='link' path='#experience' linkName='Experience' onClick={closeMenu} />
+          <NavigationLink type='link' path='#projects' linkName='Projects' onClick={closeMenu} />
+          <NavigationLink type='link' path='#skills' linkName='Skills' onClick={closeMenu} />
+          {/* <NavigationLink type='link' path='#blog' linkName='Blog' onClick={closeMenu} /> */}
+          <NavigationLink type='link' path='#connect' linkName='Get in Touch' onClick={closeMenu} />
         </div>
         <div className='!pb-8'>
           <h1 className='text-accent'>Coding Profiles</h1>
