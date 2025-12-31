@@ -1,11 +1,12 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavigationLink from './aside-nav-links';
 import { LinkPreview } from '@/ui/link-preview';
 import { LuMenu, LuX } from 'react-icons/lu';
 
 const Aside = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,6 +15,90 @@ const Aside = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'connect'];
+    const sectionElements: { id: string; element: HTMLElement }[] = [];
+
+    // Collect all section elements
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        sectionElements.push({ id: sectionId, element });
+      }
+    });
+
+    const updateActiveSection = () => {
+      // Special case: if we're at the very top, always show home
+      if (window.scrollY < 150) {
+        setActiveSection('home');
+        return;
+      }
+
+      const triggerPoint = window.scrollY + window.innerHeight * 0.3;
+      let activeId = '';
+      let minDistance = Infinity;
+
+      // Find the section that contains or is closest to the trigger point
+      sectionElements.forEach(({ id, element }) => {
+        const rect = element.getBoundingClientRect();
+        const elementTop = window.scrollY + rect.top;
+        const elementBottom = elementTop + rect.height;
+
+        // If trigger point is within this section
+        if (triggerPoint >= elementTop && triggerPoint <= elementBottom) {
+          const distance = Math.abs(triggerPoint - elementTop);
+          if (distance < minDistance) {
+            minDistance = distance;
+            activeId = id;
+          }
+        }
+      });
+
+      // If no section contains the trigger point, find the closest section above it
+      if (!activeId) {
+        sectionElements.forEach(({ id, element }) => {
+          const rect = element.getBoundingClientRect();
+          const elementTop = window.scrollY + rect.top;
+          const elementBottom = elementTop + rect.height;
+
+          // If section is above trigger point
+          if (elementBottom <= triggerPoint) {
+            const distance = triggerPoint - elementBottom;
+            if (distance < minDistance) {
+              minDistance = distance;
+              activeId = id;
+            }
+          }
+        });
+      }
+
+      if (activeId) {
+        setActiveSection(activeId);
+      }
+    };
+
+    // Initial check
+    updateActiveSection();
+
+    // Update on scroll with throttling for better performance
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -44,20 +129,20 @@ const Aside = () => {
           {/* <Link href="#home" onClick={handleClick} className='hover:cursor-pointer transition-all'>
             <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
           </Link> */}
-          <NavigationLink type='home' path='#home' linkName='Tanmoy_OG' />
+          <NavigationLink type='home' path='#home' linkName='Tanmoy_OG' isActive={activeSection === 'home'} />
           {/* <NavigationLink path='#home' linkName='Tanmoy_OG' /> */}
           <h1 className='text-lg/6'>{'Web Developer & Designer'}</h1>
           <p className='text-xs opacity-50 font-sans-desc'>
             {'Software Engineer / Web Developer / UI/UX Designer'}
           </p>
         </div>
-        <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100 *:hover:tracking-widest'>
-          <NavigationLink type='link' path='#about' linkName='About' />
-          <NavigationLink type='link' path='#experience' linkName='Experience' />
-          <NavigationLink type='link' path='#projects' linkName='Projects' />
-          <NavigationLink type='link' path='#skills' linkName='Skills' />
+        <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:hover:opacity-100 *:hover:tracking-widest'>
+          <NavigationLink type='link' path='#about' linkName='About' isActive={activeSection === 'about'} />
+          <NavigationLink type='link' path='#experience' linkName='Experience' isActive={activeSection === 'experience'} />
+          <NavigationLink type='link' path='#projects' linkName='Projects' isActive={activeSection === 'projects'} />
+          <NavigationLink type='link' path='#skills' linkName='Skills' isActive={activeSection === 'skills'} />
           {/* <NavigationLink type='link' path='#blog' linkName='Blog' /> */}
-          <NavigationLink type='link' path='#connect' linkName='Get in Touch' />
+          <NavigationLink type='link' path='#connect' linkName='Get in Touch' isActive={activeSection === 'connect'} />
         </div>
         <div className='!pb-8'>
           <h1 className='text-accent'>Coding Profiles</h1>
@@ -93,12 +178,12 @@ const Aside = () => {
           </p>
         </div>
         <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:opacity-50 *:hover:opacity-100 *:hover:tracking-widest'>
-          <NavigationLink type='link' path='#about' linkName='About' onClick={closeMenu} />
-          <NavigationLink type='link' path='#experience' linkName='Experience' onClick={closeMenu} />
-          <NavigationLink type='link' path='#projects' linkName='Projects' onClick={closeMenu} />
-          <NavigationLink type='link' path='#skills' linkName='Skills' onClick={closeMenu} />
+          <NavigationLink type='link' path='#about' linkName='About' onClick={closeMenu} isActive={activeSection === 'about'} />
+          <NavigationLink type='link' path='#experience' linkName='Experience' onClick={closeMenu} isActive={activeSection === 'experience'} />
+          <NavigationLink type='link' path='#projects' linkName='Projects' onClick={closeMenu} isActive={activeSection === 'projects'} />
+          <NavigationLink type='link' path='#skills' linkName='Skills' onClick={closeMenu} isActive={activeSection === 'skills'} />
           {/* <NavigationLink type='link' path='#blog' linkName='Blog' onClick={closeMenu} /> */}
-          <NavigationLink type='link' path='#connect' linkName='Get in Touch' onClick={closeMenu} />
+          <NavigationLink type='link' path='#connect' linkName='Get in Touch' onClick={closeMenu} isActive={activeSection === 'connect'} />
         </div>
         <div className='!pb-8'>
           <h1 className='text-accent'>Coding Profiles</h1>
