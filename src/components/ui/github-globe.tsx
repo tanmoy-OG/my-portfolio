@@ -1,27 +1,27 @@
-"use client";
-import React from "react";
-import { motion } from "motion/react";
-import dynamic from "next/dynamic";
+'use client';
+import { motion } from 'motion/react';
+import dynamic from 'next/dynamic';
+import React from 'react';
 
-const World = dynamic(() => import("@/ui/globe").then((m) => m.World), {
+const World = dynamic(() => import('@/ui/globe').then(m => m.World), {
   ssr: false,
 });
 
 export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: '#062056',
     showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
+    atmosphereColor: '#FFFFFF',
     atmosphereAltitude: 0.1,
-    emissive: "#062056",
+    emissive: '#062056',
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
-    directionalLeftLight: "#ffffff",
-    directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
+    polygonColor: 'rgba(255,255,255,0.7)',
+    ambientLight: '#38bdf8',
+    directionalLeftLight: '#ffffff',
+    directionalTopLight: '#ffffff',
+    pointLight: '#ffffff',
     arcTime: 1000,
     arcLength: 0.9,
     rings: 1,
@@ -30,7 +30,7 @@ export function GlobeDemo() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"] as const;
+  const colors = ['#06b6d4', '#3b82f6', '#6366f1'] as const;
   const pickColor = () => colors[Math.floor(Math.random() * colors.length)];
   const sampleArcs = [
     {
@@ -396,8 +396,8 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-transparent bg-transparent relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative h-full md:h-[60rem] px-4">
+    <div className='flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-transparent bg-transparent relative w-full'>
+      <div className='max-w-7xl mx-auto w-full relative h-full md:h-[60rem] px-4'>
         <motion.div
           initial={{
             opacity: 0,
@@ -410,10 +410,9 @@ export function GlobeDemo() {
           transition={{
             duration: 1,
           }}
-          className="div"
-        >
-        </motion.div>
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+          className='div'
+        ></motion.div>
+        <div className='absolute w-full -bottom-20 h-72 md:h-full z-10'>
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

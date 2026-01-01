@@ -1,133 +1,146 @@
-import { ColumnDef } from "@tanstack/react-table"
-import { Job } from "@/types/api";
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/ui/button";
-import { LuArrowUpDown, LuArrowUpRight } from "react-icons/lu";
-import { BsDashLg } from "react-icons/bs";
+import { ColumnDef } from '@tanstack/react-table';
+import Link from 'next/link';
+import { BsDashLg } from 'react-icons/bs';
+import { LuArrowUpDown, LuArrowUpRight } from 'react-icons/lu';
+
+import { Badge } from '@/components/ui/badge';
+import { Job } from '@/types/api';
+import { Button } from '@/ui/button';
 
 const JobCol: ColumnDef<Job>[] = [
-    {
-        accessorKey: "date.from.year",
-        meta: {
-            responsiveClass: "", // Always visible
-        },
-        header: ({ column }) => {
-            return (
-                <div className="flex gap-2 items-center">
-                    <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Year'}</h1>
-                    <Button
-                        variant="ghost"
-                        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-                        className="hover:bg-muted hover:text-foreground active:scale-95"
-                    >
-                        <LuArrowUpDown className="size-4" />
-                    </Button>
-                </div>
-            )
-        },
-        cell: ({ getValue }) => {
-            const year = getValue() as string;
-            return (
-                <h1 className='font-sans-desc font-medium opacity-70'>{year}</h1>
-            );
-        },
+  {
+    accessorKey: 'date.from.year',
+    meta: {
+      responsiveClass: '', // Always visible
     },
-    {
-        accessorKey: "company",
-        meta: {
-            responsiveClass: "", // Always visible
-        },
-        header: () => {
-            return (
-                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Company / Client'}</h1>
-            )
-        },
-        cell: ({ row, getValue }) => {
-            const company = getValue() as string;
-            const portal = (row.original as Job).portal as string | undefined;
+    header: ({ column }) => {
+      return (
+        <div className='flex gap-2 items-center'>
+          <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>
+            {'Year'}
+          </h1>
+          <Button
+            variant='ghost'
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className='hover:bg-muted hover:text-foreground active:scale-95'
+          >
+            <LuArrowUpDown className='size-4' />
+          </Button>
+        </div>
+      );
+    },
+    cell: ({ getValue }) => {
+      const year = getValue() as string;
+      return <h1 className='font-sans-desc font-medium opacity-70'>{year}</h1>;
+    },
+  },
+  {
+    accessorKey: 'company',
+    meta: {
+      responsiveClass: '', // Always visible
+    },
+    header: () => {
+      return (
+        <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>
+          {'Company / Client'}
+        </h1>
+      );
+    },
+    cell: ({ row, getValue }) => {
+      const company = getValue() as string;
+      const portal = (row.original as Job).portal as string | undefined;
 
-            return (
-                <>
-                    {portal ? (
-                        <Link
-                            href={portal}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline items-center transition-all group w-fit"
-                        >
-                            <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all inline'>{company}</h1>
+      return (
+        <>
+          {portal ? (
+            <Link
+              href={portal}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline items-center transition-all group w-fit'
+            >
+              <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all inline'>
+                {company}
+              </h1>
 
-                            <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
-                        </Link>
-                    ) : (
-                        <h1 className='font-sans-desc font-bold text-base md:hidden'>
-                            {company}
-                        </h1>
-                    )}
-                </>
-            );
-        },
+              <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
+            </Link>
+          ) : (
+            <h1 className='font-sans-desc font-bold text-base md:hidden'>
+              {company}
+            </h1>
+          )}
+        </>
+      );
     },
-    {
-        accessorKey: "designation",
-        meta: {
-            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
-        },
-        header: () => {
-            return (
-                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Designation'}</h1>
-            )
-        },
-        cell: ({ getValue }) => {
-            const title = getValue() as string;
-            return (
-                <h1 className='font-sans-desc font-medium opacity-70'>{title}</h1>
-            );
-        },
+  },
+  {
+    accessorKey: 'designation',
+    meta: {
+      responsiveClass: 'hidden md:table-cell', // Hidden on < 768px, visible on >= 768px
     },
-    {
-        accessorKey: "tech",
-        meta: {
-            responsiveClass: "hidden lg:table-cell max-w-80", // Hidden on < 1024px, visible on >= 1024px
-        },
-        header: () => {
-            return (
-                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Tech Stack'}</h1>
-            )
-        },
-        cell: ({ getValue }) => {
-            const tech = getValue() as string[];
-            return (
-                <div className='flex gap-2 flex-wrap'>
-                    {tech.map((data, id) => (
-                        <Badge key={id}>{data}</Badge>
-                    ))}
-                </div>
-            );
-        },
+    header: () => {
+      return (
+        <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>
+          {'Designation'}
+        </h1>
+      );
     },
-    {
-        accessorKey: "location",
-        meta: {
-            responsiveClass: "hidden md:table-cell", // Hidden on < 768px, visible on >= 768px
-        },
-        header: () => {
-            return (
-                <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>{'Location'}</h1>
-            )
-        },
-        cell: ({ getValue }) => {
-            const location = getValue() as { city?: string; country?: string } | undefined;
-            return (
-                <h1 className='font-sans-desc font-medium opacity-70 flex gap-1 items-center'>
-                    {location?.city ?? ''}
-                    {location?.city && location.country && <BsDashLg className='mt-0.5' />}
-                    {location?.country ?? ''}
-                </h1>
-            )
-        },
-    }
-]
+    cell: ({ getValue }) => {
+      const title = getValue() as string;
+      return <h1 className='font-sans-desc font-medium opacity-70'>{title}</h1>;
+    },
+  },
+  {
+    accessorKey: 'tech',
+    meta: {
+      responsiveClass: 'hidden lg:table-cell max-w-80', // Hidden on < 1024px, visible on >= 1024px
+    },
+    header: () => {
+      return (
+        <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>
+          {'Tech Stack'}
+        </h1>
+      );
+    },
+    cell: ({ getValue }) => {
+      const tech = getValue() as string[];
+      return (
+        <div className='flex gap-2 flex-wrap'>
+          {tech.map((data, id) => (
+            <Badge key={id}>{data}</Badge>
+          ))}
+        </div>
+      );
+    },
+  },
+  {
+    accessorKey: 'location',
+    meta: {
+      responsiveClass: 'hidden md:table-cell', // Hidden on < 768px, visible on >= 768px
+    },
+    header: () => {
+      return (
+        <h1 className='font-sans-desc font-extrabold whitespace-nowrap'>
+          {'Location'}
+        </h1>
+      );
+    },
+    cell: ({ getValue }) => {
+      const location = getValue() as
+        | { city?: string; country?: string }
+        | undefined;
+      return (
+        <h1 className='font-sans-desc font-medium opacity-70 flex gap-1 items-center'>
+          {location?.city ?? ''}
+          {location?.city && location.country && (
+            <BsDashLg className='mt-0.5' />
+          )}
+          {location?.country ?? ''}
+        </h1>
+      );
+    },
+  },
+];
 
-export default JobCol
+export default JobCol;

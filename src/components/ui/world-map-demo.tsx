@@ -1,9 +1,9 @@
-"use client";
-import WorldMap from "@/components/ui/world-map";
+'use client';
+import WorldMap from '@/components/ui/world-map';
 
 export function WorldMapDemo() {
   return (
-    <div className="dark:bg-transparent bg-transparent w-full h-fit z-20">
+    <div className='dark:bg-transparent bg-transparent w-full h-fit z-20'>
       <WorldMap
         dots={[
           {

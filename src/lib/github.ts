@@ -1,8 +1,10 @@
-export async function getGithubContributions(username: string): Promise<number> {
+export async function getGithubContributions(
+  username: string
+): Promise<number> {
   try {
     const link = `https://github-contributions-api.deno.dev/${username}.json`;
     const res = await fetch(link, {
-      next: { revalidate: 3600 }
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) return 0;

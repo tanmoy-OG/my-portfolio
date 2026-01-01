@@ -1,9 +1,9 @@
-import { ColumnDef } from "@tanstack/react-table"
+import { ColumnDef } from '@tanstack/react-table';
 
 export interface PageProps {
   params: Promise<{
-    id: string
-  }>
+    id: string;
+  }>;
 }
 
 export interface NavProps {
@@ -30,11 +30,11 @@ export interface Job {
     from: {
       month: string;
       year: string;
-    }
+    };
     to: {
       month: string | null;
       year: string | null;
-    }
+    };
     current: boolean;
   };
   company: string;
@@ -54,11 +54,11 @@ export interface Proj {
     from: {
       month: string;
       year: string;
-    }
+    };
     to: {
       month: string | null;
       year: string | null;
-    }
+    };
   };
   title: string;
   team: string;
@@ -77,26 +77,26 @@ export interface Proj {
 }
 
 export interface Achievement {
-  year: string
-  description: string
-  event: string
-  organization: string
-  certificate: string
+  year: string;
+  description: string;
+  event: string;
+  organization: string;
+  certificate: string;
 }
 
 export interface Certificate {
   date: {
-    month: string
-    year: string
-  }
-  title: string
-  provider: string
-  platform: string
-  skills: string[]
-  link: string
+    month: string;
+    year: string;
+  };
+  title: string;
+  provider: string;
+  platform: string;
+  skills: string[];
+  link: string;
 }
 
 export interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  columns: ColumnDef<TData, TValue>[];
+  data: TData[];
 }

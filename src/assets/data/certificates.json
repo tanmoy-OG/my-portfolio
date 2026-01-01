@@ -1,56 +1,46 @@
 [
-    {
-        "date": {
-            "month": "Nov",
-            "year": "2022"
-        },
-        "title": "Bits and Bytes of Computer Networking",
-        "provider": "google.com",
-        "platform": "coursera.org",
-        "skills": [
-            "Computer Networking"
-        ],
-        "link": "drive.proton.me/urls/T3EMHEXWCC#5RAGAdHss4wI"
+  {
+    "date": {
+      "month": "Nov",
+      "year": "2022"
     },
-    {
-        "date": {
-            "month": "Jan",
-            "year": "2022"
-        },
-        "title": "Git and Github Masterclass",
-        "provider": "",
-        "platform": "udemy.com",
-        "skills": [
-            "Git",
-            "GitHub"
-        ],
-        "link": "drive.proton.me/urls/AWBM1HA5NG#qkI67MB0a0hI"
+    "title": "Bits and Bytes of Computer Networking",
+    "provider": "google.com",
+    "platform": "coursera.org",
+    "skills": ["Computer Networking"],
+    "link": "drive.proton.me/urls/T3EMHEXWCC#5RAGAdHss4wI"
+  },
+  {
+    "date": {
+      "month": "Jan",
+      "year": "2022"
     },
-    {
-        "date": {
-            "month": "May",
-            "year": "2022"
-        },
-        "title": "Microsoft 365",
-        "provider": "",
-        "platform": "udemy.com",
-        "skills": [
-            "Microsoft 365"
-        ],
-        "link": "drive.proton.me/urls/2YWGFFFXPW#DxqLiF5vlcax"
+    "title": "Git and Github Masterclass",
+    "provider": "",
+    "platform": "udemy.com",
+    "skills": ["Git", "GitHub"],
+    "link": "drive.proton.me/urls/AWBM1HA5NG#qkI67MB0a0hI"
+  },
+  {
+    "date": {
+      "month": "May",
+      "year": "2022"
     },
-    {
-        "date": {
-            "month": "May",
-            "year": "2021"
-        },
-        "title": "Java for Beginners",
-        "provider": "",
-        "platform": "udemy.com",
-        "skills": [
-            "JAVA",
-            "VS Code"
-        ],
-        "link": "drive.proton.me/urls/06B9SV9EYW#kspN3MrDRg4Z"
-    }
+    "title": "Microsoft 365",
+    "provider": "",
+    "platform": "udemy.com",
+    "skills": ["Microsoft 365"],
+    "link": "drive.proton.me/urls/2YWGFFFXPW#DxqLiF5vlcax"
+  },
+  {
+    "date": {
+      "month": "May",
+      "year": "2021"
+    },
+    "title": "Java for Beginners",
+    "provider": "",
+    "platform": "udemy.com",
+    "skills": ["JAVA", "VS Code"],
+    "link": "drive.proton.me/urls/06B9SV9EYW#kspN3MrDRg4Z"
+  }
 ]

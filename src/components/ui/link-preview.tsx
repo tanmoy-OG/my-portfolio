@@ -1,16 +1,15 @@
-"use client";
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-
-import { encode } from "qss";
-import React from "react";
+'use client';
+import * as HoverCardPrimitive from '@radix-ui/react-hover-card';
 import {
   AnimatePresence,
   motion,
   useMotionValue,
   useSpring,
-} from "motion/react";
+} from 'motion/react';
+import { encode } from 'qss';
+import React from 'react';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 type LinkPreviewProps = {
   children: React.ReactNode;
@@ -21,9 +20,9 @@ type LinkPreviewProps = {
   quality?: number;
   layout?: string;
 } & (
-    | { isStatic: true; imageSrc: string }
-    | { isStatic?: false; imageSrc?: never }
-  );
+  | { isStatic: true; imageSrc: string }
+  | { isStatic?: false; imageSrc?: never }
+);
 
 export const LinkPreview = ({
   children,
@@ -32,9 +31,9 @@ export const LinkPreview = ({
   width = 200,
   height = 125,
   quality = 50,
-  layout = "fixed",
+  layout = 'fixed',
   isStatic = false,
-  imageSrc = "",
+  imageSrc = '',
 }: LinkPreviewProps) => {
   let src;
   if (!isStatic) {
@@ -42,12 +41,12 @@ export const LinkPreview = ({
       url,
       screenshot: true,
       meta: false,
-      embed: "screenshot.url",
-      colorScheme: "dark",
-      "viewport.isMobile": true,
-      "viewport.deviceScaleFactor": 1,
-      "viewport.width": width * 3,
-      "viewport.height": height * 3,
+      embed: 'screenshot.url',
+      colorScheme: 'dark',
+      'viewport.isMobile': true,
+      'viewport.deviceScaleFactor': 1,
+      'viewport.width': width * 3,
+      'viewport.height': height * 3,
     });
     src = `https://api.microlink.io/?${params}`;
   } else {
@@ -77,35 +76,33 @@ export const LinkPreview = ({
   return (
     <>
       {isMounted ? (
-        <div className="hidden">
-          <img
-            src={src}
-            width={width}
-            height={height}
-            alt="hidden image"
-          />
+        <div className='hidden'>
+          <img src={src} width={width} height={height} alt='hidden image' />
         </div>
       ) : null}
 
       <HoverCardPrimitive.Root
         openDelay={50}
         closeDelay={100}
-        onOpenChange={(open) => {
+        onOpenChange={open => {
           setOpen(open);
         }}
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("hover:tracking-widest w-fit transition-all", className)}
+          className={cn(
+            'hover:tracking-widest w-fit transition-all',
+            className
+          )}
           href={url}
         >
           {children}
         </HoverCardPrimitive.Trigger>
 
         <HoverCardPrimitive.Content
-          className="[transform-origin:var(--radix-hover-card-content-transform-origin)]"
-          side="top"
-          align="center"
+          className='[transform-origin:var(--radix-hover-card-content-transform-origin)]'
+          side='top'
+          align='center'
           sideOffset={10}
         >
           <AnimatePresence>
@@ -117,28 +114,28 @@ export const LinkPreview = ({
                   y: 0,
                   scale: 1,
                   transition: {
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 260,
                     damping: 20,
                   },
                 }}
                 exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                className="shadow-xl rounded-xl"
+                className='shadow-xl rounded-xl'
                 style={{
                   x: translateX,
                 }}
               >
                 <a
                   href={url}
-                  className="block p-0.5 bg-foreground/50 shadow rounded-md"
+                  className='block p-0.5 bg-foreground/50 shadow rounded-md'
                   style={{ fontSize: 0 }}
                 >
                   <img
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
-                    className="rounded-sm"
-                    alt="preview image"
+                    className='rounded-sm'
+                    alt='preview image'
                   />
                 </a>
               </motion.div>

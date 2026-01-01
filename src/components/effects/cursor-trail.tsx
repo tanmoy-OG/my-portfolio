@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 type TrailPoint = {
   x: number;
@@ -22,7 +22,7 @@ export default function CursorTrail() {
     const isMobile = window.innerWidth < 1024;
     if (isMobile) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     let mouseMoved = false;
@@ -42,11 +42,46 @@ export default function CursorTrail() {
 
     // Define multiple stroke layers with different colors and path variations
     const strokeLayers = [
-      { color: "#5eead4", widthScale: 0.5, alpha: 0.9, springOffset: 0.0, frictionOffset: 0.0, positionOffset: { x: 0, y: 0 } },      // sky blue - main
-      { color: "#0ea5e9", widthScale: 0.4, alpha: 0.7, springOffset: 0.02, frictionOffset: 0.01, positionOffset: { x: -2, y: -1 } }, // cyan - slightly different
-      { color: "#ff66cc", widthScale: 0.3, alpha: 0.6, springOffset: -0.01, frictionOffset: 0.02, positionOffset: { x: 2, y: 1 } },   // violet
-      { color: "#0ea5e9", widthScale: 0.2, alpha: 0.55, springOffset: 0.03, frictionOffset: -0.01, positionOffset: { x: -1, y: 2 } }, // pink
-      { color: "#5eead4", widthScale: 0.1, alpha: 0.5, springOffset: -0.02, frictionOffset: 0.03, positionOffset: { x: 1, y: -2 } },  // rose
+      {
+        color: '#5eead4',
+        widthScale: 0.5,
+        alpha: 0.9,
+        springOffset: 0.0,
+        frictionOffset: 0.0,
+        positionOffset: { x: 0, y: 0 },
+      }, // sky blue - main
+      {
+        color: '#0ea5e9',
+        widthScale: 0.4,
+        alpha: 0.7,
+        springOffset: 0.02,
+        frictionOffset: 0.01,
+        positionOffset: { x: -2, y: -1 },
+      }, // cyan - slightly different
+      {
+        color: '#ff66cc',
+        widthScale: 0.3,
+        alpha: 0.6,
+        springOffset: -0.01,
+        frictionOffset: 0.02,
+        positionOffset: { x: 2, y: 1 },
+      }, // violet
+      {
+        color: '#0ea5e9',
+        widthScale: 0.2,
+        alpha: 0.55,
+        springOffset: 0.03,
+        frictionOffset: -0.01,
+        positionOffset: { x: -1, y: 2 },
+      }, // pink
+      {
+        color: '#5eead4',
+        widthScale: 0.1,
+        alpha: 0.5,
+        springOffset: -0.02,
+        frictionOffset: 0.03,
+        positionOffset: { x: 1, y: -2 },
+      }, // rose
     ];
 
     // Create a trail array for each stroke layer
@@ -103,13 +138,17 @@ export default function CursorTrail() {
     const update = (t: number) => {
       // intro motion if user hasn't moved
       if (!mouseMoved) {
-        pointer.x = (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) * container.clientWidth;
-        pointer.y = (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) * container.clientHeight;
+        pointer.x =
+          (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) *
+          container.clientWidth;
+        pointer.y =
+          (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) *
+          container.clientHeight;
       }
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
 
       // Step 1: Calculate base trail (first layer) - this defines the unified head
       const baseTrail = trails[0]!;
@@ -164,7 +203,9 @@ export default function CursorTrail() {
             // Diverging tail section - use offset position and layer-specific physics
             const prev = trail[i - 1]!;
             // Gradually apply position offset based on distance from unified head
-            const divergenceProgress = (i - params.unifiedHeadLength) / (params.pointsNumber - params.unifiedHeadLength);
+            const divergenceProgress =
+              (i - params.unifiedHeadLength) /
+              (params.pointsNumber - params.unifiedHeadLength);
             const offsetX = layer.positionOffset.x * divergenceProgress;
             const offsetY = layer.positionOffset.y * divergenceProgress;
 
@@ -193,7 +234,8 @@ export default function CursorTrail() {
             const xc = 0.5 * (curr.x + next.x);
             const yc = 0.5 * (curr.y + next.y);
             ctx.quadraticCurveTo(curr.x, curr.y, xc, yc);
-            ctx.lineWidth = layer.widthScale * params.widthFactor * (params.pointsNumber - i);
+            ctx.lineWidth =
+              layer.widthScale * params.widthFactor * (params.pointsNumber - i);
             ctx.stroke();
           }
           const last = trail[trail.length - 1]!;
@@ -216,7 +258,10 @@ export default function CursorTrail() {
           const xc = 0.5 * (curr.x + next.x);
           const yc = 0.5 * (curr.y + next.y);
           ctx.quadraticCurveTo(curr.x, curr.y, xc, yc);
-          ctx.lineWidth = baseLayerStyle.widthScale * params.widthFactor * (params.pointsNumber - i);
+          ctx.lineWidth =
+            baseLayerStyle.widthScale *
+            params.widthFactor *
+            (params.pointsNumber - i);
           ctx.stroke();
         }
         const last = baseTrail[baseTrail.length - 1]!;
@@ -232,28 +277,29 @@ export default function CursorTrail() {
 
     rafId = window.requestAnimationFrame(update);
 
-    window.addEventListener("mousemove", onMouseMove, { passive: true });
-    window.addEventListener("click", onClick, { passive: true });
-    window.addEventListener("touchmove", onTouchMove, { passive: true });
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('click', onClick, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
     const onResize = () => {
       setupCanvas();
     };
-    window.addEventListener("resize", onResize);
+    window.addEventListener('resize', onResize);
 
     return () => {
-      window.removeEventListener("mousemove", onMouseMove as any);
-      window.removeEventListener("click", onClick as any);
-      window.removeEventListener("touchmove", onTouchMove as any);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('mousemove', onMouseMove as any);
+      window.removeEventListener('click', onClick as any);
+      window.removeEventListener('touchmove', onTouchMove as any);
+      window.removeEventListener('resize', onResize);
       window.cancelAnimationFrame(rafId);
     };
   }, []);
 
   return (
-    <div ref={containerRef} className="hidden lg:block absolute inset-0 pointer-events-none select-none z-0 opacity-50">
-      <canvas ref={canvasRef} className="w-full h-full -z-10 opacity-50" />
+    <div
+      ref={containerRef}
+      className='hidden lg:block absolute inset-0 pointer-events-none select-none z-0 opacity-50'
+    >
+      <canvas ref={canvasRef} className='w-full h-full -z-10 opacity-50' />
     </div>
   );
 }
-
-

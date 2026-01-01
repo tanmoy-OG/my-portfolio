@@ -2,19 +2,23 @@ import About from '@/landing/about';
 import Aside from '@/landing/aside';
 import Connect from '@/landing/connect';
 import Experience from '@/landing/experience';
+import Footer from '@/landing/footer';
 import Hero from '@/landing/hero';
 import SkillNAchieve from '@/landing/skill-n-achieve';
+
 import CursorTrail from '../components/effects/cursor-trail';
-import Footer from '@/landing/footer';
 
 export default function Home() {
   return (
-    <main id='home' className='min-h-screen bg-primary flex flex-row-reverse text-foreground font-sans'>
+    <main
+      id='home'
+      className='min-h-screen bg-primary flex flex-row-reverse text-foreground font-sans'
+    >
       <Aside /> {/* bg-background basis-1/5 flex flex-col justify-between */}
       <div className='w-full lg:basis-4/5 flex flex-col gap-20 md:gap-32 lg:gap-40 relative overflow-hidden'>
         <CursorTrail />
         <div className='px-4 md:p-6 lg:p-8 flex flex-col gap-20 md:gap-28 lg:gap-36 relative z-10'>
-          <div className="flex flex-col gap-0 lg:gap-20">
+          <div className='flex flex-col gap-0 lg:gap-20'>
             <Hero />
             <About />
           </div>

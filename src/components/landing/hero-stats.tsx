@@ -1,4 +1,4 @@
-import { HeroStats } from "@/types/api";
+import { HeroStats } from '@/types/api';
 
 const Stats = ({ count, line1, line2 }: HeroStats) => {
   return (

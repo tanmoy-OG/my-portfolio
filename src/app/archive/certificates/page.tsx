@@ -1,26 +1,27 @@
-"use client"
-import CertificateCol from "@/components/archive/certificate";
-import { DataTable } from "@/ui/data-table";
+'use client';
+import Link from 'next/link';
+import { LuArrowLeft } from 'react-icons/lu';
 
-import data from "@/data/certificates.json"
-import Link from "next/link";
-import { LuArrowLeft } from "react-icons/lu";
+import CertificateCol from '@/components/archive/certificate';
+import data from '@/data/certificates.json';
+import { DataTable } from '@/ui/data-table';
 
 const Page = () => {
-    return (
-        <div className='container bg-primary h-full min-h-screen max-w-full mx-auto px-8 md:px-10 py-16 md:py-20 flex flex-col gap-12 md:gap-16'>
-            <div className="flex flex-col gap-4">
-                <Link href='/' className='w-fit group z-10 flex gap-1 items-center text-accent'>
-                    <LuArrowLeft className='-ml-1 pt-0.5 group-hover:-translate-x-2 transition-all' />
-                    <h1 className='font-bold font-sans-desc'>
-                        {'Tanmoy_OG'}
-                    </h1>
-                </Link>
-                <h1 className='text-5xl font-sans'>{'Certificates'}</h1>
-            </div>
-            <DataTable columns={CertificateCol} data={data} />
-        </div>
-    );
-}
+  return (
+    <div className='container bg-primary h-full min-h-screen max-w-full mx-auto px-8 md:px-10 py-16 md:py-20 flex flex-col gap-12 md:gap-16'>
+      <div className='flex flex-col gap-4'>
+        <Link
+          href='/'
+          className='w-fit group z-10 flex gap-1 items-center text-accent'
+        >
+          <LuArrowLeft className='-ml-1 pt-0.5 group-hover:-translate-x-2 transition-all' />
+          <h1 className='font-bold font-sans-desc'>{'Tanmoy_OG'}</h1>
+        </Link>
+        <h1 className='text-5xl font-sans'>{'Certificates'}</h1>
+      </div>
+      <DataTable columns={CertificateCol} data={data} />
+    </div>
+  );
+};
 
 export default Page;

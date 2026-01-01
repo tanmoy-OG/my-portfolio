@@ -10,21 +10,29 @@ const About = () => {
     <div id='about' className='flex flex-col px-4 md:px-6 lg:px-8 relative'>
       <div className='flex flex-col lg:flex-row justify-between gap-12 md:gap-16 lg:gap-28 md:px-8 z-20'>
         <div className='w-full flex flex-col gap-4 lg:w-1/2'>
-          <div className="text-base lg:text-lg">
-            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>{'<h1>'}</h1>
-            <h1 className='ml-4 md:ml-0 text-4xl md:text-5xl text-accent'>{'Know Me'}</h1>
+          <div className='text-base lg:text-lg'>
+            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>
+              {'<h1>'}
+            </h1>
+            <h1 className='ml-4 md:ml-0 text-4xl md:text-5xl text-accent'>
+              {'Know Me'}
+            </h1>
             <h1 className='ml-40 md:ml-48 -mt-6 opacity-15 font-cursive'>
               {'</h1>'}
             </h1>
           </div>
-          <div className="text-base lg:text-lg">
-            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>{'<p>'}</h1>
+          <div className='text-base lg:text-lg'>
+            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>
+              {'<p>'}
+            </h1>
             <div className='ml-4 md:ml-0 flex flex-col gap-3 md:gap-4 font-sans-desc opacity-70 text-sm md:text-lg lg:text-base'>
               <p className=''>{para1}</p>
               <p className=''>{para2}</p>
               <p className=''>{para3}</p>
             </div>
-            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>{'</p>'}</h1>
+            <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>
+              {'</p>'}
+            </h1>
           </div>
         </div>
         <div className='w-full lg:w-1/2'>
@@ -42,7 +50,7 @@ const About = () => {
           </Card>
         </div>
       </div>
-      <div className="hidden md:block absolute w-full -mt-60 lg:-mt-80 ml-32 md:ml-44 lg:ml-52 opacity-30 md:opacity-40 lg:opacity-50 pointer-events-none">
+      <div className='hidden md:block absolute w-full -mt-60 lg:-mt-80 ml-32 md:ml-44 lg:ml-52 opacity-30 md:opacity-40 lg:opacity-50 pointer-events-none'>
         <GlobeDemo />
       </div>
     </div>
