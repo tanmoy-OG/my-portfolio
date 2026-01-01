@@ -26,7 +26,7 @@ const DialogueImage = ({ title, gallery, isPopup, initialIndex = 0 }: Params) =>
                                 <div className="p-1">
                                     <Card className="p-0 group">
                                         <CardContent className="flex items-center justify-center p-0">
-                                            <Image src={link} alt={title} width={100} height={100} className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all' />
+                                            <Image src={link} alt={title} width={1600} height={10} sizes="(max-width: 1024px) 90vw, 80vw" className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all' />
                                         </CardContent>
                                     </Card>
                                 </div>

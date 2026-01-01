@@ -28,14 +28,14 @@
   {
     "date": {
       "from": {
-        "month": "Nov",
+        "month": "August",
         "year": "2024"
       },
       "to": {
-        "month": "",
-        "year": ""
+        "month": "September",
+        "year": "2024"
       },
-      "current": true
+      "current": false
     },
     "company": "Interior Exterior Designers",
     "designation": "Freelance Web Dev",
@@ -53,5 +53,33 @@
       "SendGrid"
     ],
     "portal": "https://interior-designers.in"
+  },
+  {
+    "date": {
+      "from": {
+        "month": "January",
+        "year": "2024"
+      },
+      "to": {
+        "month": "February",
+        "year": "2024"
+      },
+      "current": false
+    },
+    "company": "Philomath",
+    "designation": "Freelance Web Dev",
+    "location": {
+      "city": "",
+      "country": "Remote"
+    },
+    "work": "Build and deliver a web wrapped desktop app to enable online tutoring. Integrating zoom for live sessions. Working with firebase to authenticate and validate users, admin controls and maintain course content archives- pdf materials, session recordings. Using python library to compile a web wrapper desktop application that runs locally without online hosting.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Firebase",
+      "Python",
+      "Zoom"
+    ],
+    "portal": ""
   }
 ]

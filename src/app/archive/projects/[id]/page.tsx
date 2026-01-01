@@ -71,22 +71,26 @@ export default function ProjectPage({ params }: PageProps) {
             <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-28 px-4 md:px-10 lg:px-18">
                 <div className="text-sm w-full lg:w-1/2 flex flex-col gap-6 md:gap-8">
                     {project.gallery[0] && (
-                        <Image src={project.gallery[0]} alt={project.title} width={100} height={100} className='rounded-sm w-full object-cover border-2 border-foreground/10 hover:border-foreground/50 active:border-foreground/50 lg:hidden transition-all'
+                        <Image src={project.gallery[0]} alt={project.title} width={1200} height={0} sizes="100vw" className='rounded-sm w-full object-cover border-2 border-foreground/10 hover:border-foreground/50 active:border-foreground/50 lg:hidden transition-all'
                         />
                     )}
                     <div className="flex flex-col gap-4 lg:gap-6 px-4">
                         <p className='opacity-70'>{project.description}</p>
                         <div className="flex lg:flex-col gap-8 lg:gap-2">
-                            {// project.externalLink &&
-                                <Link href={project.externalLink} className='w-fit group z-20 flex gap-1 items-center hover:text-accent' id='connect'>
+                            {project.externalLink &&
+                                <Link href={project.externalLink} className='w-fit group z-20 flex gap-1 items-center hover:text-accent'
+                                    target="_blank"
+                                    rel="noopener noreferrer">
                                     <LuGlobe className="size-5 mr-1" />
                                     <h1 className='font-sans-desc font-bold text-sm md:text-base'>
                                         {'View Live'}
                                     </h1>
                                     <LuArrowUpRight className='size-4 mt-0.5 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
                                 </Link>}
-                            {// project.gitHub &&
-                                <Link href={project.gitHub} className='w-fit group z-20 flex gap-1 items-center hover:text-accent' id='connect'>
+                            {project.gitHub &&
+                                <Link href={project.gitHub} className='w-fit group z-20 flex gap-1 items-center hover:text-accent'
+                                    target="_blank"
+                                    rel="noopener noreferrer">
                                     <LuCodeXml className="size-5 mr-1" />
                                     <h1 className='font-sans-desc font-bold text-sm md:text-base'>
                                         {'Source Code'}
@@ -102,9 +106,9 @@ export default function ProjectPage({ params }: PageProps) {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className='flex flex-col gap-2 px-6 md:px-8 font-sans-desc opacity-70'>
-                            <p>{'I mainly do full-stack Web Development and UI/UX Design'}</p>
-                            <p>{'Currently I am also learning React-Native for Android'}</p>
-                            <p>{"I've also started learning ML"}</p>
+                            {project.features.map((text, id) => (
+                                <p key={id}>{text}</p>
+                            ))}
                         </CardContent>
                     </Card>
                 </div>
@@ -116,7 +120,7 @@ export default function ProjectPage({ params }: PageProps) {
                                     <div className="p-1">
                                         <Card className="p-0 group">
                                             <CardContent className="flex items-center justify-center p-0">
-                                                <Image src={link} alt={project.title} width={100} height={100} className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all cursor-pointer'
+                                                <Image src={link} alt={project.title} width={1200} height={0} sizes="(max-width: 1024px) 100vw, 50vw" className='rounded-sm w-full object-cover border-2 border-foreground/10 group-hover:border-foreground/50 transition-all cursor-pointer'
                                                     onClick={() => {
                                                         setClickedIndex(id);
                                                         isPopup(true);

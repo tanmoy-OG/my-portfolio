@@ -70,6 +70,7 @@ export interface Proj {
   company: string;
   description: string;
   tech: string[];
+  features: string[];
   externalLink: string;
   gitHub: string;
   install: string;
