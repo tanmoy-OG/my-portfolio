@@ -17,10 +17,12 @@ const dosisSans = Dosis({
 
 const manropeSans = Manrope({
   variable: '--font-manrope-sans',
+  subsets: ['latin'],
 });
 
 const archivoSans = Archivo({
   variable: '--font-archivo-sans',
+  subsets: ['latin'],
 });
 
 const fastHandCursive = Fasthand({
