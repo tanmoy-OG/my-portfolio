@@ -3,9 +3,14 @@ import { Resend } from 'resend';
 
 import EmailTemplate from '@/email/email-template';
 
-// Initialize Resend with API key, fallback to empty string if not provided
-const resendApiKey = process.env['RESEND_API_KEY'];
-const resend = new Resend(resendApiKey);
+// Lazy initialization of Resend to avoid build-time errors
+function getResend() {
+  const resendApiKey = process.env['RESEND_API_KEY'];
+  if (!resendApiKey) {
+    return null;
+  }
+  return new Resend(resendApiKey);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -25,6 +30,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const resend = getResend();
     if (!resend) {
       return NextResponse.json(
         { error: 'Email service not configured' },
