@@ -89,7 +89,7 @@ const JobCol: ColumnDef<Job>[] = [
     {
         accessorKey: "tech",
         meta: {
-            responsiveClass: "hidden lg:table-cell", // Hidden on < 1024px, visible on >= 1024px
+            responsiveClass: "hidden lg:table-cell max-w-80", // Hidden on < 1024px, visible on >= 1024px
         },
         header: () => {
             return (
