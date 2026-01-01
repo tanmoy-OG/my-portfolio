@@ -15,7 +15,7 @@ const Connect = () => {
     >
       <div className='flex flex-col lg:flex-row justify-between gap-6 md:gap-12 lg:gap-16 md:px-8'>
         <div className='w-full lg:w-1/2 relative'>
-          <ShimmerText mt={140} ml={96} mlNegative={false} text='Dm' />
+          <ShimmerText mt={540} ml={480} mlNegative={false} text='Dm' />
           <div className='flex flex-col gap-4'>
             <div className='text-base lg:text-lg'>
               <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>

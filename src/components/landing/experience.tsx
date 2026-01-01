@@ -16,7 +16,7 @@ const Experience = () => {
     >
       <div className='flex flex-col gap-8 md:gap-20 md:px-8'>
         <div className='text-base lg:text-lg relative'>
-          <ShimmerText mt={140} ml={80} mlNegative={true} text='Work' />
+          <ShimmerText mt={480} ml={320} mlNegative={true} text='Work' />
           <h1 className='md:-ml-6 lg:-ml-8 opacity-15 font-cursive'>
             {'<h1>'}
           </h1>
@@ -57,7 +57,7 @@ const Experience = () => {
         </div>
       </div>
       <div id='projects' className='relative md:px-8'>
-        <ShimmerText mt={130} ml={16} mlNegative={false} text='Projects' />
+        <ShimmerText mt={510} ml={20} mlNegative={false} text='Projects' />
         <div className='mt-12 md:mt-18 lg:mt-24 flex flex-col gap-8'>
           {projList.slice(0, 4).map((data, id) => (
             <ExpProject

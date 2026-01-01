@@ -28,27 +28,30 @@ const ShimmerText = ({ mt, ml, mlNegative, text }: Props) => {
   return (
     <div
       ref={containerRef}
-      className={`hidden md:flex absolute flex-col justify-center font-sans-bg font-extrabold text-[10rem] md:text-[15rem] lg:text-[20rem] opacity-10 select-none h-[200vh] z-10 -mt-${mt}`}
+      className="hidden md:flex absolute flex-col justify-center font-sans-bg font-extrabold text-[10rem] md:text-[15rem] lg:text-[20rem] opacity-10 select-none h-[200vh] z-10"
+      style={{ marginTop: `-${mt}px` }}
       onMouseMove={handleMouseMove}
     >
       {mlNegative ? (
         <span
-          className={`text-foreground/40 uppercase bg-clip-text transition-none pointer-events-none -ml-${ml}`}
+          className="text-foreground/40 uppercase bg-clip-text transition-none pointer-events-none"
           style={{
             backgroundImage: gradient,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
+            marginLeft: `-${ml}px`,
           }}
         >
           {text}
         </span>
       ) : (
         <span
-          className={`text-foreground/40 uppercase bg-clip-text transition-none pointer-events-none ml-${ml}`}
+          className="text-foreground/40 uppercase bg-clip-text transition-none pointer-events-none"
           style={{
             backgroundImage: gradient,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
+            marginLeft: `${ml}px`,
           }}
         >
           {text}
