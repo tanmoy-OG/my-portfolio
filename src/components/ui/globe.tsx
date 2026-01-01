@@ -9,7 +9,7 @@ import countries from '@/data/globe.json';
 declare module '@react-three/fiber' {
   interface ThreeElements {
     threeGlobe: ThreeElements['mesh'] & {
-      new (): ThreeGlobe;
+      new(): ThreeGlobe;
     };
   }
 }
@@ -222,7 +222,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       );
 
       const ringsData = data
-        .filter((d, i) => newNumbersOfRings.includes(i))
+        .filter((_, i) => newNumbersOfRings.includes(i))
         .map(d => ({
           lat: d.startLat,
           lng: d.startLng,
