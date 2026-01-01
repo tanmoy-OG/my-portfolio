@@ -49,7 +49,7 @@ export function DataTable<TData, TValue>({
                 ];
                 const responsiveClass =
                   (header.column.columnDef.meta as { responsiveClass?: string })
-                    ?.responsiveClass || '';
+                    ?.responsiveClass ?? '';
                 return (
                   <TableHead
                     key={header.id}
@@ -85,7 +85,7 @@ export function DataTable<TData, TValue>({
                   ];
                   const responsiveClass =
                     (cell.column.columnDef.meta as { responsiveClass?: string })
-                      ?.responsiveClass || '';
+                      ?.responsiveClass ?? '';
                   return (
                     <TableCell
                       key={cell.id}

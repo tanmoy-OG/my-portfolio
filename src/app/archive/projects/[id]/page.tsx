@@ -39,7 +39,9 @@ function normalizeParam(id: string) {
   let decoded = id;
   try {
     decoded = decodeURIComponent(id);
-  } catch {}
+  } catch {
+    // Ignore decoding errors and use the original id
+  }
   return {
     raw: decoded,
     slug: toSlug(decoded),

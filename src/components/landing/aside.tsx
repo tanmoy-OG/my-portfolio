@@ -129,6 +129,14 @@ const Aside = () => {
         <div
           className='fixed inset-0 bg-background/80 backdrop-blur-sm z-40 lg:hidden'
           onClick={closeMenu}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              closeMenu();
+            }
+          }}
+          role='button'
+          tabIndex={0}
+          aria-label='Close menu'
         />
       )}
 
@@ -210,9 +218,8 @@ const Aside = () => {
 
       {/* Mobile Menu Popup */}
       <aside
-        className={`fixed top-0 left-0 w-4/5 max-w-sm h-screen z-50 bg-background border-r border-foreground/10 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 w-4/5 max-w-sm h-screen z-50 bg-background border-r border-foreground/10 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className='!pt-8'>
           <div className='flex justify-between items-center mb-4'>

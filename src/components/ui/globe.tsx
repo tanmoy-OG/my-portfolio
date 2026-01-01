@@ -89,7 +89,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   useEffect(() => {
     if (!globeRef.current && groupRef.current) {
       globeRef.current = new ThreeGlobe();
-      (groupRef.current as any).add(globeRef.current);
+      (groupRef.current as Group).add(globeRef.current);
       setIsInitialized(true);
     }
   }, []);
@@ -106,8 +106,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
     globeMaterial.color = new Color(globeConfig.globeColor);
     globeMaterial.emissive = new Color(globeConfig.emissive);
-    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
-    globeMaterial.shininess = globeConfig.shininess || 0.9;
+    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity ?? 0.1;
+    globeMaterial.shininess = globeConfig.shininess ?? 0.9;
   }, [
     isInitialized,
     globeConfig.globeColor,
@@ -167,6 +167,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng(d => (d as { startLng: number }).startLng * 1)
       .arcEndLat(d => (d as { endLat: number }).endLat * 1)
       .arcEndLng(d => (d as { endLng: number }).endLng * 1)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .arcColor((e: any) => (e as { color: string }).color)
       .arcAltitude(e => (e as { arcAlt: number }).arcAlt * 1)
       .arcStroke(_ => {
@@ -247,7 +248,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, []);
+  }, [gl, size.width, size.height]);
 
   return null;
 }
@@ -259,6 +260,7 @@ export function World(props: WorldProps) {
   return (
     <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
+      {/* eslint-disable react/no-unknown-property */}
       <ambientLight
         color={globeConfig.ambientLight ?? '#ffffff'}
         intensity={0.6}
@@ -276,6 +278,7 @@ export function World(props: WorldProps) {
         position={new Vector3(-200, 500, 200)}
         intensity={0.8}
       />
+      {/* eslint-enable react/no-unknown-property */}
       <Globe {...props} />
       <OrbitControls
         enablePan={false}

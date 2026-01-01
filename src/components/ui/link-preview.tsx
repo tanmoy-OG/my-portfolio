@@ -6,6 +6,7 @@ import {
   useMotionValue,
   useSpring,
 } from 'motion/react';
+import Image from 'next/image';
 import { encode } from 'qss';
 import React from 'react';
 
@@ -20,9 +21,9 @@ type LinkPreviewProps = {
   quality?: number;
   layout?: string;
 } & (
-  | { isStatic: true; imageSrc: string }
-  | { isStatic?: false; imageSrc?: never }
-);
+    | { isStatic: true; imageSrc: string }
+    | { isStatic?: false; imageSrc?: never }
+  );
 
 export const LinkPreview = ({
   children,
@@ -66,8 +67,8 @@ export const LinkPreview = ({
 
   const translateX = useSpring(x, springConfig);
 
-  const handleMouseMove = (event: any) => {
-    const targetRect = event.target.getBoundingClientRect();
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    const targetRect = (event.target as HTMLElement).getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
     const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
     x.set(offsetFromCenter);
@@ -77,7 +78,7 @@ export const LinkPreview = ({
     <>
       {isMounted ? (
         <div className='hidden'>
-          <img src={src} width={width} height={height} alt='hidden image' />
+          <Image src={src} width={width} height={height} alt='hidden' />
         </div>
       ) : null}
 
@@ -130,12 +131,12 @@ export const LinkPreview = ({
                   className='block p-0.5 bg-foreground/50 shadow rounded-md'
                   style={{ fontSize: 0 }}
                 >
-                  <img
+                  <Image
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
                     className='rounded-sm'
-                    alt='preview image'
+                    alt='preview'
                   />
                 </a>
               </motion.div>

@@ -12,7 +12,7 @@ import {
 interface Params {
   title: string;
   gallery: string[];
-  isPopup: any;
+  isPopup: (value: boolean) => void;
   initialIndex?: number;
 }
 
@@ -26,6 +26,14 @@ const DialogueImage = ({
     <div
       className='fixed flex justify-center top-0 left-0 size-full z-20 py-8 backdrop-blur-lg'
       onClick={() => isPopup(false)}
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') {
+          isPopup(false);
+        }
+      }}
+      role='button'
+      tabIndex={0}
+      aria-label='Close image dialog'
     >
       <Card
         className='w-11/12 lg:w-5/6 px-4 lg:px-16 py-8 h-fit lg:h-auto my-auto lg:my-0 flex justify-center items-center bg-muted/70 border-foreground/10 shadow-secondary'
