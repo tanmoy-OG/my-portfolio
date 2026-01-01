@@ -17,8 +17,8 @@ const ExpProject = ({
   description,
   tech,
   externalLink,
-  gitHub,
-  install,
+  // gitHub,
+  // install,
 }: Proj) => {
   const projHref = `/archive/projects/${title}`
   const titleHref = externalLink ? externalLink : projHref
