@@ -7,11 +7,11 @@ import {
   useSpring,
 } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { encode } from 'qss';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
 
 type LinkPreviewProps = {
   children: React.ReactNode;
