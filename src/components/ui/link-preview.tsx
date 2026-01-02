@@ -11,6 +11,7 @@ import { encode } from 'qss';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 type LinkPreviewProps = {
   children: React.ReactNode;
@@ -96,6 +97,8 @@ export const LinkPreview = ({
             className
           )}
           href={url}
+          target='_blank'
+          rel='noopener noreferrer'
         >
           {children}
         </HoverCardPrimitive.Trigger>
@@ -126,8 +129,10 @@ export const LinkPreview = ({
                   x: translateX,
                 }}
               >
-                <a
+                <Link
                   href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'    
                   className='block p-0.5 bg-foreground/50 shadow rounded-md'
                   style={{ fontSize: 0 }}
                 >
@@ -138,7 +143,7 @@ export const LinkPreview = ({
                     className='rounded-sm'
                     alt='preview'
                   />
-                </a>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>

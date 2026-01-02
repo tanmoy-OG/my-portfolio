@@ -52,7 +52,7 @@ const Project: ColumnDef<Proj>[] = [
           href={`/archive/projects/${title}`}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline items-center transition-all group w-fit'
+          className='inline items-center transition-all group w-fit whitespace-nowrap'
         >
           <h1 className='font-sans-desc font-bold text-base group-hover:text-accent transition-all inline'>
             {title}
@@ -125,7 +125,7 @@ const Project: ColumnDef<Proj>[] = [
             href={`https://${link}`}
             target='_blank'
             rel='noopener noreferrer'
-            className='opacity-70 inline hover:opacity-100 transition-all group'
+            className='opacity-70 inline hover:opacity-100 transition-all group  whitespace-nowrap'
           >
             <h1 className='font-sans-desc font-medium group-hover:text-accent transition-all inline break-all'>
               {link}

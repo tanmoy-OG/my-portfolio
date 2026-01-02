@@ -17,8 +17,13 @@
       "city": "Hyderabad",
       "country": "India"
     },
-    "work": "Write and maintain scripts to connect and upload data to SAP Signavio endpoints on client systems. Work closely with data-analytics team to migrate client data between Celonis and SAP Signavio, validate data-views business-objects on SAP Signavio. Handle the submission of reusable SAP ABAP modules into PALS library.",
-    "tech": ["SAP Signavio", "Celonis", "SAP ABAP"],
+    "work": "Write and maintain scripts to connect and upload data to SAP Signavio endpoints on client systems. Work closely with data-analytics team to migrate client data between Celonis and SAP Signavio, validate column counts, data-views and business-objects on SAP Signavio. Handle the submission of reusable SAP ABAP modules into PALS library.",
+    "tech": [
+      "SAP Signavio",
+      "Celonis",
+      "SQL",
+      "Python"
+    ],
     "portal": "https://www.ey.com/en_in/careers/global-delivery-services"
   },
   {
@@ -68,8 +73,14 @@
       "city": "",
       "country": "Remote"
     },
-    "work": "Build and deliver a web wrapped desktop app to enable online tutoring. Integrating zoom for live sessions. Working with firebase to authenticate and validate users, admin controls and maintain course content archives- pdf materials, session recordings. Using python library to compile a web wrapper desktop application that runs locally without online hosting.",
-    "tech": ["HTML", "CSS", "Firebase", "Python", "Zoom"],
+    "work": "Build and deliver a web wrapper desktop app to enable online tutoring. Integrating zoom for live sessions. Working with firebase to authenticate and validate users, admin controls and maintain course content archives- pdf materials, session recordings. Using python library to compile a web wrapper desktop application that runs locally without online hosting.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Firebase",
+      "Python",
+      "Zoom"
+    ],
     "portal": ""
   }
 ]

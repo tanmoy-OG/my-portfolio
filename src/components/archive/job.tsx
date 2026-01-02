@@ -66,7 +66,7 @@ const JobCol: ColumnDef<Job>[] = [
               <LuArrowUpRight className='size-4 ml-1 inline-block align-middle group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent transition-all' />
             </Link>
           ) : (
-            <h1 className='font-sans-desc font-bold text-base md:hidden'>
+            <h1 className='font-sans-desc font-bold text-base'>
               {company}
             </h1>
           )}

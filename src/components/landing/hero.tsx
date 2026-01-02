@@ -74,7 +74,7 @@ const Hero = async () => {
                 <FaInstagram className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
-                href='https://instagram.com/tanmoy_og/'
+                href='https://drive.proton.me/urls/8PKANSFBK0#aLBVK15H0Jds'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
               >
                 <Badge className='flex gap-2 pl-3.5 md:pl-6 lg:pl-3.5 pr-1 hover:shadow-lg/50 transition-all'>

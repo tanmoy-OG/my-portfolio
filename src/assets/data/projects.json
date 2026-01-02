@@ -26,15 +26,64 @@
     },
     "company": "",
     "description": "An simple web based real-time messaging platform over WebRTC.",
-    "tech": ["Next.js", "Express.js", "Tailwid CSS", "MongoDB", "Socket.io"],
+    "tech": [
+      "Next.js",
+      "Express.js",
+      "Tailwid CSS",
+      "MongoDB",
+      "Socket.io"
+    ],
     "features": [
       "Real time bi-directional messaging.",
       "Online/offline status of users.",
       "Notification sound for new messages.",
       "Phone/Email less login."
     ],
-    "externalLink": "addaa.life",
+    "externalLink": "https://addaa.life",
     "gitHub": "https://github.com/tanmoy-OG/addaa",
+    "install": ""
+  },
+  {
+    "gallery": [
+      "/projects/philomath1.webp",
+      "/projects/philomath2.webp",
+      "/projects/philomath3.webp"
+    ],
+    "date": {
+      "from": {
+        "month": "Jan",
+        "year": "2024"
+      },
+      "to": {
+        "month": "Feb",
+        "year": "2024"
+      }
+    },
+    "title": "Philomath",
+    "team": "",
+    "hackathon": "",
+    "organization": {
+      "orgName": "",
+      "platform": ""
+    },
+    "company": "Philomath",
+    "description": "A javascript based wrapper desktop app to enable online tutoring. It is integrate with zoom to facilitate live sessions. Recordings and study materials are stored in library for quick access.",
+    "tech": [
+      "HTML",
+      "JavaScript",
+      "HTML",
+      "Tailwind CSS",
+      "Firebase",
+      "Zoom",
+      "Python"
+    ],
+    "features": [
+      "Live sessions.",
+      "Archive of Recordings and Study materials.",
+      "Not hosted online, just install and use locally from app."
+    ],
+    "externalLink": "",
+    "gitHub": "",
     "install": ""
   },
   {
@@ -65,7 +114,12 @@
     },
     "company": "Bengal Institute of Technology",
     "description": "Official Technical-Fest website of BIT for the year of 2023.",
-    "tech": ["React.js", "Tailwind CSS", "Vanta.js", "Particle.js"],
+    "tech": [
+      "React.js",
+      "Tailwind CSS",
+      "Vanta.js",
+      "Particle.js"
+    ],
     "features": [
       "Dynamic self-adjusting masonry layout gallery page.",
       "Hero background starry effect with Vanta.js.",
@@ -102,7 +156,11 @@
     },
     "company": "Bengal Institute of Technology",
     "description": "Official Cultural-Fest website of BIT for the year of 2023.",
-    "tech": ["React.js", "Tailwind CSS", "TS-Particles"],
+    "tech": [
+      "React.js",
+      "Tailwind CSS",
+      "TS-Particles"
+    ],
     "features": [
       "Floating orbs background effect.",
       "Countdown timer to the actual timing of the event.",

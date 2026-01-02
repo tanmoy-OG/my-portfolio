@@ -123,7 +123,7 @@ const ConnectMessage = () => {
       >
         {isSubmitting ? (
           <span className='flex gap-2 items-center'>
-            <BiLoaderAlt className='animate-spin' /> {'Sending Message'}
+            <BiLoaderAlt className='animate-spin' /> {'Sending...'}
           </span>
         ) : (
           'Send Message'

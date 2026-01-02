@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'connect@tanmoy-og.dev',
+      to: 'hi@tanmoy-og.dev',
       subject: `Direct Connect: ${subject}`,
       react: EmailTemplate({
         name,
