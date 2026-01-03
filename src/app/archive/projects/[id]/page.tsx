@@ -122,18 +122,20 @@ export default function ProjectPage({ params }: PageProps) {
               )}
             </div>
           </div>
-          <Card className='w-full lg:max-w-sm flex flex-col py-6 md:py-8 gap-2 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-sm hover:-translate-y-2 transition-all'>
-            <CardHeader>
-              <CardTitle className='text-base text-accent font-bold font-sans-desc'>
-                {'Features'}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className='flex flex-col gap-2 px-6 md:px-8 font-sans-desc opacity-70'>
-              {project.features.map((text, id) => (
-                <p key={id}>{text}</p>
-              ))}
-            </CardContent>
-          </Card>
+          <div className="h-fit w-full lg:max-w-sm rounded-xl group">
+            <Card className='w-full flex flex-col py-6 md:py-8 gap-2 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit shadow-secondary group-hover:shadow-accent group-hover:shadow-lg/50 group-hover:border-foreground/20 group-hover:backdrop-blur-sm group-hover:-translate-y-2 transition-all'>
+              <CardHeader>
+                <CardTitle className='text-base text-accent font-bold font-sans-desc'>
+                  {'Features'}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className='flex flex-col gap-2 px-6 md:px-8 font-sans-desc opacity-70'>
+                {project.features.map((text, id) => (
+                  <p key={id}>{text}</p>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
         </div>
         <div className='hidden w-full lg:w-1/2 md:flex flex-col gap-4 px-16 lg:px-12'>
           <Carousel className='w-full max-w-full'>

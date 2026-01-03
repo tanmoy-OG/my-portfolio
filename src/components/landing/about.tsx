@@ -36,18 +36,20 @@ const About = () => {
           </div>
         </div>
         <div className='w-full lg:w-1/2'>
-          <Card className='w-full md:w-fit lg:w-full lg:max-w-sm flex flex-col py-6 md:py-7 lg:py-8 gap-6 md:gap-7 lg:gap-8 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit shadow-secondary hover:shadow-accent hover:shadow-lg/50 hover:border-foreground/20 hover:backdrop-blur-sm hover:-translate-y-2 transition-all'>
-            <CardHeader>
-              <CardTitle className='text-4xl md:text-5xl text-accent font-normal'>
-                {'What can I do?'}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className='flex flex-col gap-3 md:gap-4 px-6 lg:px-8 font-sans-desc opacity-70 text-sm md:text-lg lg:text-base'>
-              <p>{'I mainly do full-stack Web Development and UI/UX Design'}</p>
-              <p>{'Currently I am also learning React-Native for Android'}</p>
-              <p>{"I've also started learning ML"}</p>
-            </CardContent>
-          </Card>
+          <div className="h-fit w-full md:w-fit lg:w-full lg:max-w-sm rounded-xl group">
+            <Card className='flex flex-col py-6 md:py-7 lg:py-8 gap-6 md:gap-7 lg:gap-8 bg-muted/70 backdrop-blur-xs border-foreground/10 h-fit w-full shadow-secondary group-hover:shadow-accent group-hover:shadow-lg/50 group-hover:border-foreground/20 group-hover:backdrop-blur-sm group-hover:-translate-y-2 transition-all'>
+              <CardHeader>
+                <CardTitle className='text-4xl md:text-5xl text-accent font-normal'>
+                  {'What can I do?'}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className='flex flex-col gap-3 md:gap-4 px-6 lg:px-8 font-sans-desc opacity-70 text-sm md:text-lg lg:text-base'>
+                <p>{'I mainly do full-stack Web Development and UI/UX Design'}</p>
+                <p>{'Currently I am also learning React-Native for Android'}</p>
+                <p>{"I've also started learning ML"}</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
       <div className='hidden md:block absolute w-full -mt-60 lg:-mt-80 ml-32 md:ml-44 lg:ml-52 opacity-30 md:opacity-40 lg:opacity-50 pointer-events-none'>
