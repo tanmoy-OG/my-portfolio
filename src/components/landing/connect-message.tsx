@@ -57,15 +57,20 @@ const ConnectMessage = () => {
           message: '',
         });
       } else {
-        throw new Error('Failed to send message');
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage =
+          errorData?.error || response.statusText || 'Failed to send message';
+        throw new Error(errorMessage);
       }
     } catch (error) {
-      console.error('🚀 ~ handleSubmit ~ error:', error);
+      const errorMessage =
+        error instanceof Error ? error.message : 'There was an error sending message!';
+      process.env['NEXT_PUBLIC_PROD'] && console.error('🚀 ~ handleSubmit ~ error:', errorMessage);
       toast(
         <Alert variant='destructive'>
           <LuCircleAlert />
           <AlertTitle className='font-sans-desc'>
-            {'There was an error sending message!'}
+            {errorMessage}
           </AlertTitle>
         </Alert>
       );

@@ -30,6 +30,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.error('🚀 ~ POST ~ Validation failed - invalid email format:', email);
+      return NextResponse.json(
+        { error: 'Please provide a valid email address' },
+        { status: 400 }
+      );
+    }
+
     const resend = getResend();
     if (!resend) {
       return NextResponse.json(
