@@ -38,9 +38,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const fromEmail = process.env['RESENDER_EMAIL_ID'];
+    const toEmail = process.env['RECEIVER_EMAIL_ID'];
+
+    if (!fromEmail || !toEmail) {
+      return NextResponse.json(
+        { error: 'Email configuration missing' },
+        { status: 500 }
+      );
+    }
+
     const { error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'hi@tanmoy-og.dev',
+      from: fromEmail,
+      to: toEmail,
       subject: `Direct Connect: ${subject}`,
       react: EmailTemplate({
         name,

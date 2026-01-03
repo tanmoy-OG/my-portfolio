@@ -37,7 +37,7 @@ export default function CursorTrail() {
       baseSpring: 0.4,
       baseFriction: 0.5,
       unifiedHeadLength: 8, // Number of points that stay unified at the start
-      cursorOffset: { x: -60, y: -60 }, // Offset the trail from the actual cursor position
+      cursorOffset: { x: -160, y: -60 }, // Offset the trail from the actual cursor position
     };
 
     // Define multiple stroke layers with different colors and path variations

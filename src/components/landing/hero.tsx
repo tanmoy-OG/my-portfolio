@@ -51,30 +51,40 @@ const Hero = async () => {
             <div className='flex md:mt-0 mx-4 md:mx-6 gap-4 md:gap-10 lg:gap-8 lg:mx-8 items-center'>
               <Link
                 href='https://linkedin.com/in/tanmoy-choudhury/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
               >
                 <FaLinkedin className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
                 href='https://x.com/tanmoy_OG'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
               >
                 <FaXTwitter className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
                 href='https://github.com/tanmoy-OG/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
               >
                 <FaGithub className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
                 href='https://instagram.com/tanmoy_og/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all hidden md:block'
               >
                 <FaInstagram className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
                 href='https://drive.proton.me/urls/8PKANSFBK0#aLBVK15H0Jds'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
               >
                 <Badge className='flex gap-2 pl-3.5 md:pl-6 lg:pl-3.5 pr-1 hover:shadow-lg/50 transition-all'>

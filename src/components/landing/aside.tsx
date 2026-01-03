@@ -143,13 +143,10 @@ const Aside = () => {
       {/* Sidebar - Desktop */}
       <aside className='hidden lg:flex fixed left-0 w-1/5 z-30 bg-background h-screen basis-1/5 flex-col justify-between *:flex *:flex-col *:h-fit *:px-8 *:py-4 *:gap-2'>
         <div className='!pt-8'>
-          {/* <Link href="#home" onClick={handleClick} className='hover:cursor-pointer transition-all'>
-            <h1 className='text-lg text-accent'>{'Tanmoy_OG'}</h1>
-          </Link> */}
           <NavigationLink
             type='home'
             path='#home'
-            linkName='Tanmoy_OG'
+            linkName='tanmoy_OG'
             isActive={activeSection === 'home'}
           />
           {/* <NavigationLink path='#home' linkName='Tanmoy_OG' /> */}
