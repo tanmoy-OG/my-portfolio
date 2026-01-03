@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const fromEmail = process.env['RESENDER_EMAIL_ID'];
+    const fromEmail = process.env['SENDER_EMAIL_ID'];
     const toEmail = process.env['RECEIVER_EMAIL_ID'];
 
     if (!fromEmail || !toEmail) {
