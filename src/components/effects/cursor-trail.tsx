@@ -151,8 +151,10 @@ export default function CursorTrail() {
       ctx.lineJoin = 'round';
 
       // Step 1: Calculate base trail (first layer) - this defines the unified head
-      const baseTrail = trails[0]!;
-      const baseLayer = strokeLayers[0]!;
+      const baseTrail = trails[0];
+      if (!baseTrail) return;
+      const baseLayer = strokeLayers[0];
+      if (!baseLayer) return;
       const baseSpring = params.baseSpring + baseLayer.springOffset;
       const baseFriction = params.baseFriction + baseLayer.frictionOffset;
 
@@ -167,7 +169,8 @@ export default function CursorTrail() {
           p.dy += (targetY - p.y) * springFactor;
         } else {
           // Subsequent points follow the previous point
-          const prev = baseTrail[i - 1]!;
+          const prev = baseTrail[i - 1];
+          if (!prev) return;
           p.dx += (prev.x - p.x) * baseSpring;
           p.dy += (prev.y - p.y) * baseSpring;
         }
@@ -181,7 +184,8 @@ export default function CursorTrail() {
       strokeLayers.forEach((layer, layerIdx) => {
         if (layerIdx === 0) return; // Skip base layer, already processed
 
-        const trail = trails[layerIdx]!;
+        const trail = trails[layerIdx];
+        if (!trail) return;
         const spring = params.baseSpring + layer.springOffset;
         const friction = params.baseFriction + layer.frictionOffset;
 
@@ -196,12 +200,14 @@ export default function CursorTrail() {
             p.dy += (targetY - p.y) * springFactor;
           } else if (i < params.unifiedHeadLength) {
             // Unified head section - follow the base trail
-            const basePoint = baseTrail[i]!;
+            const basePoint = baseTrail[i];
+            if (!basePoint) return;
             p.dx += (basePoint.x - p.x) * spring;
             p.dy += (basePoint.y - p.y) * spring;
           } else {
             // Diverging tail section - use offset position and layer-specific physics
-            const prev = trail[i - 1]!;
+            const prev = trail[i - 1];
+            if (!prev) return;
             // Gradually apply position offset based on distance from unified head
             const divergenceProgress =
               (i - params.unifiedHeadLength) /
@@ -226,11 +232,14 @@ export default function CursorTrail() {
         ctx.globalAlpha = layer.alpha;
 
         if (trail.length >= 2) {
+          const first = trail[0];
+          if (!first) return;
           ctx.beginPath();
-          ctx.moveTo(trail[0]!.x, trail[0]!.y);
+          ctx.moveTo(first.x, first.y);
           for (let i = 1; i < trail.length - 1; i++) {
-            const curr = trail[i]!;
-            const next = trail[i + 1]!;
+            const curr = trail[i];
+            const next = trail[i + 1];
+            if (!curr || !next) continue;
             const xc = 0.5 * (curr.x + next.x);
             const yc = 0.5 * (curr.y + next.y);
             ctx.quadraticCurveTo(curr.x, curr.y, xc, yc);
@@ -238,23 +247,29 @@ export default function CursorTrail() {
               layer.widthScale * params.widthFactor * (params.pointsNumber - i);
             ctx.stroke();
           }
-          const last = trail[trail.length - 1]!;
-          ctx.lineTo(last.x, last.y);
-          ctx.stroke();
+          const last = trail[trail.length - 1];
+          if (last) {
+            ctx.lineTo(last.x, last.y);
+            ctx.stroke();
+          }
         }
       });
 
       // Draw base layer (first layer)
-      const baseLayerStyle = strokeLayers[0]!;
+      const baseLayerStyle = strokeLayers[0];
+      if (!baseLayerStyle) return;
       ctx.strokeStyle = baseLayerStyle.color;
       ctx.globalAlpha = baseLayerStyle.alpha;
 
       if (baseTrail.length >= 2) {
+        const first = baseTrail[0];
+        if (!first) return;
         ctx.beginPath();
-        ctx.moveTo(baseTrail[0]!.x, baseTrail[0]!.y);
+        ctx.moveTo(first.x, first.y);
         for (let i = 1; i < baseTrail.length - 1; i++) {
-          const curr = baseTrail[i]!;
-          const next = baseTrail[i + 1]!;
+          const curr = baseTrail[i];
+          const next = baseTrail[i + 1];
+          if (!curr || !next) continue;
           const xc = 0.5 * (curr.x + next.x);
           const yc = 0.5 * (curr.y + next.y);
           ctx.quadraticCurveTo(curr.x, curr.y, xc, yc);
@@ -264,9 +279,11 @@ export default function CursorTrail() {
             (params.pointsNumber - i);
           ctx.stroke();
         }
-        const last = baseTrail[baseTrail.length - 1]!;
-        ctx.lineTo(last.x, last.y);
-        ctx.stroke();
+        const last = baseTrail[baseTrail.length - 1];
+        if (last) {
+          ctx.lineTo(last.x, last.y);
+          ctx.stroke();
+        }
       }
 
       // Reset alpha
@@ -286,9 +303,9 @@ export default function CursorTrail() {
     window.addEventListener('resize', onResize);
 
     return () => {
-      window.removeEventListener('mousemove', onMouseMove as any);
-      window.removeEventListener('click', onClick as any);
-      window.removeEventListener('touchmove', onTouchMove as any);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('click', onClick);
+      window.removeEventListener('touchmove', onTouchMove);
       window.removeEventListener('resize', onResize);
       window.cancelAnimationFrame(rafId);
     };

@@ -1,3 +1,8 @@
+interface GitHubContributionsResponse {
+  totalContributions?: number;
+  [key: string]: unknown;
+}
+
 export async function getGithubContributions(
   username: string
 ): Promise<number> {
@@ -9,7 +14,7 @@ export async function getGithubContributions(
 
     if (!res.ok) return 0;
 
-    const data: any = await res.json();
+    const data: GitHubContributionsResponse = await res.json();
     // Extract totalContributions from the JSON
     if (data && typeof data.totalContributions === 'number') {
       return data.totalContributions;

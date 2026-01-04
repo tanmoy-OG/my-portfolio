@@ -29,7 +29,7 @@ const CertificateCol: ColumnDef<Certificate>[] = [
       );
     },
     cell: ({ getValue }) => {
-      const date = getValue() as any;
+      const date = getValue() as Certificate['date'];
       return (
         <h1 className='font-sans-desc font-medium opacity-70'>
           {date.month} {date.year}

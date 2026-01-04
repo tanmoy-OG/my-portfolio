@@ -122,20 +122,22 @@ const ConnectMessage = () => {
           className='bg-background border-none placeholder:text-foreground/50 placeholder:font-sans-desc resize-none h-32 md:h-36 lg:h-40 z-20 text-sm md:text-base'
         />
       </div>
-      <Button
-        type='submit'
-        onClick={handleSubmit}
-        className={`bg-muted border border-foreground/10 shadow-secondary w-fit sm:w-1/2 lg:w-1/3 px-6 md:px-8 text-accent self-end hover:cursor-pointer hover:bg-muted hover:shadow-accent hover:shadow-md/50 hover:border-foreground/20 hover:-translate-y-1 active:shadow-xs/50 active:border-accent/50 active:translate-0 transition-all z-20 text-sm md:text-base py-2 md:py-3 mx-auto sm:mx-0`}
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? (
-          <span className='flex gap-2 items-center'>
-            <BiLoaderAlt className='animate-spin' /> {'Sending...'}
-          </span>
-        ) : (
-          'Send Message'
-        )}
-      </Button>
+      <div className='w-fit sm:w-1/2 lg:w-1/3 mx-auto sm:mx-0 z-20 rounded-md hover:cursor-pointer transition-all self-end group'>
+        <Button
+          type='submit'
+          onClick={handleSubmit}
+          className={`bg-muted hover:bg-muted border border-foreground/10 shadow-secondary w-fit sm:w-full px-6 md:px-8 text-accent group-hover:cursor-pointer group-hover:shadow-accent group-hover:shadow-md/50 group-hover:border-foreground/20 group-hover:-translate-y-1 group-active:shadow-xs/50 group-active:border-accent/50 group-active:translate-0 transition-all text-sm md:text-base py-2 md:py-3`}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <span className='flex gap-2 items-center'>
+              <BiLoaderAlt className='animate-spin' /> {'Sending...'}
+            </span>
+          ) : (
+            'Send Message'
+          )}
+        </Button>
+      </div>
     </div>
   );
 };
