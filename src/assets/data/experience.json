@@ -11,18 +11,22 @@
       },
       "current": true
     },
-    "company": "Ernst & Young GDS",
+    "company": "EY (Ernst & Young)",
     "designation": "Associate Software Engineer",
     "location": {
       "city": "Hyderabad",
       "country": "India"
     },
-    "work": "Write and maintain scripts to connect and upload data to SAP Signavio endpoints on client systems. Work closely with data-analytics team to migrate client data between Celonis and SAP Signavio, validate column counts, data-views and business-objects on SAP Signavio. Handle the submission of reusable SAP ABAP modules into PALS library.",
+    "work": "Architect and deploy GenAI applications in SAP BTP Cockpit, integrating secure LLM endpoints and REST APIs for internal workflows. Work closely with process mining team to build an automated Celonis-to-Signavio code translation engine, leveraging prompt engineering and AST parsing to migrate client data between Celonis and SAP Signavio. Built a production-grade RAG pipeline using LangGraph to coordinate multi-agent routing, conversational state managements and fallback strategies for an automated customer support system. Optimised the process of submitting reusable SAP ABAP modules into PALS library by engineering an internal knowledge retrieval assistant using LangGraph and FastAPI, indexing internal SOPs and technical docs with source-attributed responses. Design and build the frontend UI/UX of some GenAI applications with React and Streamlit.",
     "tech": [
-      "SAP Signavio",
-      "Celonis",
-      "SQL",
-      "Python"
+      "Python",
+      "Typescript",
+      "GenAI",
+      "RAG",
+      "LangGraph",
+      "React",
+      "Streamlit",
+      "FastAPI"
     ],
     "portal": "https://www.ey.com/en_in/careers/global-delivery-services"
   },

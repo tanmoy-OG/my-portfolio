@@ -1,6 +1,59 @@
 [
   {
     "gallery": [
+      "/projects/shouldibuyit1.webp",
+      "/projects/shouldibuyit2.webp",
+      "/projects/shouldibuyit3.webp",
+      "/projects/shouldibuyit4.webp",
+      "/projects/shouldibuyit5.webp",
+      "/projects/shouldibuyit6.webp",
+      "/projects/shouldibuyit7.webp",
+      "/projects/shouldibuyit8.webp"
+    ],
+    "date": {
+      "from": {
+        "month": "September",
+        "year": "2026"
+      },
+      "to": {
+        "month": "September",
+        "year": "2026"
+      }
+    },
+    "title": "Should I buy it?",
+    "team": "",
+    "hackathon": "Orchestrate",
+    "organization": {
+      "orgName": "",
+      "platform": "Hackerrank"
+    },
+    "company": "",
+    "description": "AI WebApp to help you make better spending decisions based on your financial background and profile.",
+    "tech": [
+      "Next.js",
+      "Typescript",
+      "Tailwid CSS",
+      "Supabase",
+      "GenAI",
+      "Google Gemini",
+      "Mistral AI",
+      "Math Engine"
+    ],
+    "features": [
+      "90 days liquidity curve - Calculates exact daily cash balances by harmonizing your recurring payday cycles with fixed monthly obligations like rent, utilities, and debt payments over next 90 days.",
+      "Emergency buffer defence - Enforces your sacred reserve floor. If a prospective purchase causes your liquid funds to dip below your safety threshold at any point, the model flags it immediately.",
+      "Risk detection - Enforces your sacred reserve floor. If a prospective purchase causes your liquid funds to dip below your safety threshold at any point, the model flags it immediately.",
+      "Privacy first workflow - Gives the option to keep everything private and local or have a cloud backup with a logged in account.",
+      "AI Powered Insights - Advanced financial insights and recommendations based on your spending habits, income patterns, and financial goals.",
+      "Flexible Input Options - Accepts recurring payments (salary, rent) as well as one-time transactions.",
+      "Logged Querey History - Track your spending patterns through the logged history of your purchase queries."
+    ],
+    "externalLink": "https://shouldibuyit.website",
+    "gitHub": "https://github.com/tanmoy-OG/should-i-buy-it",
+    "install": ""
+  },
+  {
+    "gallery": [
       "/projects/addaa1.webp",
       "/projects/addaa2.webp",
       "/projects/addaa3.webp",

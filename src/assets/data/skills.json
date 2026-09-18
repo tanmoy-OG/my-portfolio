@@ -1,11 +1,20 @@
 [
   "CursorAI",
+  "Antigravity",
+  "Claude Code",
   "TypeScript",
   "JavaScript",
   "React",
+  "Streamlit",
+  "FastAPI",
+  "LangGraph",
+  "RAG",
+  "GenAI",
   "Express.js",
   "Node.js",
   "MongoDB",
+  "SQL",
+  "Supabase",
   "Next.js",
   "Figma",
   "Git",
@@ -13,7 +22,7 @@
   "C++",
   "JAVA",
   "Python",
-  "SAP ABAP",
+  "SAP BTP Cockpit",
   "Postman",
   "Devpod",
   "Socket.io",
@@ -21,5 +30,7 @@
   "Cloudinary",
   "AWS",
   "SAP Signavio",
-  "Celonis"
+  "Gemini",
+  "OpenAI SDK",
+  "Mistral"
 ]
