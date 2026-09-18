@@ -82,7 +82,7 @@ const Hero = async () => {
                 <FaInstagram className='size-10 md:size-16 lg:size-8' />
               </Link>
               <Link
-                href='https://drive.google.com/file/d/1iWylTtIIfePmwFcK7QcjZIaC9-f-3PBV/view?usp=sharing'
+                href='https://drive.google.com/file/d/1xeDT9lfjLB7Vrdcj2aN8nJ42dof5JZQ8/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='hover:-translate-y-2 hover:scale-110 hover:text-accent active:text-accent active:-translate-y-1 active:scale-100 transition-all'
