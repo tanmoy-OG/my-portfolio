@@ -150,9 +150,9 @@ const Aside = () => {
             isActive={activeSection === 'home'}
           />
           {/* <NavigationLink path='#home' linkName='Tanmoy_OG' /> */}
-          <h1 className='text-lg/6'>{'Web Developer & Designer'}</h1>
+          <h1 className='text-lg/6'>{'Software Developer'}</h1>
           <p className='text-xs opacity-50 font-sans-desc'>
-            {'Software Engineer / Web Developer / UI/UX Designer'}
+            {'Software Engineer / GenAI / Full Stack Developer'}
           </p>
         </div>
         <div className='*:text-sm *:font-bold *:uppercase *:tracking-wider *:flex *:items-center *:gap-4 *:hover:opacity-100 *:hover:tracking-widest'>
